@@ -1,237 +1,205 @@
-import Navbar from "./components/Navbar";
+"use client";
 
-export default function Home() {
+import "./home.css";
+import Image from "next/image";
+
+export default function HomePage() {
   return (
-    <>
-      <Navbar />
+    <main className="home">
+      {/* HERO SECTION */}
+      <section className="hero-bg">
+        <div className="hero-overlay">
+          <Image
+            src="/logo.png"
+            width={330}
+            height={320}
+            alt="Luxterra Builders Logo"
+            className="hero-logo"
+          />
 
-      {/* HERO */}
-      <section className="hero">
-        <div className="hero-container">
-          <div className="hero-text">
-            <h1>
-              Welcome to <span>Luxterra Builders</span>
-            </h1>
-            <p>
-              We build high-quality homes, industrial, commercial, and
-              multifamily projects across San Antonio and surrounding areas.
-            </p>
+          <h1 className="hero-title">Building Luxury. Delivering Excellence.</h1>
 
-            <div className="hero-buttons">
-              <a className="btn-primary" href="#contact">
-                Schedule Consultation
+          <p className="hero-sub">
+            Custom Homes • Industrial • Commercial • Pools
+            <br />
+            Serving San Antonio &amp; Surrounding Areas
+          </p>
+
+          <a href="/quote" className="cta-button">
+            Get a Free Quote
+          </a>
+        </div>
+      </section>
+
+      {/* FEATURED PROJECTS */}
+      <section className="featured">
+        <p className="section-label">Featured Projects</p>
+        <h2 className="section-title">Recent Luxterra Builds</h2>
+        <p className="section-sub">
+          A glimpse at the type of craftsmanship and detail we bring to every
+          custom home and commercial project.
+        </p>
+
+        <div className="featured-grid">
+          {/* Project 1 */}
+          <article className="project-card">
+            <div className="project-image-wrap">
+              <Image
+                src="/01.jpg"
+                alt="Kings Modern Residence exterior"
+                width={1200}
+                height={800}
+                className="project-image"
+              />
+            </div>
+            <div className="project-content">
+              <p className="project-meta">Custom Home</p>
+              <h3 className="project-title">Kings Modern Residence</h3>
+              <p className="project-copy">
+                Modern lines, warm interiors, and a fully reimagined layout in
+                the heart of San Antonio.
+              </p>
+              <a href="/gallery" className="project-link">
+                View project photos
               </a>
-              <a className="btn-secondary" href="#services">
-                View Services
+            </div>
+          </article>
+
+          {/* Project 2 */}
+          <article className="project-card">
+            <div className="project-image-wrap">
+              <Image
+                src="/03.jpg"
+                alt="Adaes Home renovation"
+                width={1200}
+                height={800}
+                className="project-image"
+              />
+            </div>
+            <div className="project-content">
+              <p className="project-meta">Whole‑Home Remodel</p>
+              <h3 className="project-title">Adaes Home</h3>
+              <p className="project-copy">
+                Open‑concept living, upgraded kitchen, and refined finishes
+                tailored to how this family really lives.
+              </p>
+              <a href="/projects" className="project-link">
+                Explore more projects
               </a>
             </div>
+          </article>
 
-            <div className="hero-stats">
-              <div className="stat">
-                <p>Experience</p>
-                <strong>20+ Years</strong>
-              </div>
-              <div className="stat">
-                <p>Service Area</p>
-                <strong>San Antonio & Nearby Cities</strong>
-              </div>
-              <div className="stat">
-                <p>Sectors</p>
-                <strong>Homes · Industrial · Commercial · MF</strong>
-              </div>
+          {/* Project 3 */}
+          <article className="project-card">
+            <div className="project-image-wrap">
+              <Image
+                src="/08.jpg"
+                alt="Industrial lab project"
+                width={1200}
+                height={800}
+                className="project-image"
+              />
             </div>
+            <div className="project-content">
+              <p className="project-meta">Industrial</p>
+              <h3 className="project-title">Industrial Lab Build‑Out</h3>
+              <p className="project-copy">
+                High‑performance lab and warehouse space built to strict
+                operational and safety requirements.
+              </p>
+              <a href="/services" className="project-link">
+                See industrial capabilities
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      {/* SERVICES SECTION */}
+      <section className="services">
+        <h2 className="section-title">Our Services</h2>
+
+        <div className="service-grid">
+          <div className="service-card">
+            <h3>Custom Homes</h3>
+            <p>Luxury designs built with precision and craftsmanship.</p>
           </div>
 
-          <div className="hero-image">
-            <div
-              style={{
-                background: "#d9d9d9",
-                width: "100%",
-                height: "260px",
-                borderRadius: "20px",
-              }}
-            ></div>
+          <div className="service-card">
+            <h3>Commercial</h3>
+            <p>Retail, offices, and full‑scale commercial projects.</p>
+          </div>
+
+          <div className="service-card">
+            <h3>Industrial</h3>
+            <p>Warehouses, metal buildings &amp; large developments.</p>
           </div>
         </div>
       </section>
 
-      {/* WHERE WE BUILD */}
-      <section id="where-we-build" className="section">
-        <div className="section-inner">
-          <h2>Where We Build</h2>
-          <p className="subtitle">
-            Strategic locations across San Antonio and surrounding areas that
-            make sense for your home or business.
+      {/* WHY BUILD WITH LUXTERRA */}
+      <section className="why">
+        <div className="why-copy">
+          <p className="section-label">Why Build with Luxterra</p>
+          <h2 className="section-title">A builder that thinks like an owner.</h2>
+          <p className="why-intro">
+            We treat every project like it&apos;s our own asset—balancing design,
+            budget, and schedule so you don&apos;t have to babysit the build.
           </p>
 
-          <div className="cards">
-            <div className="card">
-              <h3>San Antonio Metro</h3>
-              <p>
-                Single-family homes, commercial spaces, and light industrial
-                projects throughout the metro area.
-              </p>
-            </div>
+          <ul className="why-list">
+            <li>
+              <span className="why-bullet" />
+              Turn‑key process from planning and permits to final punch list.
+            </li>
+            <li>
+              <span className="why-bullet" />
+              Clear budgets, transparent change orders, and no surprise costs.
+            </li>
+            <li>
+              <span className="why-bullet" />
+              Dedicated project manager and weekly communication.
+            </li>
+            <li>
+              <span className="why-bullet" />
+              Licensed, insured, and vetted trade partners on every job.
+            </li>
+          </ul>
 
-            <div className="card">
-              <h3>Surrounding Communities</h3>
-              <p>
-                Growing neighborhoods and business corridors in the cities and
-                towns around San Antonio.
-              </p>
-            </div>
-
-            <div className="card">
-              <h3>Your Property</h3>
-              <p>
-                Already have land or an existing building? We evaluate
-                feasibility and create a clear construction plan.
-              </p>
-            </div>
-          </div>
+          <a href="/quote" className="cta-secondary">
+            Schedule a Free Consultation
+          </a>
         </div>
-      </section>
 
-      {/* SERVICES */}
-      <section id="services" className="section">
-        <div className="section-inner">
-          <h2>Our Services</h2>
-          <p className="subtitle">
-            One builder for homes, industrial, commercial, and multifamily
-            projects in and around San Antonio.
-          </p>
-
-          <div className="cards">
-            <div className="card">
-              <h3>Homes</h3>
-              <p>
-                Custom and semi-custom residential construction built around how
-                you live, work, and host.
-              </p>
-            </div>
-
-            <div className="card">
-              <h3>Industrial</h3>
-              <p>
-                Warehouses, logistics, and light manufacturing facilities
-                focused on efficiency and access.
-              </p>
-            </div>
-
-            <div className="card">
-              <h3>Commercial</h3>
-              <p>
-                Retail, office, and mixed-use spaces designed for visibility,
-                comfort, and tenant experience.
-              </p>
-            </div>
-
-            <div className="card">
-              <h3>Multifamily</h3>
-              <p>
-                Townhomes and multifamily communities balancing density,
-                amenities, and long-term maintenance.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROJECT TYPES / EXAMPLES */}
-      <section id="projects" className="section">
-        <div className="section-inner">
-          <h2>Example Project Types</h2>
-          <p className="subtitle">
-            Swap these examples with your real projects, addresses, and photos
-            as your portfolio grows.
-          </p>
-
-          <div className="cards">
-            <div className="card">
-              <h3>Hill Country Residence</h3>
-              <p>
-                Single-family home with open-concept living, outdoor patio, and
-                energy-efficient systems.
-              </p>
-            </div>
-            <div className="card">
-              <h3>Westside Warehouse</h3>
-              <p>
-                Industrial shell building with dock-high loading and flexible
-                interior layout.
-              </p>
-            </div>
-            <div className="card">
-              <h3>Medical Office Build-Out</h3>
-              <p>
-                Interior build-out tailored to patient flow, privacy, and
-                specialty equipment.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section id="testimonials" className="section">
-        <div className="section-inner">
-          <h2>What Our Clients Say</h2>
-          <p className="subtitle">
-            Clear communication, realistic schedules, and a focus on doing the
-            job right the first time.
-          </p>
-
-          <div className="testimonials-grid">
-            <div className="testimonial">
-              “Luxterra Builders kept us informed at every step. The finished
-              project matched exactly what was promised.”
-              <div className="testimonial-name">— Homeowner, San Antonio</div>
-            </div>
-            <div className="testimonial">
-              “Professional team, responsive, and focused on the details that
-              matter in our commercial build-out.”
-              <div className="testimonial-name">— Business Owner</div>
-            </div>
-            <div className="testimonial">
-              “They helped us understand costs, schedule, and options from day
-              one. We would build with them again.”
-              <div className="testimonial-name">— Multifamily Developer</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CONTACT */}
-      <section id="contact" className="contact">
-        <div className="contact-inner">
-          <div className="contact-info">
-            <h2>Let&apos;s Talk About Your Project</h2>
+        <div className="why-highlights">
+          <div className="why-card">
+            <span className="why-label">Completed Builds</span>
+            <span className="why-value">50+</span>
             <p>
-              Tell us about your timeline, budget, and whether you already have
-              land or an existing building.
+              Custom homes, commercial spaces, and industrial projects delivered
+              across San Antonio.
             </p>
-            <p>Phone: 254-290-2482</p>
-            <p>Email: info@luxterrabuilders.com</p>
-            <p>Based in San Antonio, serving surrounding areas.</p>
           </div>
 
-          <form className="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <input type="tel" placeholder="Your Phone" />
-            <textarea
-              rows={4}
-              placeholder="Tell us about your project"
-              required
-            ></textarea>
-            <button type="submit">Send Message</button>
-          </form>
+          <div className="why-card">
+            <span className="why-label">Experience</span>
+            <span className="why-value">15+ yrs</span>
+            <p>
+              Construction leadership with a track record of complex builds done
+              right the first time.
+            </p>
+          </div>
+
+          <div className="why-card">
+            <span className="why-label">Client Focus</span>
+            <span className="why-value">1:1</span>
+            <p>
+              You work directly with decision‑makers—no getting lost in a big
+              corporate pipeline.
+            </p>
+          </div>
         </div>
       </section>
-
-      <footer>
-        © {new Date().getFullYear()} Luxterra Builders — All Rights Reserved
-      </footer>
-    </>
+    </main>
   );
 }

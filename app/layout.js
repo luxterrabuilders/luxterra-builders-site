@@ -1,13 +1,14 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Luxterra Builders | San Antonio Construction",
-  description: "Luxterra Builders - Homes, Industrial, Commercial, Multifamily construction in San Antonio and surrounding areas.",
+  title: "Luxterra Builders",
+  description: "Luxury homes • Commercial • Industrial • Pools",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head />
       <body>{children}</body>
     </html>
   );
