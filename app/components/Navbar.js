@@ -1,30 +1,25 @@
 "use client";
-
 import Link from "next/link";
+import Image from "next/image";
+import "./navbar.css";
 
 export default function Navbar() {
   return (
-    <header className="navbar">
+    <nav className="nav">
       <div className="nav-inner">
-        <Link href="/" className="nav-logo">
-          <span className="nav-logo-main">Luxterra Builders</span>
-          <span className="nav-logo-sub">San Antonio & Surrounding Areas</span>
+        <Link href="/" className="nav-logo-block">
+          <img src="/logo.png" alt="Luxterra Builders" className="nav-logo" />
+          <span className="nav-brand">LUXTERRA</span>
         </Link>
 
-        <nav className="nav-links">
+        <div className="nav-links">
           <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
-          <Link href="/services">Services</Link>
           <Link href="/projects">Projects</Link>
-          <Link href="/gallery">Gallery</Link>
+          <Link href="/services">Services</Link>
           <Link href="/contact">Contact</Link>
-          <Link href="/quote">Request a Quote</Link>
-        </nav>
-
-        <a href="tel:12542902482" className="nav-cta">
-          Call (254) 290-2482
-        </a>
+          <Link href="/quote" className="nav-cta">Get a Quote</Link>
+        </div>
       </div>
-    </header>
+    </nav>
   );
 }

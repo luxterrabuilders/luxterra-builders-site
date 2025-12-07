@@ -25,9 +25,9 @@ export default function HomePage() {
             Serving San Antonio &amp; Surrounding Areas
           </p>
 
-          <a href="/quote" className="cta-button">
-            Get a Free Quote
-          </a>
+          <Link href="/quote" className="cta-button">
+          Get a Free Quote
+          </Link>
         </div>
       </section>
 
