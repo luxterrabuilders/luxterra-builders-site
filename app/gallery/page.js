@@ -1,16 +1,77 @@
+// app/gallery/page.js
+
+export const metadata = {
+  title: "Gallery | Luxterra Builders",
+  description: "Kings Modern Residence and featured work by Luxterra Builders.",
+};
+
+const photos = [
+  {
+    section: "Exterior",
+    images: [
+      { src: "/01.jpg", label: "Exterior – Front" },
+      { src: "/02.jpg", label: "Exterior – Porch" },
+    ],
+  },
+  {
+    section: "Living Room",
+    images: [
+      { src: "/03.jpg", label: "Living Room – Angle 1" },
+      { src: "/04.jpg", label: "Living Room – Angle 2" },
+    ],
+  },
+  {
+    section: "Kitchen",
+    images: [
+      { src: "/05.jpg", label: "Kitchen – View 1" },
+      { src: "/06.jpg", label: "Kitchen – View 2" },
+    ],
+  },
+  {
+    section: "Bedroom",
+    images: [{ src: "/07.jpg", label: "Bedroom" }],
+  },
+  {
+    section: "Bathrooms",
+    images: [
+      { src: "/08.jpg", label: "Bathroom – Black Tile" },
+      { src: "/09.jpg", label: "Bathroom – White Marble" },
+    ],
+  },
+  {
+    section: "Extra",
+    images: [
+      { src: "/10.jpg", label: "Extra 1" },
+      { src: "/11.jpg", label: "Extra 2" },
+      { src: "/12.jpg", label: "Extra 3" },
+    ],
+  },
+];
+
 export default function GalleryPage() {
   return (
-    <main className="gallery-page">
-      <section style={{ padding: "100px 20px", textAlign: "center" }}>
-        <h1 style={{ fontSize: "2.5rem", marginBottom: "16px" }}>
-          Project Gallery
-        </h1>
-        <p style={{ maxWidth: "600px", margin: "0 auto", lineHeight: 1.6 }}>
-          Our project gallery is coming soon. In the meantime, explore our
-          featured projects and services on the homepage, or schedule a
-          consultation and we&apos;ll walk you through recent builds.
+    <main className="page gallery-page">
+      <section className="page-hero">
+        <h1>Kings Modern Residence</h1>
+        <p>
+          A curated look inside Luxterra Builders’ latest modern residential
+          project in San Antonio.
         </p>
       </section>
+
+      {photos.map((group, idx) => (
+        <section key={idx} className="gallery-section">
+          <h2>{group.section}</h2>
+          <div className="gallery-grid">
+            {group.images.map((img, i) => (
+              <figure key={i} className="gallery-item">
+                <img src={img.src} alt={img.label} />
+                <figcaption>{img.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </section>
+      ))}
     </main>
   );
 }
