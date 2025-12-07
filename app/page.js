@@ -3,6 +3,7 @@
 import "./home.css";
 import Image from "next/image";
 
+
 export default function HomePage() {
   return (
     <main className="home">
@@ -25,9 +26,10 @@ export default function HomePage() {
             Serving San Antonio &amp; Surrounding Areas
           </p>
 
-          <Link href="/quote" className="cta-button">
-          Get a Free Quote
-          </Link>
+         <a href="/quote" className="cta-button">
+            Get a Free Quote
+         </a>
+
         </div>
       </section>
 
