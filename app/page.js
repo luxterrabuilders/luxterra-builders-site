@@ -61,7 +61,8 @@ export default function HomePage() {
                 Modern lines, warm interiors, and a fully reimagined layout in
                 the heart of San Antonio.
               </p>
-              <a href="/gallery" className="project-link">
+              <a 
+              href="/gallery" className="project-link">
                 View project photos
               </a>
             </div>
@@ -85,7 +86,8 @@ export default function HomePage() {
                 Open‑concept living, upgraded kitchen, and refined finishes
                 tailored to how this family really lives.
               </p>
-              <a href="/projects" className="project-link">
+              <a 
+              href="/projects" className="project-link">
                 Explore more projects
               </a>
             </div>
