@@ -1,228 +1,168 @@
 // app/quote/page.js
 
+import "./quote.css";
+
 export const metadata = {
-  title: "Request a Project Quote | Luxterra Builders",
+  title: "Request a Project Quote",
   description:
-    "Share your project details and request a free consultation for custom homes, industrial, commercial, or pool projects in San Antonio & surrounding areas.",
+    "Request a free consultation for your custom home, commercial, industrial, or pool project in San Antonio & surrounding areas.",
 };
 
 export default function QuotePage() {
   return (
-    <main
-      style={{
-        padding: "80px 16px",
-        background: "#020817",
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-      }}
-    >
-      <div
-        style={{
-          width: "100%",
-          maxWidth: "900px",
-          background: "#0b1120",
-          borderRadius: "24px",
-          padding: "32px 24px",
-          boxShadow: "0 24px 60px rgba(0,0,0,0.6)",
-          color: "#e5e7eb",
-        }}
-      >
-        <header style={{ marginBottom: "24px" }}>
-          <p
-            style={{
-              fontSize: "0.9rem",
-              letterSpacing: "0.15em",
-              textTransform: "uppercase",
-              color: "#a5b4fc",
-              marginBottom: "8px",
-            }}
-          >
-            Request a Project Quote
-          </p>
-          <h1
-            style={{
-              fontSize: "2.2rem",
-              fontWeight: 700,
-              color: "#f9fafb",
-              marginBottom: "8px",
-            }}
-          >
-            Tell us about your project
-          </h1>
-          <p style={{ fontSize: "0.95rem", color: "#9ca3af" }}>
-            Share a few details and we&apos;ll follow up within one business
-            day to discuss scope, budget, and next steps.
-          </p>
-        </header>
+    <main className="quote-page">
+      <section className="quote-hero">
+        <div className="quote-inner">
+          {/* LEFT: COPY */}
+          <div className="quote-copy">
+            <p className="quote-kicker">REQUEST A QUOTE</p>
+            <h1>Tell us about your project.</h1>
+            <p className="quote-intro">
+              Whether you&apos;re planning a custom home, an industrial facility, or a
+              commercial build-out, Luxterra Builders manages the entire process—from
+              planning and permitting to final punch list.
+            </p>
 
-        <form
-          action="https://formspree.io/f/myzrdyba" 
-          method="POST"
-          style={{ display: "grid", gap: "16px" }}
-        >
-          {/* Row 1: Name + Email */}
-          <div
-            style={{
-              display: "grid",
-              gap: "16px",
-              gridTemplateColumns: "repeat(auto-fit, minmax(0, 1fr))",
-            }}
-          >
-            <label style={{ fontSize: "0.9rem" }}>
-              Name
-              <input
-                type="text"
-                name="name"
-                required
-                placeholder="Your full name"
-                style={inputStyle}
-              />
-            </label>
+            <ul className="quote-bullets">
+              <li>Custom homes, industrial, commercial, and pools in San Antonio.</li>
+              <li>Clear budgets, transparent change orders, no surprise costs.</li>
+              <li>Dedicated project manager and weekly communication.</li>
+            </ul>
 
-            <label style={{ fontSize: "0.9rem" }}>
-              Email
-              <input
-                type="email"
-                name="email"
-                required
-                placeholder="you@example.com"
-                style={inputStyle}
-              />
-            </label>
+            <p className="quote-note">
+              Share a few details below and we&apos;ll follow up within one business day.
+            </p>
           </div>
 
-          {/* Row 2: Phone + Location */}
-          <div
-            style={{
-              display: "grid",
-              gap: "16px",
-              gridTemplateColumns: "repeat(auto-fit, minmax(0, 1fr))",
-            }}
-          >
-            <label style={{ fontSize: "0.9rem" }}>
-              Phone
-              <input
-                type="tel"
-                name="phone"
-                placeholder="(###) ###-####"
-                style={inputStyle}
-              />
-            </label>
+          {/* RIGHT: FORM */}
+          <div className="quote-form-card">
+            <form
+              className="quote-form"
+              action="https://formspree.io/f/myzrdyba"
+              method="POST"
+            >
+              {/* Contact Info */}
+              <div className="quote-field-group">
+                <div className="quote-field">
+                  <label htmlFor="name">Full Name*</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    placeholder="John Smith"
+                  />
+                </div>
 
-            <label style={{ fontSize: "0.9rem" }}>
-              Project Location
-              <input
-                type="text"
-                name="location"
-                placeholder="City, neighborhood, or address"
-                style={inputStyle}
-              />
-            </label>
+                <div className="quote-field">
+                  <label htmlFor="email">Email*</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    placeholder="you@example.com"
+                  />
+                </div>
+              </div>
+
+              <div className="quote-field-group">
+                <div className="quote-field">
+                  <label htmlFor="phone">Phone*</label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    placeholder="(555) 555-5555"
+                  />
+                </div>
+
+                <div className="quote-field">
+                  <label htmlFor="location">Project Location*</label>
+                  <input
+                    id="location"
+                    name="location"
+                    type="text"
+                    required
+                    placeholder="San Antonio, TX"
+                  />
+                </div>
+              </div>
+
+              {/* Project Details */}
+              <div className="quote-field">
+                <label htmlFor="projectType">Project Type*</label>
+                <select id="projectType" name="projectType" required>
+                  <option value="">Select one</option>
+                  <option value="Custom Home">Custom Home</option>
+                  <option value="Remodel / Addition">Remodel / Addition</option>
+                  <option value="Industrial">Industrial</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Multifamily / ADU">Multifamily / ADU</option>
+                  <option value="Pool">Pool</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div className="quote-field-group">
+                <div className="quote-field">
+                  <label htmlFor="budget">Approximate Budget</label>
+                  <select id="budget" name="budget">
+                    <option value="">Select a range</option>
+                    <option value="Under $250k">Under $250k</option>
+                    <option value="$250k – $500k">$250k – $500k</option>
+                    <option value="$500k – $1M">$500k – $1M</option>
+                    <option value="$1M+">$1M+</option>
+                  </select>
+                </div>
+
+                <div className="quote-field">
+                  <label htmlFor="timeline">Ideal Start Time</label>
+                  <select id="timeline" name="timeline">
+                    <option value="">Select</option>
+                    <option value="ASAP">ASAP</option>
+                    <option value="1–3 months">1–3 months</option>
+                    <option value="3–6 months">3–6 months</option>
+                    <option value="6+ months">6+ months</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="quote-field">
+                <label htmlFor="message">Tell us about your project*</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={4}
+                  placeholder="Lot location, square footage, use (home, warehouse, retail, etc.), and any key details."
+                />
+              </div>
+
+              <div className="quote-field">
+                <label htmlFor="hearAbout">How did you hear about us?</label>
+                <input
+                  id="hearAbout"
+                  name="hearAbout"
+                  type="text"
+                  placeholder="Referral, Google, social media, etc."
+                />
+              </div>
+
+              {/* Submit */}
+              <button type="submit" className="quote-submit">
+                Request My Free Consultation
+              </button>
+
+              <p className="quote-privacy">
+                By submitting this form, you agree to be contacted by Luxterra Builders
+                regarding your project. We respect your time and privacy.
+              </p>
+            </form>
           </div>
-
-          {/* Row 3: Project type + Budget */}
-          <div
-            style={{
-              display: "grid",
-              gap: "16px",
-              gridTemplateColumns: "repeat(auto-fit, minmax(0, 1fr))",
-            }}
-          >
-            <label style={{ fontSize: "0.9rem" }}>
-              Project Type
-              <select name="projectType" required style={inputStyle}>
-                <option value="">Select one</option>
-                <option value="custom-home">Custom Home</option>
-                <option value="industrial">Industrial</option>
-                <option value="commercial">Commercial</option>
-                <option value="pools">Pools</option>
-                <option value="multifamily">Multifamily</option>
-                <option value="other">Other</option>
-              </select>
-            </label>
-
-            <label style={{ fontSize: "0.9rem" }}>
-              Approximate Budget
-              <input
-                type="text"
-                name="budget"
-                placeholder="$250,000, $1.2M, etc."
-                style={inputStyle}
-              />
-            </label>
-          </div>
-
-          {/* Row 4: Details */}
-          <label style={{ fontSize: "0.9rem" }}>
-            Project Details
-            <textarea
-              name="details"
-              required
-              rows={5}
-              placeholder="Describe what you want to build, your goals, timeline, and any key requirements..."
-              style={{
-                ...inputStyle,
-                resize: "vertical",
-                minHeight: "140px",
-              }}
-            />
-          </label>
-
-          {/* Optional: subject line for emails */}
-          <input
-            type="hidden"
-            name="_subject"
-            value="New project quote request from luxterrabuilders.com"
-          />
-
-          {/* Optional: where to send user after submit */}
-          {/* <input type="hidden" name="_redirect" value="https://luxterrabuilders.com/thank-you" /> */}
-
-          <button
-            type="submit"
-            style={{
-              marginTop: "8px",
-              padding: "14px 24px",
-              borderRadius: "999px",
-              border: "none",
-              background:
-                "linear-gradient(135deg, #fbbf24 0%, #f97316 40%, #eab308 100%)",
-              color: "#111827",
-              fontWeight: 600,
-              fontSize: "0.95rem",
-              cursor: "pointer",
-              boxShadow: "0 10px 30px rgba(251,191,36,0.35)",
-            }}
-          >
-            Submit Quote Request
-          </button>
-
-          <p
-            style={{
-              marginTop: "6px",
-              fontSize: "0.8rem",
-              color: "#6b7280",
-            }}
-          >
-            We&apos;ll email your project details securely to the Luxterra
-            Builders team. No spam, ever.
-          </p>
-        </form>
-      </div>
+        </div>
+      </section>
     </main>
   );
 }
-
-/** Simple shared input style */
-const inputStyle = {
-  marginTop: "6px",
-  width: "100%",
-  padding: "10px 12px",
-  borderRadius: "999px",
-  border: "1px solid #1f2937",
-  backgroundColor: "#020617",
-  color: "#e5e7eb",
-  fontSize: "0.9rem",
-  outline: "none",
-};

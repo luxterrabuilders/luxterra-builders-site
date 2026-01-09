@@ -1,259 +1,260 @@
+// app/page.js
 "use client";
 
-import "./home.css";
-import Link from "next/link";
+import "./homepage.css";
 
 export default function HomePage() {
   return (
-    <main className="home">
+    <main className="lp">
       {/* HERO */}
-      <section className="hero">
-        <div className="hero-inner">
-          <div className="hero-text">
-            <p className="hero-kicker">SAN ANTONIO • DESIGN–BUILD CONTRACTOR</p>
-            <h1>
-              Building luxury spaces
-              <br />
-              with owner-level thinking.
+      <section className="lp-hero">
+        <div className="lp-hero-grid">
+          {/* LEFT: TEXT */}
+          <div className="lp-hero-text">
+            <p className="lp-hero-kicker">
+              San Antonio • Design–Build Contractor
+            </p>
+
+            <h1 className="lp-hero-title">
+              Building luxury spaces with owner-level thinking.
             </h1>
-            <p className="hero-sub">
+
+            <p className="lp-hero-sub">
               Custom homes, industrial, commercial, and multifamily projects
               delivered with clear budgets, tight schedules, and weekly
               communication.
             </p>
-            <div className="hero-actions">
-              <Link href="/quote" className="btn-primary">
+
+            <div className="lp-hero-ctas">
+              <a href="/quote" className="lp-btn lp-btn-primary">
                 Get a Free Quote
-              </Link>
-              <Link href="/services" className="btn-secondary">
+              </a>
+              <a href="/services" className="lp-btn lp-btn-secondary">
                 View Services
-              </Link>
+              </a>
             </div>
-            <p className="hero-note">
-              Licensed • Insured • Serving San Antonio & surrounding areas
-            </p>
+
+            <div className="lp-hero-metrics">
+              <div className="lp-hero-metric">
+                <span className="lp-hero-metric-label">Experience</span>
+                <span className="lp-hero-metric-value">15+ years</span>
+              </div>
+              <div className="lp-hero-metric">
+                <span className="lp-hero-metric-label">Service area</span>
+                <span className="lp-hero-metric-value">
+                  San Antonio &amp; nearby cities
+                </span>
+              </div>
+              <div className="lp-hero-metric">
+                <span className="lp-hero-metric-label">Approach</span>
+                <span className="lp-hero-metric-value">Turn-key delivery</span>
+              </div>
+            </div>
           </div>
 
-          <div className="hero-right">
-            <div className="hero-logo-card">
-              <img src="/logo.png" alt="Luxterra Builders logo" />
-            </div>
-            <div className="hero-stats">
-              <div className="hero-stat">
-                <span className="hero-stat-number">10+</span>
-                <span className="hero-stat-label">Years in construction</span>
-              </div>
-              <div className="hero-stat">
-                <span className="hero-stat-number">TX</span>
-                <span className="hero-stat-label">San Antonio & nearby cities</span>
-              </div>
-              <div className="hero-stat">
-                <span className="hero-stat-number">Turn-key</span>
-                <span className="hero-stat-label">From planning to punch list</span>
-              </div>
+          {/* RIGHT: LOGO CARD */}
+          <div className="lp-hero-visual">
+            <div className="lp-hero-logo-card">
+              <img
+                src="/luxterra-logo.png"
+                alt="Luxterra Builders logo"
+                className="lp-hero-logo-image"
+              />
             </div>
           </div>
         </div>
       </section>
 
       {/* SERVICES PREVIEW */}
-      <section className="section services" id="services">
-        <div className="section-header">
-          <p className="section-kicker">SERVICES</p>
-          <h2>From dirt to done.</h2>
-          <p className="section-sub">
-            Luxterra Builders manages everything—from early planning and budgeting
-            to final inspection and handoff.
-          </p>
-        </div>
+      <section className="lp-section lp-services-preview" id="services">
+        <p className="lp-section-label">Services</p>
+        <h2 className="lp-section-title">From dirt to done.</h2>
+        <p className="lp-section-sub">
+          Luxterra manages the entire build&mdash;planning, budgeting,
+          scheduling, and final inspection&mdash;so you can focus on your
+          business and life.
+        </p>
 
-        <div className="services-grid">
-          <div className="service-card">
+        <div className="lp-service-grid">
+          <article className="lp-service-card">
             <h3>Custom Homes</h3>
             <p>
-              High-end residential builds with modern design, efficient layouts, and
-              a focus on long-term value.
+              High-end residential builds with modern design, efficient layouts,
+              and long-term value.
             </p>
             <ul>
               <li>Ground-up custom homes</li>
-              <li>Architect & engineer coordination</li>
-              <li>Exterior & interior finish guidance</li>
+              <li>Architect &amp; engineer coordination</li>
+              <li>Exterior &amp; interior finish guidance</li>
             </ul>
-          </div>
+          </article>
 
-          <div className="service-card">
-            <h3>Commercial & Industrial</h3>
+          <article className="lp-service-card">
+            <h3>Commercial &amp; Industrial</h3>
             <p>
-              Offices, warehouses, labs, and tenant build-outs built for function,
-              safety, and future expansion.
+              Offices, warehouses, labs, and tenant build-outs focused on
+              function, safety, and future expansion.
             </p>
             <ul>
-              <li>Industrial & flex space</li>
-              <li>Retail & office interiors</li>
-              <li>Code compliance & inspections</li>
+              <li>Industrial &amp; flex space</li>
+              <li>Retail &amp; office interiors</li>
+              <li>Code compliance &amp; inspections</li>
             </ul>
-          </div>
+          </article>
 
-          <div className="service-card">
-            <h3>Multifamily & ADUs</h3>
+          <article className="lp-service-card">
+            <h3>Multifamily &amp; ADUs</h3>
             <p>
-              Investment-minded multifamily, ADUs, and additions that balance
-              aesthetics, cost, and rental performance.
+              Investment-minded builds that balance aesthetics, cost, and rental
+              performance.
             </p>
             <ul>
-              <li>Duplexes & small multifamily</li>
+              <li>Duplexes &amp; small multifamily</li>
               <li>Accessory dwelling units (ADUs)</li>
-              <li>Additions & structural changes</li>
+              <li>Additions &amp; structural changes</li>
             </ul>
-          </div>
+          </article>
+        </div>
+      </section>
+
+      {/* FEATURED PROJECTS */}
+      <section className="lp-section lp-featured" id="projects">
+        <p className="lp-section-label">Featured Projects</p>
+        <h2 className="lp-section-title">Recent Luxterra builds.</h2>
+        <p className="lp-section-sub">
+          A quick look at the kind of detail and craftsmanship we bring to
+          every project.
+        </p>
+
+        <div className="lp-project-grid">
+          {/* Project 1 */}
+          <article className="lp-project-card">
+            <div className="lp-project-image-wrap">
+              <img src="/01.jpg" alt="Kings Modern Residence exterior" />
+            </div>
+            <div className="lp-project-body">
+              <p className="lp-project-tag">Custom Home</p>
+              <h3>Kings Modern Residence</h3>
+              <p className="lp-project-text">
+                Warm interiors, clean lines, and a reimagined layout in the
+                heart of San Antonio.
+              </p>
+              <p className="lp-project-meta">
+                3,000+ sq ft • Full gut &amp; rebuild
+              </p>
+              <a
+                href="/projects/kings-modern-residence"
+                className="lp-project-link"
+              >
+                View project →
+              </a>
+            </div>
+          </article>
+
+          {/* Project 2 */}
+          <article className="lp-project-card">
+            <div className="lp-project-image-wrap">
+              <img src="/02.jpg" alt="Adaes home renovation" />
+            </div>
+            <div className="lp-project-body">
+              <p className="lp-project-tag">Residential Remodel</p>
+              <h3>Adaes Home</h3>
+              <p className="lp-project-text">
+                Open-concept living, updated kitchen, and finishes tailored to
+                how this family really lives.
+              </p>
+              <p className="lp-project-meta">
+                Interior reconfiguration • New finishes
+              </p>
+              <a href="/projects/adaes-home" className="lp-project-link">
+                View project →
+              </a>
+            </div>
+          </article>
+
+          {/* Project 3 */}
+          <article className="lp-project-card">
+            <div className="lp-project-image-wrap">
+              <img src="/03.jpg" alt="Advanced industrial lab" />
+            </div>
+            <div className="lp-project-body">
+              <p className="lp-project-tag">Industrial</p>
+              <h3>Advanced Industrial Lab</h3>
+              <p className="lp-project-text">
+                High-performance industrial space with durable finishes and
+                efficient circulation.
+              </p>
+              <p className="lp-project-meta">
+                Lab &amp; flex space • Tenant build-out
+              </p>
+              <a href="/projects/industrial-lab" className="lp-project-link">
+                View project →
+              </a>
+            </div>
+          </article>
         </div>
       </section>
 
       {/* WHY BUILD WITH LUXTERRA */}
-      <section className="section why" id="why">
-        <div className="section-header">
-          <p className="section-kicker">WHY BUILD WITH LUXTERRA</p>
-          <h2>A builder that thinks like an owner.</h2>
-          <p className="section-sub">
-            You shouldn&apos;t have to babysit your project. Luxterra runs your build
-            like an asset—protecting your time, budget, and schedule.
+      <section className="lp-section lp-why">
+        <div className="lp-why-copy">
+          <p className="lp-section-label">Why build with Luxterra</p>
+          <h2 className="lp-section-title">A builder that thinks like an owner.</h2>
+          <p className="lp-why-intro">
+            We treat every project like it&apos;s our own asset—balancing design,
+            budget, and schedule so you don&apos;t have to babysit the build.
           </p>
+          <ul className="lp-why-list">
+            <li>Turn-key process from planning and permits to final punch list.</li>
+            <li>Clear budgets, transparent change orders, and no surprise costs.</li>
+            <li>Dedicated project manager and weekly communication.</li>
+            <li>Licensed, insured, and vetted trade partners on every job.</li>
+          </ul>
         </div>
 
-        <div className="why-grid">
-          <div className="why-card">
-            <h3>Owner mindset</h3>
+        <div className="lp-why-stats">
+          <div className="lp-why-card">
+            <span className="lp-why-label">Completed builds</span>
+            <span className="lp-why-value">12+</span>
             <p>
-              We treat every project like it&apos;s our own—balancing design, budget,
-              and schedule so you don&apos;t have to stress every decision.
+              Custom homes, commercial spaces, pools, and industrial projects
+              across San Antonio.
             </p>
           </div>
-          <div className="why-card">
-            <h3>Turn-key delivery</h3>
+          <div className="lp-why-card">
+            <span className="lp-why-label">Experience</span>
+            <span className="lp-why-value">15+ yrs</span>
             <p>
-              From planning and permits to final punch list, we coordinate the entire
-              process with architects, engineers, and subs.
+              Construction leadership with a proven record of getting it right
+              the first time.
             </p>
           </div>
-          <div className="why-card">
-            <h3>Clear communication</h3>
+          <div className="lp-why-card">
+            <span className="lp-why-label">Client focus</span>
+            <span className="lp-why-value">1:1</span>
             <p>
-              Dedicated project management with weekly updates, photos, and simple
-              change order approvals.
+              You work directly with decision-makers—no getting lost in a big
+              corporate pipeline.
             </p>
           </div>
-          <div className="why-card">
-            <h3>Licensed & insured</h3>
-            <p>
-              Fully insured with vetted trade partners on every job—no cutting
-              corners, no mystery crews on your site.
-            </p>
-          </div>
-        </div>
-
-        <ul className="why-list">
-          <li>Turn-key process from planning and permits to final punch list.</li>
-          <li>Clear budgets, transparent change orders, and no surprise costs.</li>
-          <li>Dedicated project manager and weekly communication.</li>
-          <li>Licensed, insured, and vetted trade partners on every job.</li>
-        </ul>
-      </section>
-
-      {/* 🔥 FEATURED PROJECTS */}
-      <section className="section featured" id="projects">
-        <div className="section-header">
-          <p className="section-kicker">FEATURED PROJECTS</p>
-          <h2>Recent builds by Luxterra.</h2>
-          <p className="section-sub">
-            A quick look at the type of work we deliver—from modern residences to
-            high-function industrial spaces.
-          </p>
-        </div>
-
-        <div className="featured-grid">
-          {/* Kings Modern Residence */}
-          <article className="project-card">
-            <div className="project-image">
-              <img src="/01.jpg" alt="Kings Modern Residence exterior" />
-            </div>
-            <div className="project-body">
-              <h3>Kings Modern Residence</h3>
-              <p>
-                A modern San Antonio residence with clean lines, warm materials, and
-                efficient use of a tight urban lot.
-              </p>
-              <ul className="project-tags">
-                <li>Custom Home</li>
-                <li>Urban Infill</li>
-                <li>Modern Design</li>
-              </ul>
-              <Link href="/projects/kings-modern-residence" className="project-link">
-                View project →
-              </Link>
-            </div>
-          </article>
-
-          {/* Adaes Home */}
-          <article className="project-card">
-            <div className="project-image">
-              <img src="/03.jpg" alt="Adaes Home interior and exterior" />
-            </div>
-            <div className="project-body">
-              <h3>Adaes Home</h3>
-              <p>
-                A family-focused residence with open living, natural light, and
-                durable finishes built for everyday life.
-              </p>
-              <ul className="project-tags">
-                <li>Custom Home</li>
-                <li>Family Living</li>
-                <li>High-Durability Finishes</li>
-              </ul>
-              <Link href="/projects/adaes-home" className="project-link">
-                  View project →
-              </Link>
-            </div>
-          </article>
-
-          {/* Industrial Lab */}
-          <article className="project-card">
-            <div className="project-image">
-              <img src="/05.jpg" alt="Industrial lab project by Luxterra Builders" />
-            </div>
-            <div className="project-body">
-              <h3>Industrial Lab Facility</h3>
-              <p>
-                A specialized industrial lab with efficient circulation, service
-                access, and infrastructure for future expansion.
-              </p>
-              <ul className="project-tags">
-                <li>Industrial</li>
-                <li>Lab / Flex Space</li>
-                <li>Code-Driven Design</li>
-              </ul>
-              <Link href="/projects/industrial-lab" className="project-link">
-                  View project →
-              </Link>
-            </div>
-          </article>
         </div>
       </section>
 
       {/* FINAL CTA */}
-      <section className="section home-cta">
-        <div className="home-cta-inner">
-          <div>
+      <section className="lp-final-cta">
+        <div className="lp-final-inner">
+          <div className="lp-final-copy">
             <h2>Ready to talk about your project?</h2>
             <p>
               Share your plans, budget, or even just a rough idea. We&apos;ll help
               you understand what&apos;s possible and what it will take to build it.
             </p>
           </div>
-          <div className="home-cta-actions">
-            <Link href="/quote" className="btn-primary">
+          <div className="lp-final-actions">
+            <a href="/quote" className="lp-btn lp-btn-primary">
               Request a Free Consultation
-            </Link>
-            <a href="tel:12542902482" className="btn-secondary">
+            </a>
+            <a href="tel:12542902482" className="lp-phone">
               Call (254) 290-2482
             </a>
           </div>
@@ -262,3 +263,4 @@ export default function HomePage() {
     </main>
   );
 }
+

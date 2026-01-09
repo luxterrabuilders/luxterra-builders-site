@@ -1,77 +1,65 @@
 // app/gallery/page.js
+import Image from "next/image";
 
 export const metadata = {
-  title: "Gallery | Luxterra Builders",
-  description: "Kings Modern Residence and featured work by Luxterra Builders.",
+  title: "Project Gallery | Luxterra Builders",
+  description:
+    "View a selection of Luxterra Builders projects, including modern homes, renovations, and industrial work.",
 };
 
-const photos = [
+const galleryImages = [
   {
-    section: "Exterior",
-    images: [
-      { src: "/01.jpg", label: "Exterior – Front" },
-      { src: "/02.jpg", label: "Exterior – Porch" },
-    ],
+    src: "/01.jpg",
+    alt: "Kings Modern Residence exterior",
+    label: "Kings Modern Residence",
+    tag: "Modern Home",
   },
   {
-    section: "Living Room",
-    images: [
-      { src: "/03.jpg", label: "Living Room – Angle 1" },
-      { src: "/04.jpg", label: "Living Room – Angle 2" },
-    ],
+    src: "/02.jpg",
+    alt: "Kings Modern Residence living room",
+    label: "Kings Modern Residence",
+    tag: "Interior",
   },
   {
-    section: "Kitchen",
-    images: [
-      { src: "/05.jpg", label: "Kitchen – View 1" },
-      { src: "/06.jpg", label: "Kitchen – View 2" },
-    ],
+    src: "/03.jpg",
+    alt: "Kings Modern Residence open living space",
+    label: "Kings Modern Residence",
+    tag: "Interior",
   },
-  {
-    section: "Bedroom",
-    images: [{ src: "/07.jpg", label: "Bedroom" }],
-  },
-  {
-    section: "Bathrooms",
-    images: [
-      { src: "/08.jpg", label: "Bathroom – Black Tile" },
-      { src: "/09.jpg", label: "Bathroom – White Marble" },
-    ],
-  },
-  {
-    section: "Extra",
-    images: [
-      { src: "/10.jpg", label: "Extra 1" },
-      { src: "/11.jpg", label: "Extra 2" },
-      { src: "/12.jpg", label: "Extra 3" },
-    ],
-  },
+  // You can add more images here later:
+  // { src: "/adaes-01.jpg", alt: "...", label: "Adaes Home", tag: "Remodel" },
 ];
 
 export default function GalleryPage() {
   return (
-    <main className="page gallery-page">
-      <section className="page-hero">
-        <h1>Kings Modern Residence</h1>
+    <main className="gallery-page">
+      <section className="gallery-hero">
+        <h1>Project Gallery</h1>
         <p>
-          A curated look inside Luxterra Builders’ latest modern residential
-          project in San Antonio.
+          A curated look at some of our recent work across modern homes,
+          renovations, and industrial spaces in the San Antonio area.
         </p>
       </section>
 
-      {photos.map((group, idx) => (
-        <section key={idx} className="gallery-section">
-          <h2>{group.section}</h2>
-          <div className="gallery-grid">
-            {group.images.map((img, i) => (
-              <figure key={i} className="gallery-item">
-                <img src={img.src} alt={img.label} />
-                <figcaption>{img.label}</figcaption>
-              </figure>
-            ))}
-          </div>
-        </section>
-      ))}
+      <section className="gallery-grid">
+        {galleryImages.map((item, index) => (
+          <article className="gallery-card" key={index}>
+            <div className="gallery-image-wrap">
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="gallery-image"
+              />
+            </div>
+            <div className="gallery-card-body">
+              <span className="gallery-tag">{item.tag}</span>
+              <h2>{item.label}</h2>
+            </div>
+          </article>
+        ))}
+      </section>
     </main>
   );
 }

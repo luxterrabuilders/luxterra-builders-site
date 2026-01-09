@@ -1,31 +1,44 @@
+// app/components/Navbar.js
 "use client";
 
 import Image from "next/image";
-import "./carousel.css"; // this file is already in app/components
+import "./navbar.css";
 
-// Add or change slides here:
-const slides = [
-  { src: "/01.jpg", alt: "Luxterra project 1" },
-  { src: "/02.jpg", alt: "Luxterra project 2" },
-  { src: "/03.jpg", alt: "Luxterra project 3" },
-];
-
-export default function Carousel() {
+export default function Navbar() {
   return (
-    <div className="carousel-wrapper">
-      <div className="carousel-track">
-        {slides.map((slide, index) => (
-          <div className="carousel-card" key={index}>
-            <Image
-              src={slide.src}
-              alt={slide.alt}
-              width={1200}
-              height={650}
-              className="carousel-image"
-            />
-          </div>
-        ))}
+    <header className="navbar">
+      <div className="nav-inner">
+        {/* Logo + name */}
+        <a href="/" className="nav-logo">
+          <Image
+            src="/luxterra-logo.png"
+            alt="Luxterra Builders logo"
+            width={40}
+            height={40}
+            className="nav-logo-image"
+          />
+          <span className="nav-logo-text">Luxterra Builders</span>
+        </a>
+
+        {/* Main nav links */}
+        <nav className="nav-links">
+          <a href="/" className="nav-link">
+            Home
+          </a>
+          <a href="/services" className="nav-link">
+            Services
+          </a>
+          <a href="/gallery" className="nav-link">
+            Gallery
+          </a>
+          <a href="/contact" className="nav-link">
+            Contact
+          </a>
+          <a href="/quote" className="nav-link nav-link-cta">
+            Get a Quote
+          </a>
+        </nav>
       </div>
-    </div>
+    </header>
   );
 }

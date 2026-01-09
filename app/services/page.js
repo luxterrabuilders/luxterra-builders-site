@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Services | Luxterra Builders",
   description:
-    "Residential, commercial, and multifamily construction services in San Antonio by Luxterra Builders.",
+    "Custom Homes, commercial, Industrial, Pools and multifamily construction services in San Antonio by Luxterra Builders.",
 };
 
 export default function ServicesPage() {
