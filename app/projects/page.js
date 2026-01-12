@@ -1,49 +1,69 @@
-export const metadata = {
-  title: "Projects | Luxterra Builders",
-  description:
-    "Selected residential, commercial, and multifamily construction projects by Luxterra Builders.",
-};
+// app/projects/page.js
+"use client";
 
-const sampleProjects = [
+import "../home.css";
+
+const projects = [
   {
-    icon: "🏡",
-    type: "Custom Home",
-    name: "Hill Country Modern Residence",
-    location: "North San Antonio, TX",
-    summary:
-      "4,000+ sq ft custom home with open-concept living, large windows, and outdoor entertainment space.",
+    slug: "kings-modern-residence",
+    tag: "Custom Home",
+    title: "Kings Modern Residence",
+    image: "/01.jpg",
+    blurb:
+      "Warm interiors, clean lines, and a reimagined layout in the heart of San Antonio.",
+    meta: "3,000+ sq ft • Full gut & rebuild",
   },
   {
-    icon: "🏭",
-    type: "Industrial",
-    name: "Distribution Warehouse",
-    location: "San Antonio, TX",
-    summary:
-      "65,000 sq ft warehouse with loading docks, high-span structure, and energy-efficient lighting.",
+    slug: "adaes-home",
+    tag: "Residential Remodel",
+    title: "Adaes Home",
+    image: "/02.jpg",
+    blurb:
+      "Open-concept living, updated kitchen, and finishes tailored to how this family really lives.",
+    meta: "Interior reconfiguration • New finishes",
+  },
+  {
+    slug: "industrial-lab",
+    tag: "Industrial",
+    title: "Advanced Industrial Lab",
+    image: "/03.jpg",
+    blurb:
+      "High-performance industrial space with durable finishes and efficient circulation.",
+    meta: "Lab & flex space • Tenant build-out",
   },
 ];
 
 export default function ProjectsPage() {
   return (
     <main className="projects-page">
-      {/* HERO */}
-      <section className="page-hero">
-        <h1>Our Projects</h1>
-        <p>Recent residential, commercial, and industrial builds.</p>
-      </section>
+      <section className="lp-featured projects-layout">
+        <p className="lp-section-label">Projects</p>
+        <h1 className="lp-section-title">Recent Luxterra builds.</h1>
+        <p className="lp-section-sub">
+          A closer look at the kind of detail, coordination, and craftsmanship
+          we bring to every project.
+        </p>
 
-      {/* GRID */}
-      <section className="project-grid">
-        {sampleProjects.map((project, index) => (
-          <div key={index} className="project-card">
-            <div className="project-icon">{project.icon}</div>
-            <h3>{project.name}</h3>
-            <p><strong>Type:</strong> {project.type}</p>
-            <p><strong>Location:</strong> {project.location}</p>
-            <p className="summary">{project.summary}</p>
-          </div>
-        ))}
+        <div className="lp-project-grid">
+          {projects.map((p) => (
+            <article key={p.slug} className="lp-project-card">
+              <div className="lp-project-image-wrap">
+                <img src={p.image} alt={p.title} />
+              </div>
+              <div className="lp-project-body">
+                <p className="lp-project-tag">{p.tag}</p>
+                <h3>{p.title}</h3>
+                <p className="lp-project-text">{p.blurb}</p>
+                <p className="lp-project-meta">{p.meta}</p>
+                <a href={`/projects/${p.slug}`} className="lp-project-link">
+                  View project →
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
     </main>
   );
 }
+

@@ -1,64 +1,62 @@
 // app/page.js
 "use client";
 
-import "./homepage.css";
+import "./home.css";
 
 export default function HomePage() {
   return (
-    <main className="lp">
+    <main className="home">
       {/* HERO */}
-      <section className="lp-hero">
-        <div className="lp-hero-grid">
-          {/* LEFT: TEXT */}
-          <div className="lp-hero-text">
-            <p className="lp-hero-kicker">
-              San Antonio • Design–Build Contractor
-            </p>
+      <section className="hero">
+        <div className="hero-grid">
+          {/* LEFT – TEXT */}
+          <div className="hero-text">
+            <p className="hero-kicker">San Antonio • Design–Build Contractor</p>
 
-            <h1 className="lp-hero-title">
+            <h1 className="hero-title">
               Building luxury spaces with owner-level thinking.
             </h1>
 
-            <p className="lp-hero-sub">
+            <p className="hero-sub">
               Custom homes, industrial, commercial, and multifamily projects
               delivered with clear budgets, tight schedules, and weekly
               communication.
             </p>
 
-            <div className="lp-hero-ctas">
-              <a href="/quote" className="lp-btn lp-btn-primary">
+            <div className="hero-ctas">
+              <a href="/quote" className="hero-cta hero-cta-primary">
                 Get a Free Quote
               </a>
-              <a href="/services" className="lp-btn lp-btn-secondary">
+              <a href="/services" className="hero-cta hero-cta-secondary">
                 View Services
               </a>
             </div>
 
-            <div className="lp-hero-metrics">
-              <div className="lp-hero-metric">
-                <span className="lp-hero-metric-label">Experience</span>
-                <span className="lp-hero-metric-value">15+ years</span>
+            <div className="hero-metrics">
+              <div className="hero-metric">
+                <span className="hero-metric-label">Experience</span>
+                <span className="hero-metric-value">15+ years</span>
               </div>
-              <div className="lp-hero-metric">
-                <span className="lp-hero-metric-label">Service area</span>
-                <span className="lp-hero-metric-value">
+              <div className="hero-metric">
+                <span className="hero-metric-label">Service area</span>
+                <span className="hero-metric-value">
                   San Antonio &amp; nearby cities
                 </span>
               </div>
-              <div className="lp-hero-metric">
-                <span className="lp-hero-metric-label">Approach</span>
-                <span className="lp-hero-metric-value">Turn-key delivery</span>
+              <div className="hero-metric">
+                <span className="hero-metric-label">Approach</span>
+                <span className="hero-metric-value">Turn-key delivery</span>
               </div>
             </div>
           </div>
 
-          {/* RIGHT: LOGO CARD */}
-          <div className="lp-hero-visual">
-            <div className="lp-hero-logo-card">
+          {/* RIGHT – LOGO CARD */}
+          <div className="hero-visual">
+            <div className="hero-logo-card">
               <img
                 src="/luxterra-logo.png"
                 alt="Luxterra Builders logo"
-                className="lp-hero-logo-image"
+                className="hero-logo-image"
               />
             </div>
           </div>
@@ -66,13 +64,12 @@ export default function HomePage() {
       </section>
 
       {/* SERVICES PREVIEW */}
-      <section className="lp-section lp-services-preview" id="services">
+      <section className="lp-services-preview" id="services">
         <p className="lp-section-label">Services</p>
         <h2 className="lp-section-title">From dirt to done.</h2>
         <p className="lp-section-sub">
-          Luxterra manages the entire build&mdash;planning, budgeting,
-          scheduling, and final inspection&mdash;so you can focus on your
-          business and life.
+          Luxterra manages the entire build—planning, budgeting, scheduling, and
+          final inspection—so you can focus on your business and life.
         </p>
 
         <div className="lp-service-grid">
@@ -118,7 +115,7 @@ export default function HomePage() {
       </section>
 
       {/* FEATURED PROJECTS */}
-      <section className="lp-section lp-featured" id="projects">
+      <section className="lp-featured" id="projects">
         <p className="lp-section-label">Featured Projects</p>
         <h2 className="lp-section-title">Recent Luxterra builds.</h2>
         <p className="lp-section-sub">
@@ -196,7 +193,7 @@ export default function HomePage() {
       </section>
 
       {/* WHY BUILD WITH LUXTERRA */}
-      <section className="lp-section lp-why">
+      <section className="lp-why">
         <div className="lp-why-copy">
           <p className="lp-section-label">Why build with Luxterra</p>
           <h2 className="lp-section-title">A builder that thinks like an owner.</h2>

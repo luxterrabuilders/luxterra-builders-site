@@ -1,62 +1,72 @@
-export const metadata = {
-  title: "Services | Luxterra Builders",
-  description:
-    "Custom Homes, commercial, Industrial, Pools and multifamily construction services in San Antonio by Luxterra Builders.",
-};
+// app/services/page.js
+"use client";
+
+import "../home.css";
 
 export default function ServicesPage() {
   return (
-    <main className="page services-page">
-      {/* HERO SECTION */}
-      <section className="hero">
-        <h1>Our Construction Services</h1>
-        <p>
-          High-quality residential, commercial, and multifamily construction
-          services backed by craftsmanship, integrity, and over a decade of experience.
+    <main className="services-page">
+      <section className="lp-services-preview services-layout">
+        <p className="lp-section-label">Services</p>
+        <h1 className="lp-section-title">From dirt to done.</h1>
+        <p className="lp-section-sub">
+          Luxterra Builders manages the entire build—from early planning and
+          budgeting to final inspection and handoff, so you can focus on your
+          business and life.
         </p>
-      </section>
 
-      {/* SERVICE GRID */}
-      <section className="service-grid">
-        <div className="service-card">
-          <div className="service-icon">🏡</div>
-          <h2>Residential Construction</h2>
-          <p>
-            Luxury custom homes, whole-home remodels, additions, and modern home
-            designs built with attention to detail and long-lasting quality.
-          </p>
+        <div className="lp-service-grid">
+          {/* Custom Homes */}
+          <article className="lp-service-card">
+            <h2>Custom Homes</h2>
+            <p>
+              High-end residential builds with modern design, efficient layouts,
+              and a focus on long-term value.
+            </p>
+            <ul>
+              <li>Ground-up custom homes</li>
+              <li>Architect &amp; engineer coordination</li>
+              <li>Exterior &amp; interior finish guidance</li>
+            </ul>
+          </article>
+
+          {/* Commercial & Industrial */}
+          <article className="lp-service-card">
+            <h2>Commercial &amp; Industrial</h2>
+            <p>
+              Offices, warehouses, labs, and tenant build-outs focused on
+              function, safety, and future expansion.
+            </p>
+            <ul>
+              <li>Industrial &amp; flex space</li>
+              <li>Retail &amp; office interiors</li>
+              <li>Code compliance &amp; inspections</li>
+            </ul>
+          </article>
+
+          {/* Multifamily & ADUs */}
+          <article className="lp-service-card">
+            <h2>Multifamily &amp; ADUs</h2>
+            <p>
+              Investment-minded builds that balance aesthetics, cost, and rental
+              performance.
+            </p>
+            <ul>
+              <li>Duplexes &amp; small multifamily</li>
+              <li>Accessory dwelling units (ADUs)</li>
+              <li>Additions &amp; structural changes</li>
+            </ul>
+          </article>
         </div>
 
-        <div className="service-card">
-          <div className="service-icon">🏢</div>
-          <h2>Commercial & Industrial</h2>
+        <div className="services-note">
           <p>
-            Warehouses, tenant finish-outs, office buildouts, retail spaces, and
-            industrial facilities built for efficiency and durability.
+            Need something more specialized? We also take on select pools,
+            sitework, and light civil scopes tied to larger projects.
           </p>
         </div>
-
-        <div className="service-card">
-          <div className="service-icon">🏘️</div>
-          <h2>Multifamily & Investment Projects</h2>
-          <p>
-            Duplexes, fourplexes, townhome communities, and investor-focused projects
-            optimized for long-term returns and fast absorption.
-          </p>
-        </div>
-      </section>
-
-      {/* CTA STRIP */}
-      <section className="cta-strip">
-        <h2>Ready to Start Your Project?</h2>
-        <p>
-          Luxterra Builders serves San Antonio and surrounding areas with dependable,
-          high-quality construction services.
-        </p>
-        <a href="/quote" className="cta-button">
-          Request a Quote
-        </a>
       </section>
     </main>
   );
 }
+

@@ -1,3 +1,449 @@
-/* app/home.css
-   Old homepage styles removed on purpose.
-   The homepage is now styled by app/homepage.css */
+/* app/home.css */
+
+/* Whole landing page */
+.home {
+  min-height: 100vh;
+  background: #020617 !important;   /* force dark */
+  color: #f9fafb;
+}
+
+/* HARD OVERRIDE: hero area must stay dark */
+.hero,
+.hero-grid,
+.hero-text {
+  background: transparent !important;
+}
+
+/* If body/site wrapper was white, force it dark too */
+.site-body,
+body {
+  background: #020617 !important;
+}
+
+
+/* HERO */
+.hero {
+  padding: 96px 16px 80px;
+}
+
+.hero-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1.2fr);
+  gap: 56px;
+  align-items: center;
+}
+
+/* Left side */
+.hero-text {
+  max-width: 640px;
+}
+
+.hero-kicker {
+  font-size: 0.9rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 14px;
+}
+
+.hero-title {
+  font-size: 2.9rem;
+  line-height: 1.05;
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.hero-sub {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin-bottom: 28px;
+}
+
+/* CTAs */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.hero-cta {
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease,
+    box-shadow 0.1s ease, border-color 0.2s ease;
+}
+
+.hero-cta-primary {
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #020617;
+  box-shadow: 0 12px 30px rgba(250, 204, 21, 0.35);
+}
+
+.hero-cta-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(250, 204, 21, 0.45);
+}
+
+.hero-cta-secondary {
+  background: transparent;
+  color: #f9fafb;
+  border-color: rgba(148, 163, 184, 0.6);
+}
+
+.hero-cta-secondary:hover {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+/* Metrics row */
+.hero-metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.hero-metric {
+  min-width: 150px;
+}
+
+.hero-metric-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.hero-metric-value {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+/* Right side – logo card */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-logo-card {
+  width: 260px;
+  height: 260px;
+  border-radius: 36px;
+  background: radial-gradient(circle at top left, #0f172a, #020617);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  box-shadow: 0 30px 80px rgba(15, 23, 42, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-logo-image {
+  width: 75%;
+  height: auto;
+  display: block;
+}
+
+/* ---------- SECTIONS BELOW HERO (you already had these; styling kept similar) ---------- */
+
+.lp-section-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.lp-section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.lp-section-sub {
+  font-size: 0.98rem;
+  color: #e5e7eb;
+  max-width: 620px;
+  margin-bottom: 28px;
+}
+
+/* Services preview */
+.lp-services-preview {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 16px 40px;
+}
+
+.lp-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.lp-service-card {
+  background: radial-gradient(circle at top left, #020617, #020617);
+  border-radius: 24px;
+  border: 1px solid rgba(30, 64, 175, 0.5);
+  padding: 24px 24px 20px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.85);
+}
+
+.lp-service-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.lp-service-card p {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  margin-bottom: 10px;
+}
+
+.lp-service-card ul {
+  list-style: disc;
+  padding-left: 18px;
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+/* Featured projects */
+.lp-featured {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px 40px;
+}
+
+.lp-project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.lp-project-card {
+  background: radial-gradient(circle at top left, #020617, #020617);
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(30, 64, 175, 0.6);
+  box-shadow: 0 20px 55px rgba(15, 23, 42, 0.9);
+  display: flex;
+  flex-direction: column;
+}
+
+.lp-project-image-wrap img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.lp-project-body {
+  padding: 18px 20px 20px;
+}
+
+.lp-project-tag {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #facc15;
+  margin-bottom: 6px;
+}
+
+.lp-project-text {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  margin-bottom: 8px;
+}
+
+.lp-project-meta {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  margin-bottom: 12px;
+}
+
+.lp-project-link {
+  font-size: 0.9rem;
+  color: #facc15;
+  text-decoration: none;
+}
+
+.lp-project-link:hover {
+  text-decoration: underline;
+}
+
+/* Why section */
+.lp-why {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 16px 60px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.2fr);
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.lp-why-intro {
+  font-size: 0.98rem;
+  color: #e5e7eb;
+  margin-bottom: 14px;
+}
+
+.lp-why-list {
+  list-style: disc;
+  padding-left: 20px;
+  color: #d1d5db;
+  font-size: 0.95rem;
+}
+
+.lp-why-stats {
+  display: grid;
+  gap: 16px;
+}
+
+.lp-why-card {
+  background: radial-gradient(circle at top left, #020617, #020617);
+  border-radius: 22px;
+  border: 1px solid rgba(30, 64, 175, 0.6);
+  padding: 16px 18px 16px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.9);
+}
+
+.lp-why-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #9ca3af;
+  margin-bottom: 4px;
+}
+
+.lp-why-value {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+/* Final CTA */
+.lp-final-cta {
+  padding: 40px 16px 72px;
+}
+
+.lp-final-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 28px;
+  background: radial-gradient(circle at top left, #1e293b, #020617);
+  border: 1px solid rgba(37, 99, 235, 0.8);
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.9);
+}
+
+.lp-final-copy h2 {
+  margin: 0 0 8px;
+}
+
+.lp-final-copy p {
+  margin: 0;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+.lp-final-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+}
+
+.lp-btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.lp-btn-primary {
+  background: linear-gradient(135deg, #facc15, #f97316);
+  color: #020617;
+}
+
+.lp-phone {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+/* Mobile tweaks */
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+
+  .hero-visual {
+    justify-content: flex-start;
+  }
+
+  .lp-why {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ----- PROJECTS PAGE ----- */
+
+.projects-page {
+  min-height: 100vh;
+  background: #020617; /* same dark as home */
+  color: #f9fafb;
+}
+
+.projects-layout {
+  padding-top: 120px; /* breathing room under navbar */
+}
+
+/* Make sure images look good if different aspect ratios */
+.projects-page .lp-project-image-wrap img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+/* ----- SERVICES PAGE ----- */
+
+.services-page {
+  min-height: 100vh;
+  background: #020617; /* same dark background as home */
+  color: #f9fafb;
+}
+
+.services-layout {
+  padding-top: 120px; /* space under navbar */
+}
+
+/* Optional: tighten the grid a bit on very large screens */
+.services-page .lp-service-grid {
+  max-width: 1100px;
+  margin: 40px auto 0;
+}
+
+/* Small text block under the grid */
+.services-note {
+  max-width: 800px;
+  margin: 40px auto 0;
+  font-size: 0.95rem;
+  color: #9ca3af;
+}
