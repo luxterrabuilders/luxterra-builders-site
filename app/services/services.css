@@ -1,0 +1,160 @@
+/* app/services/services.css */
+
+/* PAGE WRAPPER */
+.services-page {
+  min-height: 100vh;
+  padding: 120px 16px 96px;
+  background: #020617; /* same dark as home */
+  color: #f9fafb;
+}
+
+.services-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.services-header {
+  max-width: 640px;
+  margin-bottom: 40px;
+}
+
+.services-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.78rem;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.services-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.services-lede {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+/* CARD */
+.service-card {
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border-radius: 24px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  padding: 22px 22px 20px;
+  box-shadow: 0 22px 42px rgba(0, 0, 0, 0.7);
+}
+
+.service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.service-blurb {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: #e5e7eb;
+  margin-bottom: 12px;
+}
+
+.service-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.92rem;
+  color: #d1d5db;
+}
+
+.service-list li {
+  margin-bottom: 6px;
+}
+
+/* CTA SECTION */
+.services-cta {
+  margin-top: 12px;
+}
+
+.services-cta-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 24px;
+  border-radius: 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(248, 250, 252, 0.06),
+    rgba(55, 65, 81, 0.2)
+  );
+  border: 1px solid rgba(156, 163, 175, 0.35);
+}
+
+.services-cta-copy h2 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.services-cta-copy p {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  max-width: 520px;
+}
+
+.services-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* BUTTONS */
+.services-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: #facc15;
+  color: #111827;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  box-shadow: 0 14px 32px rgba(250, 204, 21, 0.45);
+}
+
+.services-cta-phone {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .services-page {
+    padding-top: 100px;
+  }
+
+  .services-title {
+    font-size: 1.9rem;
+  }
+
+  .services-cta-inner {
+    align-items: flex-start;
+  }
+
+  .services-cta-copy h2 {
+    font-size: 1.25rem;
+  }
+}
+

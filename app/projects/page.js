@@ -1,68 +1,89 @@
 // app/projects/page.js
-"use client";
+import Link from "next/link";
+import "./projects.css";
 
-import "../home.css";
+export const metadata = {
+  title: "Projects | Luxterra Builders",
+  description: "Recent custom home, commercial, and industrial builds by Luxterra Builders.",
+};
 
 const projects = [
   {
     slug: "kings-modern-residence",
     tag: "Custom Home",
     title: "Kings Modern Residence",
-    image: "/01.jpg",
-    blurb:
-      "Warm interiors, clean lines, and a reimagined layout in the heart of San Antonio.",
-    meta: "3,000+ sq ft • Full gut & rebuild",
+    location: "San Antonio, TX",
+    summary:
+      "Modern custom home with ADU/mother-in-law suite, designed for multigenerational living and long-term flexibility.",
+    details: "3,000+ sq ft • Full gut & rebuild • ADU/mother-in-law suite",
+    image: "/kings-01.jpg",
+    alt: "Exterior of a modern custom home with ADU in San Antonio",
+    href: "/projects/kings-modern-residence",
   },
+
   {
-    slug: "adaes-home",
-    tag: "Residential Remodel",
-    title: "Adaes Home",
-    image: "/02.jpg",
-    blurb:
-      "Open-concept living, updated kitchen, and finishes tailored to how this family really lives.",
-    meta: "Interior reconfiguration • New finishes",
+    slug: "burnet-home",
+    tag: "Custom Home",
+    title: "Burnet Rooftop Residence",
+    location: "Burnet, TX",
+    summary:
+      "Ground-up custom home with a rooftop deck, indoor–outdoor living, and modern elevations tailored to the site.",
+    details: "Rooftop deck • 3D design • New construction custom home",
+    image: "/burnet-01.jpg",
+    alt: "Burnet custom home with rooftop deck at sunset",
+    href: "/projects/burnet-home",
   },
+
   {
     slug: "industrial-lab",
     tag: "Industrial",
     title: "Advanced Industrial Lab",
+    location: "San Antonio, TX",
+    summary:
+      "High-performance industrial lab and flex space built for durability, safety, and future expansion.",
+    details: "Lab & flex space • Tenant build-out • Code-compliant finishes",
     image: "/03.jpg",
-    blurb:
-      "High-performance industrial space with durable finishes and efficient circulation.",
-    meta: "Lab & flex space • Tenant build-out",
+    alt: "Interior of an advanced industrial lab project",
+    href: "/projects/industrial-lab",
   },
 ];
+
 
 export default function ProjectsPage() {
   return (
     <main className="projects-page">
-      <section className="lp-featured projects-layout">
-        <p className="lp-section-label">Projects</p>
-        <h1 className="lp-section-title">Recent Luxterra builds.</h1>
-        <p className="lp-section-sub">
-          A closer look at the kind of detail, coordination, and craftsmanship
-          we bring to every project.
-        </p>
+      <div className="projects-inner">
+        {/* HEADER */}
+        <header className="projects-header">
+          <p className="projects-kicker">Project Gallery</p>
+          <h1 className="projects-title">Recent Luxterra builds.</h1>
+          <p className="projects-lede">
+            A closer look at the custom homes, commercial spaces, and industrial
+            projects we&apos;ve delivered around San Antonio.
+          </p>
+        </header>
 
-        <div className="lp-project-grid">
-          {projects.map((p) => (
-            <article key={p.slug} className="lp-project-card">
-              <div className="lp-project-image-wrap">
-                <img src={p.image} alt={p.title} />
-              </div>
-              <div className="lp-project-body">
-                <p className="lp-project-tag">{p.tag}</p>
-                <h3>{p.title}</h3>
-                <p className="lp-project-text">{p.blurb}</p>
-                <p className="lp-project-meta">{p.meta}</p>
-                <a href={`/projects/${p.slug}`} className="lp-project-link">
-                  View project →
-                </a>
-              </div>
-            </article>
-          ))}
+        {/* GRID */}
+<section className="projects-grid">
+  {projects.map((project) => (
+    <article key={project.slug} className="projects-card">
+      <Link href={`/projects/${project.slug}`} className="projects-card-link">
+        <div className="projects-card-image-wrap">
+          <img src={project.image} alt={project.alt} />
         </div>
-      </section>
+        <div className="projects-card-body">
+          <p className="projects-card-tag">{project.tag}</p>
+          <h3>{project.title}</h3>
+          <p className="projects-card-text">{project.summary}</p>
+          <p className="projects-card-meta">{project.details}</p>
+          <span className="projects-card-cta">View project →</span>
+        </div>
+      </Link>
+    </article>
+  ))}
+</section>
+
+      </div>
     </main>
   );
 }

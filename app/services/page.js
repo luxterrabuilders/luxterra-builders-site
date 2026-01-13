@@ -1,29 +1,38 @@
 // app/services/page.js
-"use client";
+import Link from "next/link";
+import "./services.css";
 
-import "../home.css";
+export const metadata = {
+  title: "Services | Luxterra Builders",
+  description:
+    "Custom homes, commercial & industrial, and multifamily construction services by Luxterra Builders.",
+};
 
 export default function ServicesPage() {
   return (
     <main className="services-page">
-      <section className="lp-services-preview services-layout">
-        <p className="lp-section-label">Services</p>
-        <h1 className="lp-section-title">From dirt to done.</h1>
-        <p className="lp-section-sub">
-          Luxterra Builders manages the entire build—from early planning and
-          budgeting to final inspection and handoff, so you can focus on your
-          business and life.
-        </p>
+      <div className="services-inner">
+        {/* HEADER */}
+        <header className="services-header">
+          <p className="services-kicker">Services</p>
+          <h1 className="services-title">From dirt to done.</h1>
+          <p className="services-lede">
+            Luxterra manages the entire build—from early planning and budgeting
+            to final inspection and handoff—so you can focus on your business
+            and life.
+          </p>
+        </header>
 
-        <div className="lp-service-grid">
+        {/* GRID */}
+        <section className="services-grid">
           {/* Custom Homes */}
-          <article className="lp-service-card">
-            <h2>Custom Homes</h2>
-            <p>
+          <article className="service-card">
+            <h2 className="service-title">Custom Homes</h2>
+            <p className="service-blurb">
               High-end residential builds with modern design, efficient layouts,
               and a focus on long-term value.
             </p>
-            <ul>
+            <ul className="service-list">
               <li>Ground-up custom homes</li>
               <li>Architect &amp; engineer coordination</li>
               <li>Exterior &amp; interior finish guidance</li>
@@ -31,13 +40,13 @@ export default function ServicesPage() {
           </article>
 
           {/* Commercial & Industrial */}
-          <article className="lp-service-card">
-            <h2>Commercial &amp; Industrial</h2>
-            <p>
+          <article className="service-card">
+            <h2 className="service-title">Commercial &amp; Industrial</h2>
+            <p className="service-blurb">
               Offices, warehouses, labs, and tenant build-outs focused on
               function, safety, and future expansion.
             </p>
-            <ul>
+            <ul className="service-list">
               <li>Industrial &amp; flex space</li>
               <li>Retail &amp; office interiors</li>
               <li>Code compliance &amp; inspections</li>
@@ -45,27 +54,41 @@ export default function ServicesPage() {
           </article>
 
           {/* Multifamily & ADUs */}
-          <article className="lp-service-card">
-            <h2>Multifamily &amp; ADUs</h2>
-            <p>
+          <article className="service-card">
+            <h2 className="service-title">Multifamily &amp; ADUs</h2>
+            <p className="service-blurb">
               Investment-minded builds that balance aesthetics, cost, and rental
               performance.
             </p>
-            <ul>
+            <ul className="service-list">
               <li>Duplexes &amp; small multifamily</li>
               <li>Accessory dwelling units (ADUs)</li>
               <li>Additions &amp; structural changes</li>
             </ul>
           </article>
-        </div>
+        </section>
 
-        <div className="services-note">
-          <p>
-            Need something more specialized? We also take on select pools,
-            sitework, and light civil scopes tied to larger projects.
-          </p>
-        </div>
-      </section>
+        {/* CTA */}
+        <section className="services-cta">
+          <div className="services-cta-inner">
+            <div className="services-cta-copy">
+              <h2>Need help scoping your project?</h2>
+              <p>
+                Share your plans, budget, or even just a rough idea. We&apos;ll help
+                you understand what&apos;s possible and what it will take to build it.
+              </p>
+            </div>
+            <div className="services-cta-actions">
+              <Link href="/quote" className="services-cta-btn">
+                Request a Free Consultation
+              </Link>
+              <a href="tel:12542902482" className="services-cta-phone">
+                Call (254) 290-2482
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
   );
 }

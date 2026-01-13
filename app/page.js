@@ -27,8 +27,8 @@ export default function HomePage() {
               <a href="/quote" className="hero-cta hero-cta-primary">
                 Get a Free Quote
               </a>
-              <a href="/services" className="hero-cta hero-cta-secondary">
-                View Services
+              <a href="/gallery" className="hero-cta hero-cta-secondary">
+                View Gallery
               </a>
             </div>
 
@@ -126,48 +126,50 @@ export default function HomePage() {
         <div className="lp-project-grid">
           {/* Project 1 */}
           <article className="lp-project-card">
-            <div className="lp-project-image-wrap">
-              <img src="/01.jpg" alt="Kings Modern Residence exterior" />
-            </div>
-            <div className="lp-project-body">
-              <p className="lp-project-tag">Custom Home</p>
-              <h3>Kings Modern Residence</h3>
-              <p className="lp-project-text">
-                Warm interiors, clean lines, and a reimagined layout in the
-                heart of San Antonio.
-              </p>
-              <p className="lp-project-meta">
-                3,000+ sq ft • Full gut &amp; rebuild
-              </p>
-              <a
-                href="/projects/kings-modern-residence"
-                className="lp-project-link"
-              >
-                View project →
-              </a>
-            </div>
-          </article>
+  <div className="lp-project-image-wrap">
+    <img src="/kings-01.jpg" alt="Kings Modern Residence exterior" />
+  </div>
+  <div className="lp-project-body">
+    <p className="lp-project-tag">Custom Home + ADU</p>
+    <h3>Kings Modern Residence</h3>
+    <p className="lp-project-text">
+      Modern custom home in San Antonio with a dedicated ADU / mother-in-law
+      suite and a Pool with SPA designed for multigenerational living and long-term flexibility.
+    </p>
+    <p className="lp-project-meta">
+      Custom home + ADU • Full rebuild
+    </p>
+    <a
+      href="/projects/kings-modern-residence"
+      className="lp-project-link"
+    >
+      View project →
+    </a>
+  </div>
+</article>
 
-          {/* Project 2 */}
-          <article className="lp-project-card">
-            <div className="lp-project-image-wrap">
-              <img src="/02.jpg" alt="Adaes home renovation" />
-            </div>
-            <div className="lp-project-body">
-              <p className="lp-project-tag">Residential Remodel</p>
-              <h3>Adaes Home</h3>
-              <p className="lp-project-text">
-                Open-concept living, updated kitchen, and finishes tailored to
-                how this family really lives.
-              </p>
-              <p className="lp-project-meta">
-                Interior reconfiguration • New finishes
-              </p>
-              <a href="/projects/adaes-home" className="lp-project-link">
-                View project →
-              </a>
-            </div>
-          </article>
+{/* Project 2 – Burnet Luxury Home */}
+<article className="lp-project-card">
+  <div className="lp-project-image-wrap">
+    <img src="/burnet-01.jpg" alt="Burnet luxury custom home with rooftop deck" />
+  </div>
+  <div className="lp-project-body">
+    <p className="lp-project-tag">Custom Home</p>
+    <h3>Burnet Rooftop Residence</h3>
+    <p className="lp-project-text">
+      Design-driven custom home with a rooftop deck, indoor–outdoor living,
+      and modern elevations tailored for the site.
+    </p>
+    <p className="lp-project-meta">
+      New construction • Rooftop deck • Burnet, Texas
+    </p>
+    <a href="/projects/burnet-home" className="lp-project-link">
+      View project →
+    </a>
+  </div>
+</article>
+
+        
 
           {/* Project 3 */}
           <article className="lp-project-card">
@@ -260,4 +262,3 @@ export default function HomePage() {
     </main>
   );
 }
-
