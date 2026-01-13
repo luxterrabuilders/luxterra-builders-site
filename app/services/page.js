@@ -5,7 +5,7 @@ const SERVICES = [
   {
     id: "custom-homes",
     label: "Custom Homes",
-    image: "/custom-home-services-01.png",
+    image: "/custom-home-services-01.jpg",
     alt: "Custom home exterior by Luxterra Builders",
     intro:
       "High-end residential builds with modern design, efficient layouts, and long-term value.",
