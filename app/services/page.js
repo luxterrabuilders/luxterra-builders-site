@@ -5,7 +5,7 @@ const SERVICES = [
   {
     id: "custom-homes",
     label: "Custom Homes",
-    image: "/custom-home-services-01.jpg",
+    image: "/custom-home-services-01.png",
     alt: "Custom home exterior by Luxterra Builders",
     intro:
       "High-end residential builds with modern design, efficient layouts, and long-term value.",
@@ -18,7 +18,7 @@ const SERVICES = [
   {
     id: "commercial-industrial",
     label: "Commercial & Industrial",
-    image: "/industrial-services-01.jpg",
+    image: "/industrial-services-01.png",
     alt: "Industrial or commercial interior built by Luxterra Builders",
     intro:
       "Offices, warehouses, labs, and tenant build-outs focused on function, safety, and future expansion.",
@@ -31,7 +31,7 @@ const SERVICES = [
   {
     id: "multifamily-adus",
     label: "Multifamily & ADUs",
-    image: "/multifamily-services-01.jpg",
+    image: "/multifamily-services-01.png",
     alt: "Multifamily / ADU project by Luxterra Builders",
     intro:
       "Investment-minded builds that balance aesthetics, cost, and rental performance.",
