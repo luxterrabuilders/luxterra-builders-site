@@ -262,4 +262,67 @@
   }
 }
 
+/* ========================= */
+/* Mobile layout – services  */
+/* ========================= */
+
+@media (max-width: 900px) {
+  .services-page {
+    padding: 72px 16px 80px;
+  }
+
+  /* Hero layout stacks */
+  .services-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .services-hero-copy {
+    max-width: 100%;
+  }
+
+  .services-hero-media {
+    margin-top: 16px;
+    justify-content: flex-start;
+  }
+
+  .services-hero-card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  /* The three service cards (Custom / Multifamily / Industrial) */
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .services-card {
+    padding: 20px 18px;
+  }
+
+  .services-card-media {
+    margin-bottom: 16px;
+  }
+
+  .services-card-media img {
+    height: 190px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 640px) {
+  .services-hero-title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .services-hero-sub {
+    font-size: 15px;
+  }
+
+  .services-section-title {
+    font-size: 22px;
+  }
+}
 
