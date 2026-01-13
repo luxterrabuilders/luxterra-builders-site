@@ -114,7 +114,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FEATURED PROJECTS */}
+         {/* FEATURED PROJECTS */}
       <section className="lp-featured" id="projects">
         <p className="lp-section-label">Featured Projects</p>
         <h2 className="lp-section-title">Recent Luxterra builds.</h2>
@@ -124,75 +124,87 @@ export default function HomePage() {
         </p>
 
         <div className="lp-project-grid">
-          {/* Project 1 */}
-          <article className="lp-project-card">
-  <div className="lp-project-image-wrap">
-    <img src="/kings-01.jpg" alt="Kings Modern Residence exterior" />
-  </div>
-  <div className="lp-project-body">
-    <p className="lp-project-tag">Custom Home + ADU</p>
-    <h3>Kings Modern Residence</h3>
-    <p className="lp-project-text">
-      Modern custom home in San Antonio with a dedicated ADU / mother-in-law
-      suite and a Pool with SPA designed for multigenerational living and long-term flexibility.
-    </p>
-    <p className="lp-project-meta">
-      Custom home + ADU • Full rebuild
-    </p>
-    <a
-      href="/projects/kings-modern-residence"
-      className="lp-project-link"
-    >
-      View project →
-    </a>
-  </div>
-</article>
-
-{/* Project 2 – Burnet Luxury Home */}
-<article className="lp-project-card">
-  <div className="lp-project-image-wrap">
-    <img src="/burnet-01.jpg" alt="Burnet luxury custom home with rooftop deck" />
-  </div>
-  <div className="lp-project-body">
-    <p className="lp-project-tag">Custom Home</p>
-    <h3>Burnet Rooftop Residence</h3>
-    <p className="lp-project-text">
-      Design-driven custom home with a rooftop deck, indoor–outdoor living,
-      and modern elevations tailored for the site.
-    </p>
-    <p className="lp-project-meta">
-      New construction • Rooftop deck • Burnet, Texas
-    </p>
-    <a href="/projects/burnet-home" className="lp-project-link">
-      View project →
-    </a>
-  </div>
-</article>
-
-        
-
-          {/* Project 3 */}
+          {/* Project 1 – Kings Modern Residence */}
           <article className="lp-project-card">
             <div className="lp-project-image-wrap">
-              <img src="/03.jpg" alt="Advanced industrial lab" />
+              <img
+                src="/kings-01.jpg"
+                alt="Kings Modern Residence exterior"
+              />
+            </div>
+            <div className="lp-project-body">
+              <p className="lp-project-tag">Custom Home + ADU</p>
+              <h3>Kings Modern Residence</h3>
+              <p className="lp-project-text">
+                Modern custom home in San Antonio with a dedicated ADU /
+                mother-in-law suite and a pool with SPA designed for
+                multigenerational living and long-term flexibility.
+              </p>
+              <p className="lp-project-meta">
+                Custom home + ADU • Full rebuild
+              </p>
+              <a
+                href="/projects/kings-modern-residence"
+                className="lp-project-link"
+              >
+                View project →
+              </a>
+            </div>
+          </article>
+
+          {/* Project 2 – Burnet Rooftop Residence */}
+          <article className="lp-project-card">
+            <div className="lp-project-image-wrap">
+              <img
+                src="/burnet-01.jpg"
+                alt="Burnet rooftop custom home"
+              />
+            </div>
+            <div className="lp-project-body">
+              <p className="lp-project-tag">Custom Home</p>
+              <h3>Burnet Rooftop Residence</h3>
+              <p className="lp-project-text">
+                Design-driven custom home with a rooftop deck, indoor–outdoor
+                living, and modern elevations tailored for the site.
+              </p>
+              <p className="lp-project-meta">
+                New construction • Rooftop deck • Burnet, Texas
+              </p>
+              <a href="/projects/burnet-home" className="lp-project-link">
+                View project →
+              </a>
+            </div>
+          </article>
+
+          {/* Project 3 – Advanced Industrial Lab */}
+          <article className="lp-project-card">
+            <div className="lp-project-image-wrap">
+              <img
+                src="/industrial-01.jpg"
+                alt="Advanced industrial lab interior"
+              />
             </div>
             <div className="lp-project-body">
               <p className="lp-project-tag">Industrial</p>
               <h3>Advanced Industrial Lab</h3>
               <p className="lp-project-text">
-                High-performance industrial space with durable finishes and
-                efficient circulation.
+                High-performance industrial lab with durable finishes,
+                organized circulation, and equipment-ready infrastructure.
               </p>
               <p className="lp-project-meta">
                 Lab &amp; flex space • Tenant build-out
               </p>
-              <a href="/projects/industrial-lab" className="lp-project-link">
+              <a
+                href="/projects/industrial-lab"
+                className="lp-project-link"
+              >
                 View project →
               </a>
             </div>
           </article>
         </div>
       </section>
+
 
       {/* WHY BUILD WITH LUXTERRA */}
       <section className="lp-why">

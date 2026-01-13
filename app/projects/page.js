@@ -34,18 +34,19 @@ const projects = [
     href: "/projects/burnet-home",
   },
 
-  {
+    {
     slug: "industrial-lab",
     tag: "Industrial",
     title: "Advanced Industrial Lab",
     location: "San Antonio, TX",
     summary:
-      "High-performance industrial lab and flex space built for durability, safety, and future expansion.",
-    details: "Lab & flex space • Tenant build-out • Code-compliant finishes",
-    image: "/03.jpg",
-    alt: "Interior of an advanced industrial lab project",
+      "High-performance industrial lab and flex space built for durable daily use, strict safety requirements, and future expansion.",
+    details: "Lab & flex space • Tenant build-out • Code compliance & inspections",
+    image: "/industrial-01.jpg",
+    alt: "Interior of an advanced industrial lab built by Luxterra Builders",
     href: "/projects/industrial-lab",
   },
+
 ];
 
 
