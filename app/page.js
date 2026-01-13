@@ -35,7 +35,7 @@ export default function HomePage() {
             <div className="hero-metrics">
               <div className="hero-metric">
                 <span className="hero-metric-label">Experience</span>
-                <span className="hero-metric-value">15+ years</span>
+                <span className="hero-metric-value">5+ years</span>
               </div>
               <div className="hero-metric">
                 <span className="hero-metric-label">Service area</span>
@@ -99,7 +99,7 @@ export default function HomePage() {
     <article className="lp-service-card">
       <div className="lp-service-card-media">
         <img
-          src="/industrial-services-01.jpg"
+          src="/industrial-services-01.png"
           alt="Industrial or commercial interior built by Luxterra Builders"
         />
       </div>
@@ -121,7 +121,7 @@ export default function HomePage() {
     <article className="lp-service-card">
       <div className="lp-service-card-media">
         <img
-          src="/multifamily-services-01.jpg"
+          src="/multifamily-services-01.png"
           alt="Multifamily project or ADU by Luxterra Builders"
         />
       </div>
@@ -196,7 +196,7 @@ export default function HomePage() {
                 living, and modern elevations tailored for the site.
               </p>
               <p className="lp-project-meta">
-                New construction • Rooftop deck • Burnet, Texas
+                New construction • Rooftop deck • San Antonio, Texas
               </p>
               <a href="/projects/burnet-home" className="lp-project-link">
                 View project →
