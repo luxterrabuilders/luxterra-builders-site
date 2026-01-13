@@ -1,0 +1,174 @@
+/* app/gallery/gallery.css */
+
+/* PAGE WRAPPER */
+.gallery-page {
+  min-height: 100vh;
+  background: #020617; /* same dark background as homepage */
+  color: #f9fafb;
+}
+
+.gallery-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 96px 16px 120px;
+}
+
+/* PAGE HEADER */
+.gallery-header {
+  margin-bottom: 40px;
+}
+
+.gallery-header .lp-section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-bottom: 8px;
+}
+
+.gallery-header .lp-section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #f9fafb;
+}
+
+.gallery-header .lp-section-sub {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #9ca3af;
+  max-width: 640px;
+}
+
+/* SECTION HEADER (Custom Homes / Commercial / Multifamily) */
+.gallery-section {
+  margin-top: 48px;
+}
+
+.gallery-section-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 20px;
+}
+
+.gallery-section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  color: #9ca3af;
+}
+
+.gallery-section-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e5e7eb;
+}
+
+.gallery-section-description {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* GRID OF CARDS */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* CARD */
+.gallery-card {
+  background: radial-gradient(circle at top left, #020617 0%, #020617 40%, #020617 100%);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  box-shadow: 0 22px 40px rgba(15, 23, 42, 0.65);
+  display: flex;
+  flex-direction: column;
+  transition: transform 160ms ease-out, box-shadow 160ms ease-out, border-color 160ms ease-out;
+}
+
+.gallery-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(234, 179, 8, 0.55);
+  box-shadow: 0 28px 55px rgba(15, 23, 42, 0.85);
+}
+
+/* IMAGE */
+.gallery-card-image-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background: #020617;
+}
+
+.gallery-card-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 200ms ease-out;
+}
+
+.gallery-card:hover .gallery-card-image-wrap img {
+  transform: scale(1.03);
+}
+
+/* CARD BODY */
+.gallery-card-body {
+  padding: 16px 18px 18px;
+}
+
+.gallery-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #a5b4fc;
+  margin-bottom: 4px;
+}
+
+.gallery-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f9fafb;
+  margin-bottom: 4px;
+}
+
+.gallery-location {
+  font-size: 0.86rem;
+  color: #9ca3af;
+  margin-bottom: 6px;
+}
+
+.gallery-meta {
+  font-size: 0.8rem;
+  color: #9ca3af;
+}
+
+/* MOBILE / TABLET */
+@media (max-width: 1024px) {
+  .gallery-inner {
+    padding: 72px 16px 96px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-inner {
+    padding: 64px 16px 80px;
+  }
+
+  .gallery-header .lp-section-title {
+    font-size: 2rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
