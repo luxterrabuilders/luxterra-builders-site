@@ -65,54 +65,82 @@ export default function HomePage() {
 
       {/* SERVICES PREVIEW */}
       <section className="lp-services-preview" id="services">
-        <p className="lp-section-label">Services</p>
-        <h2 className="lp-section-title">From dirt to done.</h2>
-        <p className="lp-section-sub">
-          Luxterra manages the entire build—planning, budgeting, scheduling, and
-          final inspection—so you can focus on your business and life.
+  <p className="lp-section-label">Services</p>
+  <h2 className="lp-section-title">From dirt to done.</h2>
+  <p className="lp-section-sub">
+    Luxterra manages the entire build—planning, budgeting, scheduling, and
+    final inspection—so you can focus on your business and life.
+  </p>
+
+  <div className="lp-service-grid">
+    {/* Custom Homes */}
+    <article className="lp-service-card">
+      <div className="lp-service-card-media">
+        <img
+          src="/custom-home-services-01.jpg"
+          alt="Custom home exterior by Luxterra Builders"
+        />
+      </div>
+      <div className="lp-service-card-body">
+        <h3>Custom Homes</h3>
+        <p>
+          High-end residential builds with modern design, efficient layouts, and
+          long-term value.
         </p>
+        <ul>
+          <li>Ground-up custom homes</li>
+          <li>Architect &amp; engineer coordination</li>
+          <li>Exterior &amp; interior finish guidance</li>
+        </ul>
+      </div>
+    </article>
 
-        <div className="lp-service-grid">
-          <article className="lp-service-card">
-            <h3>Custom Homes</h3>
-            <p>
-              High-end residential builds with modern design, efficient layouts,
-              and long-term value.
-            </p>
-            <ul>
-              <li>Ground-up custom homes</li>
-              <li>Architect &amp; engineer coordination</li>
-              <li>Exterior &amp; interior finish guidance</li>
-            </ul>
-          </article>
+    {/* Commercial & Industrial */}
+    <article className="lp-service-card">
+      <div className="lp-service-card-media">
+        <img
+          src="/industrial-services-01.jpg"
+          alt="Industrial or commercial interior built by Luxterra Builders"
+        />
+      </div>
+      <div className="lp-service-card-body">
+        <h3>Commercial &amp; Industrial</h3>
+        <p>
+          Offices, warehouses, labs, and tenant spaces built for function,
+          safety, and future expansion.
+        </p>
+        <ul>
+          <li>Industrial &amp; flex space</li>
+          <li>Retail &amp; office interiors</li>
+          <li>Code compliance &amp; inspections</li>
+        </ul>
+      </div>
+    </article>
 
-          <article className="lp-service-card">
-            <h3>Commercial &amp; Industrial</h3>
-            <p>
-              Offices, warehouses, labs, and tenant build-outs focused on
-              function, safety, and future expansion.
-            </p>
-            <ul>
-              <li>Industrial &amp; flex space</li>
-              <li>Retail &amp; office interiors</li>
-              <li>Code compliance &amp; inspections</li>
-            </ul>
-          </article>
+    {/* Multifamily & ADUs */}
+    <article className="lp-service-card">
+      <div className="lp-service-card-media">
+        <img
+          src="/multifamily-services-01.jpg"
+          alt="Multifamily project or ADU by Luxterra Builders"
+        />
+      </div>
+      <div className="lp-service-card-body">
+        <h3>Multifamily &amp; ADUs</h3>
+        <p>
+          Investment-focused builds that balance aesthetics, cost, and rental
+          performance.
+        </p>
+        <ul>
+          <li>Duplexes &amp; small multifamily</li>
+          <li>Accessory dwelling units (ADUs)</li>
+          <li>Additions &amp; structural changes</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
 
-          <article className="lp-service-card">
-            <h3>Multifamily &amp; ADUs</h3>
-            <p>
-              Investment-minded builds that balance aesthetics, cost, and rental
-              performance.
-            </p>
-            <ul>
-              <li>Duplexes &amp; small multifamily</li>
-              <li>Accessory dwelling units (ADUs)</li>
-              <li>Additions &amp; structural changes</li>
-            </ul>
-          </article>
-        </div>
-      </section>
 
          {/* FEATURED PROJECTS */}
       <section className="lp-featured" id="projects">
@@ -234,7 +262,7 @@ export default function HomePage() {
           </div>
           <div className="lp-why-card">
             <span className="lp-why-label">Experience</span>
-            <span className="lp-why-value">15+ yrs</span>
+            <span className="lp-why-value">5+ yrs</span>
             <p>
               Construction leadership with a proven record of getting it right
               the first time.

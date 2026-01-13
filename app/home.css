@@ -447,3 +447,122 @@ body {
   font-size: 0.95rem;
   color: #9ca3af;
 }
+
+/* --- Home services images --- */
+
+.lp-service-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lp-service-card-media {
+  width: 100%;
+  height: 180px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #020617;
+}
+
+.lp-service-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.lp-service-card-body ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  font-size: 0.85rem;
+}
+
+/* ========================= */
+/* Mobile layout – homepage  */
+/* ========================= */
+
+@media (max-width: 900px) {
+  /* Hero layout goes to single column */
+  .hero {
+    padding: 72px 16px 56px;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-visual {
+    justify-content: flex-start;
+  }
+
+  .hero-logo-card {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* Services cards on home */
+  .lp-service-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .lp-service-card {
+    padding: 20px 18px;
+  }
+
+  /* Featured projects on home */
+  .lp-project-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* Final CTA stack */
+  .lp-final-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .lp-final-actions {
+    width: 100%;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .lp-btn {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.15;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+  }
+
+  .hero-metrics {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .lp-section-title {
+    font-size: 24px;
+  }
+
+  .lp-section-sub {
+    font-size: 15px;
+  }
+}
+
