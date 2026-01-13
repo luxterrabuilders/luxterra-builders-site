@@ -5,43 +5,50 @@ const SERVICES = [
   {
     id: "custom-homes",
     label: "Custom Homes",
-    image: "/custom-home-services-01.jpg",
-    alt: "Custom home exterior by Luxterra Builders",
-    intro:
+    kicker: "Custom Homes",
+    title: "Custom Homes",
+    blurb:
       "High-end residential builds with modern design, efficient layouts, and long-term value.",
     bullets: [
       "Ground-up custom homes",
       "Architect & engineer coordination",
       "Exterior & interior finish guidance",
     ],
+    image: "/custom-homes-services-01.jpg", // ✅ PNG
+    imageAlt: "Custom home exterior by Luxterra Builders",
   },
   {
-    id: "commercial-industrial",
+    id: "industrial",
     label: "Commercial & Industrial",
-    image: "/industrial-services-01.png",
-    alt: "Industrial or commercial interior built by Luxterra Builders",
-    intro:
-      "Offices, warehouses, labs, and tenant build-outs focused on function, safety, and future expansion.",
+    kicker: "Commercial & Industrial",
+    title: "Commercial & Industrial",
+    blurb:
+      "Offices, warehouses, labs, and tenant spaces built for function, safety, and future expansion.",
     bullets: [
       "Industrial & flex space",
       "Retail & office interiors",
       "Code compliance & inspections",
     ],
+    image: "/industrial-services-01.png", // ✅ PNG
+    imageAlt: "Industrial or commercial project by Luxterra Builders",
   },
   {
-    id: "multifamily-adus",
+    id: "multifamily",
     label: "Multifamily & ADUs",
-    image: "/multifamily-services-01.png",
-    alt: "Multifamily / ADU project by Luxterra Builders",
-    intro:
-      "Investment-minded builds that balance aesthetics, cost, and rental performance.",
+    kicker: "Multifamily project or ADU by Luxterra Builders",
+    title: "Multifamily & ADUs",
+    blurb:
+      "Investment-focused builds that balance aesthetics, cost, and rental performance.",
     bullets: [
       "Duplexes & small multifamily",
       "Accessory dwelling units (ADUs)",
       "Additions & structural changes",
     ],
+    image: "/multifamily-services-01.png", // ✅ PNG
+    imageAlt: "Multifamily building by Luxterra Builders",
   },
 ];
+
 
 export default function ServicesPage() {
   return (
