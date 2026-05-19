@@ -1,6 +1,7 @@
 // app/layout.js
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata = {
   title: {
@@ -41,6 +42,7 @@ export default function RootLayout({ children }) {
       <body className="site-body">
         <Navbar />
         {children}
+        <GoogleAnalytics gaId="G-0E499Z2FVH" />
       </body>
     </html>
   );
