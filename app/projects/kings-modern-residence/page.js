@@ -1,11 +1,9 @@
 // app/projects/kings-modern-residence/page.js
 
-import "../project.css";
-
 export const metadata = {
-  title: "Kings Modern Residence | Luxterra Builders",
+  title: "Kings Modern Residence – Custom Home + ADU",
   description:
-    "Custom home with ADU / mother-in-law suite in San Antonio. Kings Modern Residence by Luxterra Builders.",
+    "Modern custom home in San Antonio with a dedicated ADU / mother-in-law suite, open concept living, and high-contrast finishes by Luxterra Builders.",
 };
 
 const photos = [

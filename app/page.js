@@ -1,4 +1,11 @@
 // app/page.js
+
+export const metadata = {
+  title: "San Antonio Design–Build Contractor",
+  description:
+    "Custom homes, commercial, and multifamily projects in San Antonio with clear budgets, tight schedules, and weekly communication.",
+};
+// app/page.js
 "use client";
 
 import "./home.css";
@@ -7,137 +14,143 @@ export default function HomePage() {
   return (
     <main className="home">
       {/* HERO */}
-      <section className="hero">
-        <div className="hero-grid">
-          {/* LEFT – TEXT */}
-          <div className="hero-text">
-            <p className="hero-kicker">San Antonio • Design–Build Contractor</p>
+<section className="hero">
+  <div className="hero-grid">
+    {/* LEFT – TEXT */}
+    <div className="hero-text">
+      <p className="hero-kicker">San Antonio • Design–Build Contractor</p>
 
-            <h1 className="hero-title">
-              Building luxury spaces with owner-level thinking.
-            </h1>
+      <h1 className="hero-title">
+        Building custom homes and investment properties with owner-level thinking.
+      </h1>
 
-            <p className="hero-sub">
-              Custom homes, industrial, commercial, and multifamily projects
-              delivered with clear budgets, tight schedules, and weekly
-              communication.
-            </p>
+      <p className="hero-sub">
+        Custom homes, ADUs, and small multifamily projects delivered with clear budgets,
+        realistic schedules, and weekly communication—so you don&apos;t have to babysit
+        the build.
+      </p>
 
-            <div className="hero-ctas">
-              <a href="/quote" className="hero-cta hero-cta-primary">
-                Get a Free Quote
-              </a>
-              <a href="/gallery" className="hero-cta hero-cta-secondary">
-                View Gallery
-              </a>
-            </div>
+      <div className="hero-ctas">
+        <a href="/quote" className="hero-cta hero-cta-primary">
+          Get a Free Quote
+        </a>
+        <a href="/services" className="hero-cta hero-cta-secondary">
+          View Services
+        </a>
+      </div>
 
-            <div className="hero-metrics">
-              <div className="hero-metric">
-                <span className="hero-metric-label">Experience</span>
-                <span className="hero-metric-value">5+ years</span>
-              </div>
-              <div className="hero-metric">
-                <span className="hero-metric-label">Service area</span>
-                <span className="hero-metric-value">
-                  San Antonio &amp; nearby cities
-                </span>
-              </div>
-              <div className="hero-metric">
-                <span className="hero-metric-label">Approach</span>
-                <span className="hero-metric-value">Turn-key delivery</span>
-              </div>
-            </div>
-          </div>
-
-          {/* RIGHT – LOGO CARD */}
-          <div className="hero-visual">
-            <div className="hero-logo-card">
-              <img
-                src="/luxterra-logo.png"
-                alt="Luxterra Builders logo"
-                className="hero-logo-image"
-              />
-            </div>
-          </div>
+      <div className="hero-metrics">
+        <div className="hero-metric">
+          <span className="hero-metric-label">Experience</span>
+          <span className="hero-metric-value">5+ years</span>
         </div>
-      </section>
+        <div className="hero-metric">
+          <span className="hero-metric-label">Project types</span>
+          <span className="hero-metric-value">
+            Custom homes, ADUs, small multifamily, industrial
+          </span>
+        </div>
+        <div className="hero-metric">
+          <span className="hero-metric-label">Service area</span>
+          <span className="hero-metric-value">San Antonio &amp; nearby cities</span>
+        </div>
+      </div>
+    </div>
+
+    {/* RIGHT – LOGO / VISUAL (keep using your existing styles) */}
+    <div className="hero-visual">
+      <div className="hero-logo-card">
+        <img
+          src="/luxterra-logo.png"
+          alt="Luxterra Builders logo"
+          className="hero-logo-image"
+        />
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* SERVICES PREVIEW */}
-      <section className="lp-services-preview" id="services">
-  <p className="lp-section-label">Services</p>
-  <h2 className="lp-section-title">From dirt to done.</h2>
-  <p className="lp-section-sub">
-    Luxterra manages the entire build—planning, budgeting, scheduling, and
-    final inspection—so you can focus on your business and life.
-  </p>
+{/* HOME – SERVICES STRIP */}
+<section id="services" className="home-services">
+  <div className="home-services-inner">
+    <header className="home-services-header">
+      <p className="lp-section-label">Services</p>
+      <h2 className="lp-section-title">From dirt to done.</h2>
+      <p className="lp-section-sub">
+        Luxterra manages the entire build—planning, budgeting, scheduling,
+        permits, and final punch list—so you can focus on your life and
+        business instead of chasing trades.
+      </p>
+    </header>
 
-  <div className="lp-service-grid">
-    {/* Custom Homes */}
-    <article className="lp-service-card">
-      <div className="lp-service-card-media">
-        <img
-          src="/custom-home-services-01.jpg"
-          alt="Custom home exterior by Luxterra Builders"
-        />
-      </div>
-      <div className="lp-service-card-body">
-        <h3>Custom Homes</h3>
-        <p>
-          High-end residential builds with modern design, efficient layouts, and
-          long-term value.
+    <div className="home-services-grid">
+      {/* Custom Homes */}
+      <article className="home-services-card">
+        <div className="home-services-media">
+          <img
+            src="/custom-home-services-01.jpg"
+            alt="Custom home exterior built by Luxterra Builders"
+          />
+        </div>
+
+        <h3 className="home-services-card-title">Custom Homes</h3>
+        <p className="home-services-card-text">
+          High-end residential builds with modern architecture, efficient
+          floor plans, and smart detailing that holds value over time.
         </p>
-        <ul>
-          <li>Ground-up custom homes</li>
-          <li>Architect &amp; engineer coordination</li>
+        <ul className="home-services-card-list">
+          <li>Ground-up custom homes and additions</li>
+          <li>ADUs and mother-in-law suites</li>
+          <li>Architect &amp; structural engineer coordination</li>
           <li>Exterior &amp; interior finish guidance</li>
         </ul>
-      </div>
-    </article>
+      </article>
 
-    {/* Commercial & Industrial */}
-    <article className="lp-service-card">
-      <div className="lp-service-card-media">
-        <img
-          src="/industrial-services-01.png"
-          alt="Industrial or commercial interior built by Luxterra Builders"
-        />
-      </div>
-      <div className="lp-service-card-body">
-        <h3>Commercial &amp; Industrial</h3>
-        <p>
-          Offices, warehouses, labs, and tenant spaces built for function,
-          safety, and future expansion.
+      {/* Commercial & Industrial */}
+      <article className="home-services-card">
+        <div className="home-services-media">
+          <img
+            src="/industrial-services-01.png"
+            alt="Industrial or lab build-out by Luxterra Builders"
+          />
+        </div>
+
+        <h3 className="home-services-card-title">Commercial &amp; Industrial</h3>
+        <p className="home-services-card-text">
+          Offices, warehouses, labs, and tenant build-outs planned around
+          safety, clear circulation, and future expansion.
         </p>
-        <ul>
-          <li>Industrial &amp; flex space</li>
-          <li>Retail &amp; office interiors</li>
-          <li>Code compliance &amp; inspections</li>
+        <ul className="home-services-card-list">
+          <li>Industrial &amp; flex space build-outs</li>
+          <li>Retail and office interiors</li>
+          <li>Lab and specialized use spaces</li>
+          <li>Code compliance, inspections, and city coordination</li>
         </ul>
-      </div>
-    </article>
+      </article>
 
-    {/* Multifamily & ADUs */}
-    <article className="lp-service-card">
-      <div className="lp-service-card-media">
-        <img
-          src="/multifamily-services-01.png"
-          alt="Multifamily project or ADU by Luxterra Builders"
-        />
-      </div>
-      <div className="lp-service-card-body">
-        <h3>Multifamily &amp; ADUs</h3>
-        <p>
-          Investment-focused builds that balance aesthetics, cost, and rental
-          performance.
+      {/* Multifamily & ADUs */}
+      <article className="home-services-card">
+        <div className="home-services-media">
+          <img
+            src="/multifamily-services-01.png"
+            alt="Multifamily or ADU project by Luxterra Builders"
+          />
+        </div>
+
+        <h3 className="home-services-card-title">Multifamily &amp; ADUs</h3>
+        <p className="home-services-card-text">
+          Investment-focused projects that balance aesthetics, construction
+          cost, and long-term rental performance.
         </p>
-        <ul>
-          <li>Duplexes &amp; small multifamily</li>
-          <li>Accessory dwelling units (ADUs)</li>
+        <ul className="home-services-card-list">
+          <li>Duplexes &amp; small multifamily buildings</li>
+          <li>ADUs and mother-in-law suites</li>
           <li>Additions &amp; structural changes</li>
+          <li>Layout changes for rental efficiency</li>
         </ul>
-      </div>
-    </article>
+      </article>
+    </div>
   </div>
 </section>
 
@@ -234,71 +247,79 @@ export default function HomePage() {
       </section>
 
 
-      {/* WHY BUILD WITH LUXTERRA */}
-      <section className="lp-why">
-        <div className="lp-why-copy">
-          <p className="lp-section-label">Why build with Luxterra</p>
-          <h2 className="lp-section-title">A builder that thinks like an owner.</h2>
-          <p className="lp-why-intro">
-            We treat every project like it&apos;s our own asset—balancing design,
-            budget, and schedule so you don&apos;t have to babysit the build.
-          </p>
-          <ul className="lp-why-list">
-            <li>Turn-key process from planning and permits to final punch list.</li>
-            <li>Clear budgets, transparent change orders, and no surprise costs.</li>
-            <li>Dedicated project manager and weekly communication.</li>
-            <li>Licensed, insured, and vetted trade partners on every job.</li>
-          </ul>
-        </div>
+     {/* WHY BUILD WITH LUXTERRA */}
+<section className="lp-why">
+  <div className="lp-why-copy">
+    <p className="lp-section-label">Why build with Luxterra</p>
+    <h2 className="lp-section-title">A builder that thinks like an owner.</h2>
+    <p className="lp-why-intro">
+      Every project is treated like a long-term asset, not a quick flip. We plan, budget,
+      and build as if we were keeping the property ourselves.
+    </p>
+    <ul className="lp-why-list">
+      <li>
+        Turn-key process from early planning and permits to final punch list.
+      </li>
+      <li>
+        Clear budgets up front, documented change orders, and no surprise costs.
+      </li>
+      <li>
+        Weekly updates so you always know what&apos;s happening on site.
+      </li>
+      <li>
+        Licensed, insured, and working with vetted trades on every job.
+      </li>
+    </ul>
+  </div>
 
-        <div className="lp-why-stats">
-          <div className="lp-why-card">
-            <span className="lp-why-label">Completed builds</span>
-            <span className="lp-why-value">12+</span>
-            <p>
-              Custom homes, commercial spaces, pools, and industrial projects
-              across San Antonio.
-            </p>
-          </div>
-          <div className="lp-why-card">
-            <span className="lp-why-label">Experience</span>
-            <span className="lp-why-value">5+ yrs</span>
-            <p>
-              Construction leadership with a proven record of getting it right
-              the first time.
-            </p>
-          </div>
-          <div className="lp-why-card">
-            <span className="lp-why-label">Client focus</span>
-            <span className="lp-why-value">1:1</span>
-            <p>
-              You work directly with decision-makers—no getting lost in a big
-              corporate pipeline.
-            </p>
-          </div>
-        </div>
-      </section>
+  <div className="lp-why-stats">
+    <div className="lp-why-card">
+      <span className="lp-why-label">Completed builds</span>
+      <span className="lp-why-value">12+</span>
+      <p>
+        Custom homes, ADUs, remodels, and industrial projects around San Antonio.
+      </p>
+    </div>
+    <div className="lp-why-card">
+      <span className="lp-why-label">Experience</span>
+      <span className="lp-why-value">5+ yrs</span>
+      <p>
+        Hands-on leadership across residential and light commercial construction.
+      </p>
+    </div>
+    <div className="lp-why-card">
+      <span className="lp-why-label">Client focus</span>
+      <span className="lp-why-value">1:1</span>
+      <p>
+        You work directly with the builder—no getting lost in a big corporate pipeline.
+      </p>
+    </div>
+  </div>
+</section>
 
-      {/* FINAL CTA */}
-      <section className="lp-final-cta">
-        <div className="lp-final-inner">
-          <div className="lp-final-copy">
-            <h2>Ready to talk about your project?</h2>
-            <p>
-              Share your plans, budget, or even just a rough idea. We&apos;ll help
-              you understand what&apos;s possible and what it will take to build it.
-            </p>
-          </div>
-          <div className="lp-final-actions">
-            <a href="/quote" className="lp-btn lp-btn-primary">
-              Request a Free Consultation
-            </a>
-            <a href="tel:12542902482" className="lp-phone">
-              Call (254) 290-2482
-            </a>
-          </div>
-        </div>
-      </section>
+{/* FINAL CTA */}
+<section className="lp-final-cta">
+  <div className="lp-final-inner">
+    <div className="lp-final-copy">
+      <h2>Ready to talk about your project?</h2>
+      <p>
+        Share your plans, budget, or even just a rough idea. We&apos;ll help you
+        understand what&apos;s realistic, what it will take to build it, and how to
+        phase the work if needed.
+      </p>
+    </div>
+    <div className="lp-final-actions">
+      <a href="/quote" className="lp-btn lp-btn-primary">
+        Request a Free Consultation
+      </a>
+      <a href="tel:12542902482" className="lp-phone">
+        Call (254) 290-2482
+      </a>
+    </div>
+  </div>
+</section>
+
+     
     </main>
   );
 }

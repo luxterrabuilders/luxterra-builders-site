@@ -1,11 +1,11 @@
 // app/projects/page.js
-import Link from "next/link";
-import "./projects.css";
 
 export const metadata = {
-  title: "Projects | Luxterra Builders",
-  description: "Recent custom home, commercial, and industrial builds by Luxterra Builders.",
+  title: "Projects – Recent Luxterra Builds",
+  description:
+    "A curated look at Luxterra’s recent custom homes, commercial spaces, and multifamily projects built like long-term assets.",
 };
+
 
 const projects = [
   {

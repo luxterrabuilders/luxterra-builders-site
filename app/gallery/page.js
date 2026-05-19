@@ -1,10 +1,9 @@
 // app/gallery/page.js
-import "./gallery.css";
 
 export const metadata = {
-  title: "Project Gallery | Luxterra Builders",
+  title: "Gallery – Custom Homes, Commercial, and Multifamily",
   description:
-    "Gallery of custom homes, commercial builds, and multifamily projects by Luxterra Builders.",
+    "Project photos from Luxterra Builders, including custom homes with ADUs, commercial labs, and multifamily buildings in San Antonio.",
 };
 
 const gallerySections = [

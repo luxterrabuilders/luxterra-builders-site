@@ -1,9 +1,10 @@
-export const metadata = {
-  title: "Contact | Luxterra Builders",
-  description:
-    "Contact Luxterra Builders in San Antonio for residential, industrial, commercial, and multifamily construction projects.",
-};
+// app/contact/page.js
 
+export const metadata = {
+  title: "Contact Luxterra Builders",
+  description:
+    "Have questions about a build, ADU, or commercial project in San Antonio? Contact Luxterra Builders to talk through your ideas.",
+};
 export default function ContactPage() {
   return (
     <main className="page">

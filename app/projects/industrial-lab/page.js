@@ -10,7 +10,13 @@ const labImages = [
   "/industrial-04.jpg",
   "/industrial-05.jpg",
 ];
+// app/projects/industrial-lab/page.js
 
+export const metadata = {
+  title: "Advanced Industrial Lab – Tenant Build-Out",
+  description:
+    "High-performance industrial lab and flex space build-out with durable finishes, organized circulation, and equipment-ready infrastructure.",
+};
 export default function IndustrialLabPage() {
   return (
     <main className="project-detail-page">

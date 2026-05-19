@@ -1,11 +1,9 @@
 // app/quote/page.js
 
-import "./quote.css";
-
 export const metadata = {
-  title: "Request a Project Quote",
+  title: "Request a Free Consultation",
   description:
-    "Request a free consultation for your custom home, commercial, industrial, or pool project in San Antonio & surrounding areas.",
+    "Tell Luxterra Builders about your custom home, commercial, or multifamily project and get a free consultation and budget range.",
 };
 
 export default function QuotePage() {

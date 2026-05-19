@@ -1,328 +1,182 @@
-/* app/services/services.css */
+/* === SERVICES PAGE === */
 
-/* PAGE WRAPPER */
 .services-page {
-  min-height: 100vh;
-  background: #020617; /* same dark as home */
+  background: #020617;
   color: #f9fafb;
-  padding: 80px 16px 120px;
+  min-height: 100vh;
 }
 
 .services-inner {
   max-width: 1120px;
   margin: 0 auto;
+  padding: 120px 16px 96px;
 }
 
-/* HERO */
-.services-hero {
+/* Header */
+
+.services-header {
+  max-width: 720px;
   margin-bottom: 48px;
 }
 
-.services-hero .lp-section-label {
+.services-header .lp-section-label {
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 12px;
   color: #9ca3af;
-  margin-bottom: 8px;
-}
-
-.services-hero .lp-section-title {
-  font-size: 34px;
-  line-height: 1.15;
-  margin-bottom: 12px;
-}
-
-.services-hero .lp-section-sub {
-  max-width: 620px;
-  font-size: 15px;
-  line-height: 1.6;
-  color: #d1d5db;
-}
-
-/* GRID SECTION */
-.services-grid-section {
-  margin-bottom: 64px;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
-}
-
-/* CARD */
-.service-card {
-  background: radial-gradient(circle at top left, #020b2a, #020617);
-  border-radius: 24px;
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.6);
-}
-
-/* IMAGE AREA */
-.service-card-image-wrap {
-  width: 100%;
-  height: 220px; /* controls image height */
-  overflow: hidden;
-}
-
-.service-card-image-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* crop nicely */
+  margin-bottom: 10px;
   display: block;
 }
 
-/* CARD BODY */
-.service-card-body {
-  padding: 18px 18px 20px;
+.services-header .lp-section-title {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin: 0 0 14px;
 }
 
-.service-card-kicker {
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 11px;
-  color: #9ca3af;
-  margin-bottom: 6px;
-}
-
-.service-card-title {
-  font-size: 18px;
-  margin-bottom: 6px;
-}
-
-.service-card-text {
-  font-size: 14px;
+.services-header .lp-section-sub {
+  font-size: 0.98rem;
   line-height: 1.6;
   color: #e5e7eb;
-  margin-bottom: 10px;
-}
-
-.service-card-list {
-  list-style: disc;
-  padding-left: 18px;
   margin: 0;
 }
 
-.service-card-list li {
-  font-size: 13px;
-  line-height: 1.5;
-  color: #cbd5f5;
-  margin-bottom: 4px;
-}
-
-/* CTA SECTION */
-.services-cta {
-  margin-top: 40px;
-}
-
-.services-cta-inner {
-  border-radius: 24px;
-  border: 1px solid rgba(148, 163, 184, 0.3);
-  background: radial-gradient(circle at top left, #020b2a, #020617);
-  padding: 24px 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.services-cta-copy h2 {
-  font-size: 22px;
-  margin-bottom: 6px;
-}
-
-.services-cta-copy p {
-  font-size: 14px;
-  color: #d1d5db;
-  max-width: 520px;
-}
-
-.services-cta-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-end;
-}
-
-/* Reuse existing button styles from home (lp-btn, lp-btn-primary, lp-phone) */
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .services-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 768px) {
-  .services-page {
-    padding: 72px 14px 96px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card-image-wrap {
-    height: 210px;
-  }
-
-  .services-cta-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .services-cta-actions {
-    justify-content: flex-start;
-  }
-}
-
-/* --- Services page images --- */
-
-.services-page {
-  background: #020617; /* matches home page dark */
-  color: #f9fafb;
-}
-
-.services-inner {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 96px 16px 120px;
-}
-
-.services-header {
-  margin-bottom: 40px;
-}
+/* Cards grid */
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+  gap: 28px;
+  margin-bottom: 64px;
 }
 
-.services-card {
+.service-card {
   background: radial-gradient(circle at top left, #111827, #020617);
-  border-radius: 24px;
-  padding: 16px 16px 20px;
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 28px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.7);
+  padding: 18px 18px 24px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 14px;
 }
 
-/* image block */
-.services-card-image-wrap {
-  width: 100%;
-  height: 180px;
-  border-radius: 18px;
+.service-card-media {
+  border-radius: 20px;
   overflow: hidden;
+  height: 220px;
   background: #020617;
 }
 
-.services-card-image {
+.service-card-media img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
 }
 
-.services-card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.service-card-body {
+  padding: 4px 2px 0;
 }
 
-.services-card-title {
+.service-card-title {
   font-size: 1.1rem;
   font-weight: 600;
+  margin: 0 0 6px;
 }
 
-.services-card-intro {
-  font-size: 0.9rem;
+.service-card-intro {
+  font-size: 0.95rem;
+  line-height: 1.6;
   color: #e5e7eb;
+  margin: 0 0 8px;
 }
 
-.services-card-list {
+.service-card-list {
   margin: 0;
   padding-left: 18px;
   font-size: 0.9rem;
   color: #cbd5f5;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
-/* Mobile */
-@media (max-width: 900px) {
+/* CTA */
+
+.services-cta {
+  margin-top: 8px;
+}
+
+.services-cta-inner {
+  border-radius: 28px;
+  padding: 24px 22px;
+  border: 1px solid rgba(250, 204, 21, 0.5);
+  background: radial-gradient(circle at top left, #1e293b, #020617);
+  box-shadow: 0 22px 60px rgba(15, 23, 42, 0.7);
+}
+
+.services-cta-inner h2 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.services-cta-inner p {
+  margin: 0 0 16px;
+  font-size: 0.96rem;
+  color: #e5e7eb;
+}
+
+.services-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Buttons reuse your existing classes; just align size a bit */
+
+.lp-btn-primary,
+.lp-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+}
+
+/* Layout: desktop vs mobile */
+
+@media (min-width: 960px) {
   .services-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .service-card {
+    padding: 18px 18px 26px;
+  }
+
+  .services-cta-inner {
+    padding: 24px 28px;
+  }
+}
+
+@media (max-width: 768px) {
   .services-inner {
-    padding-top: 72px;
-  }
-}
-
-/* ========================= */
-/* Mobile layout – services  */
-/* ========================= */
-
-@media (max-width: 900px) {
-  .services-page {
-    padding: 72px 16px 80px;
+    padding-top: 96px;
   }
 
-  /* Hero layout stacks */
-  .services-hero-layout {
-    grid-template-columns: 1fr;
-    gap: 32px;
+  .service-card-media {
+    height: 200px;
   }
 
-  .services-hero-copy {
-    max-width: 100%;
+  .services-header .lp-section-title {
+    font-size: 1.6rem;
   }
 
-  .services-hero-media {
-    margin-top: 16px;
-    justify-content: flex-start;
-  }
-
-  .services-hero-card {
-    max-width: 320px;
-    margin: 0 auto;
-  }
-
-  /* The three service cards (Custom / Multifamily / Industrial) */
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .services-card {
-    padding: 20px 18px;
-  }
-
-  .services-card-media {
-    margin-bottom: 16px;
-  }
-
-  .services-card-media img {
-    height: 190px;
-    object-fit: cover;
-  }
-}
-
-@media (max-width: 640px) {
-  .services-hero-title {
-    font-size: 28px;
-    line-height: 1.2;
-  }
-
-  .services-hero-sub {
-    font-size: 15px;
-  }
-
-  .services-section-title {
-    font-size: 22px;
+  .services-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 

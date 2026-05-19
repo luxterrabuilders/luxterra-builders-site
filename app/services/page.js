@@ -1,85 +1,93 @@
 // app/services/page.js
+
+export const metadata = {
+  title: "Services – Custom Homes, Commercial & Multifamily",
+  description:
+    "Custom homes, commercial and industrial build-outs, and multifamily projects coordinated from planning and permits through final inspection.",
+};
+
+"use client";
+
 import "./services.css";
 
 const SERVICES = [
   {
     id: "custom-homes",
     label: "Custom Homes",
-    kicker: "Custom Homes",
-    title: "Custom Homes",
-    blurb:
-      "High-end residential builds with modern design, efficient layouts, and long-term value.",
+    image: "/custom-home-services-01.jpg",
+    imageAlt: "Custom home exterior built by Luxterra Builders",
+    intro:
+      "From lot selection to final walkthrough, we build modern, efficient homes that feel great to live in and make sense as long-term investments.",
     bullets: [
-      "Ground-up custom homes",
-      "Architect & engineer coordination",
-      "Exterior & interior finish guidance",
-    ],
-    image: "/custom-homes-services-01.jpg", // ✅ PNG
-    imageAlt: "Custom home exterior by Luxterra Builders",
+      "Ground-up custom homes and additions",
+      "ADUs and mother-in-law suites",
+      "Architect & structural engineer coordination",
+      "Exterior & interior finish guidance"
+    ]
   },
   {
-    id: "industrial",
+    id: "commercial-industrial",
     label: "Commercial & Industrial",
-    kicker: "Commercial & Industrial",
-    title: "Commercial & Industrial",
-    blurb:
-      "Offices, warehouses, labs, and tenant spaces built for function, safety, and future expansion.",
+    image: "/industrial-services-01.png",
+    imageAlt: "Industrial or lab space built by Luxterra Builders",
+    intro:
+      "Offices, warehouses, labs, and tenant build-outs focused on function, safety, and future expansion.",
     bullets: [
-      "Industrial & flex space",
-      "Retail & office interiors",
-      "Code compliance & inspections",
-    ],
-    image: "/industrial-services-01.png", // ✅ PNG
-    imageAlt: "Industrial or commercial project by Luxterra Builders",
+      "Industrial & flex space build-outs",
+      "Retail & office interior build-outs",
+      "Lab and specialized use spaces",
+      "Code compliance, inspections, and city coordination"
+    ]
   },
   {
-    id: "multifamily",
+    id: "multifamily-adus",
     label: "Multifamily & ADUs",
-    kicker: "Multifamily project or ADU by Luxterra Builders",
-    title: "Multifamily & ADUs",
-    blurb:
-      "Investment-focused builds that balance aesthetics, cost, and rental performance.",
+    image: "/multifamily-services-01.png",
+    imageAlt: "Multifamily project or ADU by Luxterra Builders",
+    intro:
+      "Investment-focused projects that balance aesthetics, construction cost, and long-term rental performance.",
     bullets: [
-      "Duplexes & small multifamily",
-      "Accessory dwelling units (ADUs)",
+      "Duplexes & small multifamily buildings",
+      "ADUs and mother-in-law suites",
       "Additions & structural changes",
-    ],
-    image: "/multifamily-services-01.png", // ✅ PNG
-    imageAlt: "Multifamily building by Luxterra Builders",
-  },
+      "Layout changes and structural upgrades"
+    ]
+  }
 ];
-
 
 export default function ServicesPage() {
   return (
     <main className="services-page">
       <div className="services-inner">
-        {/* PAGE HEADER */}
         <header className="services-header">
           <p className="lp-section-label">Services</p>
-          <h1 className="lp-section-title">From dirt to done.</h1>
+          <h1 className="lp-section-title">
+            Custom homes, commercial spaces, and multifamily projects built like
+            long-term assets.
+          </h1>
           <p className="lp-section-sub">
-            Luxterra manages the entire build—planning, budgeting, scheduling,
-            and final inspection—so you can focus on your business and life.
+            Luxterra Builders handles design coordination, budgeting, permits,
+            and construction so you don&apos;t have to chase trades or manage
+            the schedule. We build as if we were keeping the property ourselves.
           </p>
         </header>
 
-        {/* SERVICES GRID */}
+        {/* Three service cards */}
         <section className="services-grid">
           {SERVICES.map((service) => (
-            <article key={service.id} className="services-card">
-              <div className="services-card-image-wrap">
-                <img
-                  src={service.image}
-                  alt={service.alt}
-                  className="services-card-image"
-                />
+            <article
+              key={service.id}
+              id={service.id}
+              className="service-card"
+            >
+              <div className="service-card-media">
+                <img src={service.image} alt={service.imageAlt} />
               </div>
 
-              <div className="services-card-body">
-                <h2 className="services-card-title">{service.label}</h2>
-                <p className="services-card-intro">{service.intro}</p>
-                <ul className="services-card-list">
+              <div className="service-card-body">
+                <h2 className="service-card-title">{service.label}</h2>
+                <p className="service-card-intro">{service.intro}</p>
+                <ul className="service-card-list">
                   {service.bullets.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -88,8 +96,27 @@ export default function ServicesPage() {
             </article>
           ))}
         </section>
+
+        {/* Simple CTA at bottom */}
+        <section className="services-cta">
+          <div className="services-cta-inner">
+            <h2>Planning a new build or major renovation?</h2>
+            <p>
+              Whether it&apos;s a custom home, tenant build-out, or multifamily
+              project, we can help you scope the work, set a budget, and build
+              a schedule that matches your goals.
+            </p>
+            <div className="services-cta-actions">
+              <a href="/quote" className="lp-btn-primary">
+                Request a Free Consultation
+              </a>
+              <a href="tel:12542902482" className="lp-btn-secondary">
+                Call (254) 290-2482
+              </a>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );
 }
-

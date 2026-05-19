@@ -1,10 +1,9 @@
-// app/projects/adaes-home/page.js
-import "../project.css";
+// app/projects/burnet-home/page.js
 
 export const metadata = {
-  title: "Burnet Rooftop Residence | Luxterra Builders",
+  title: "Burnet Rooftop Residence – Custom Home with Rooftop Deck",
   description:
-    "Custom home in Burnet, TX with a rooftop deck and indoor–outdoor living. 3D planned and built by Luxterra Builders.",
+    "Design-driven custom home in Burnet, TX featuring a rooftop deck, indoor–outdoor living, and modern elevations tailored to the site.",
 };
 
 export default function BurnetRooftopResidencePage() {
