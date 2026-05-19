@@ -1,14 +1,11 @@
 // app/services/page.js
+import "./services.css";
 
 export const metadata = {
   title: "Services – Custom Homes, Commercial & Multifamily",
   description:
     "Custom homes, commercial and industrial build-outs, and multifamily projects coordinated from planning and permits through final inspection.",
 };
-
-"use client";
-
-import "./services.css";
 
 const SERVICES = [
   {

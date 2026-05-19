@@ -1,14 +1,11 @@
 // app/page.js
+import "./home.css";
 
 export const metadata = {
   title: "San Antonio Design–Build Contractor",
   description:
     "Custom homes, commercial, and multifamily projects in San Antonio with clear budgets, tight schedules, and weekly communication.",
 };
-// app/page.js
-"use client";
-
-import "./home.css";
 
 export default function HomePage() {
   return (
