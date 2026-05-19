@@ -1,5 +1,5 @@
 // app/components/Navbar.js
-"use client";
+
 
 import Image from "next/image";
 import "./navbar.css";
