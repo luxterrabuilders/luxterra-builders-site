@@ -36,7 +36,9 @@ linkLabel: "Learn more about custom homes →"
       "Retail & office interior build-outs",
       "Lab and specialized use spaces",
       "Code compliance, inspections, and city coordination"
-    ]
+    ],
+    link: "/commercial-contractor-san-antonio",
+linkLabel: "Learn more about commercial work →"
   },
   {
   id: "multifamily-adus",
