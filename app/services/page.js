@@ -37,19 +37,21 @@ const SERVICES = [
     ]
   },
   {
-    id: "multifamily-adus",
-    label: "Multifamily & ADUs",
-    image: "/multifamily-services-01.png",
-    imageAlt: "Multifamily project or ADU by Luxterra Builders",
-    intro:
-      "Investment-focused projects that balance aesthetics, construction cost, and long-term rental performance.",
-    bullets: [
-      "Duplexes & small multifamily buildings",
-      "ADUs and mother-in-law suites",
-      "Additions & structural changes",
-      "Layout changes and structural upgrades"
-    ]
-  }
+  id: "multifamily-adus",
+  label: "Multifamily & ADUs",
+  image: "/multifamily-services-01.png",
+  imageAlt: "Multifamily project or ADU by Luxterra Builders",
+  intro:
+    "Investment-focused projects that balance aesthetics, construction cost, and long-term rental performance.",
+  bullets: [
+    "Duplexes & small multifamily buildings",
+    "ADUs and mother-in-law suites",
+    "Additions & structural changes",
+    "Layout changes and structural upgrades"
+  ],
+  link: "/adu-builder-san-antonio",
+  linkLabel: "Learn more about ADUs →"
+}
   
 ];
 
@@ -90,6 +92,11 @@ export default function ServicesPage() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+                {service.link && (
+  <a href={service.link} className="service-card-link">
+    {service.linkLabel}
+  </a>
+)}
               </div>
             </article>
           ))}
