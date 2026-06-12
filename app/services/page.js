@@ -20,7 +20,9 @@ const SERVICES = [
       "ADUs and mother-in-law suites",
       "Architect & structural engineer coordination",
       "Exterior & interior finish guidance"
-    ]
+    ],
+    link: "/custom-home-builder-san-antonio",
+linkLabel: "Learn more about custom homes →"
   },
   {
     id: "commercial-industrial",
