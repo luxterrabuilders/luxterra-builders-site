@@ -50,6 +50,7 @@ const SERVICES = [
       "Layout changes and structural upgrades"
     ]
   }
+  
 ];
 
 export default function ServicesPage() {

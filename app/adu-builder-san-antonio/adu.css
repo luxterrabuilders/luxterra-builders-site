@@ -1,0 +1,268 @@
+/* app/adu-builder-san-antonio/adu.css */
+
+.adu-page {
+  min-height: 100vh;
+  background: #020617;
+  color: #f9fafb;
+  padding: 96px 16px 96px;
+}
+
+.adu-hero,
+.adu-section,
+.adu-final-cta {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.adu-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+  gap: 42px;
+  align-items: center;
+  padding-bottom: 72px;
+}
+
+.adu-kicker,
+.adu-section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.adu-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.05;
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.adu-hero p {
+  max-width: 640px;
+  color: #d1d5db;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.adu-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.adu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.adu-btn-primary {
+  background: #facc15;
+  color: #111827;
+}
+
+.adu-btn-secondary {
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  color: #f9fafb;
+}
+
+.adu-hero-image {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.45);
+}
+
+.adu-hero-image img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  display: block;
+}
+
+.adu-section {
+  padding: 64px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.adu-two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 40px;
+}
+
+.adu-section h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.adu-copy p,
+.adu-section-header p,
+.adu-card p,
+.adu-process-step p,
+.adu-featured-copy p,
+.adu-faq-list p,
+.adu-final-cta p {
+  color: #d1d5db;
+  line-height: 1.65;
+}
+
+.adu-section-header {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.adu-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.adu-card,
+.adu-process-step,
+.adu-faq-list article {
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.adu-card h3,
+.adu-process-step h3,
+.adu-faq-list h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.adu-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.adu-process-step span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: #facc15;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.adu-featured-project {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.adu-text-link {
+  display: inline-flex;
+  color: #facc15;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.adu-featured-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.adu-featured-images img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.adu-faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.adu-final-cta {
+  margin-top: 64px;
+  padding: 28px;
+  border-radius: 28px;
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border: 1px solid rgba(250, 204, 21, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.adu-final-cta h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 980px) {
+  .adu-hero,
+  .adu-two-column,
+  .adu-featured-project {
+    grid-template-columns: 1fr;
+  }
+
+  .adu-card-grid,
+  .adu-process-grid,
+  .adu-faq-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .adu-hero-image img {
+    height: 320px;
+  }
+
+  .adu-final-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .adu-page {
+    padding-top: 80px;
+  }
+
+  .adu-card-grid,
+  .adu-process-grid,
+  .adu-faq-list,
+  .adu-featured-images {
+    grid-template-columns: 1fr;
+  }
+
+  .adu-section {
+    padding: 48px 0;
+  }
+
+  .adu-hero {
+    padding-bottom: 48px;
+  }
+
+  .adu-featured-images img,
+  .adu-hero-image img {
+    height: 240px;
+  }
+
+  .adu-actions {
+    width: 100%;
+  }
+
+  .adu-btn {
+    width: 100%;
+  }
+}
