@@ -1,6 +1,7 @@
+
 // app/sitemap.js
 
-const baseUrl = "https://luxterra-builders-site-fe1k-luxterrabuilders-projects.vercel.app";
+const baseUrl = "https://www.luxterrabuilders.com";
 
 export default function sitemap() {
   const routes = [
