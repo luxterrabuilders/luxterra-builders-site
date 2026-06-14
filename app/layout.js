@@ -114,13 +114,11 @@ export const metadata = {
   },
   description:
     "Luxterra Builders delivers custom homes, commercial spaces, and multifamily projects in San Antonio with clear budgets, realistic schedules, and owner-level thinking.",
-    verification: {
-    google: "PASTE-YOUR-CODE-HERE",
-  },
-    metadataBase: new URL("https://luxterrabuilders-site.vercel.app"),
+    
+    metadataBase: new URL("https://www.luxterrabuilders.com"),
   openGraph: {
     type: "website",
-    url: "https://luxterrabuilders-site.vercel.app",
+    url: "https://www.luxterrabuilders.com",
     title: "Luxterra Builders | San Antonio Design–Build Contractor",
     description:
       "Custom homes, commercial, and multifamily projects built like long-term assets with clear budgets and weekly communication.",
