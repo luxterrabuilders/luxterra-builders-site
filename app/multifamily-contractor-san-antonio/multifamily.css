@@ -1,0 +1,268 @@
+/* app/multifamily-contractor-san-antonio/multifamily.css */
+
+.multifamily-page {
+  min-height: 100vh;
+  background: #020617;
+  color: #f9fafb;
+  padding: 96px 16px 96px;
+}
+
+.multifamily-hero,
+.multifamily-section,
+.multifamily-final-cta {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.multifamily-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+  gap: 42px;
+  align-items: center;
+  padding-bottom: 72px;
+}
+
+.multifamily-kicker,
+.multifamily-section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.multifamily-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.05;
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.multifamily-hero p {
+  max-width: 640px;
+  color: #d1d5db;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.multifamily-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.multifamily-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.multifamily-btn-primary {
+  background: #facc15;
+  color: #111827;
+}
+
+.multifamily-btn-secondary {
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  color: #f9fafb;
+}
+
+.multifamily-hero-image {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.45);
+}
+
+.multifamily-hero-image img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  display: block;
+}
+
+.multifamily-section {
+  padding: 64px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.multifamily-two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 40px;
+}
+
+.multifamily-section h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.multifamily-copy p,
+.multifamily-section-header p,
+.multifamily-card p,
+.multifamily-process-step p,
+.multifamily-featured-copy p,
+.multifamily-faq-list p,
+.multifamily-final-cta p {
+  color: #d1d5db;
+  line-height: 1.65;
+}
+
+.multifamily-section-header {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.multifamily-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.multifamily-card,
+.multifamily-process-step,
+.multifamily-faq-list article {
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.multifamily-card h3,
+.multifamily-process-step h3,
+.multifamily-faq-list h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.multifamily-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.multifamily-process-step span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: #facc15;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.multifamily-featured-project {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.multifamily-text-link {
+  display: inline-flex;
+  color: #facc15;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.multifamily-featured-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.multifamily-featured-images img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.multifamily-faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.multifamily-final-cta {
+  margin-top: 64px;
+  padding: 28px;
+  border-radius: 28px;
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border: 1px solid rgba(250, 204, 21, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.multifamily-final-cta h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 980px) {
+  .multifamily-hero,
+  .multifamily-two-column,
+  .multifamily-featured-project {
+    grid-template-columns: 1fr;
+  }
+
+  .multifamily-card-grid,
+  .multifamily-process-grid,
+  .multifamily-faq-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .multifamily-hero-image img {
+    height: 320px;
+  }
+
+  .multifamily-final-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .multifamily-page {
+    padding-top: 80px;
+  }
+
+  .multifamily-card-grid,
+  .multifamily-process-grid,
+  .multifamily-faq-list,
+  .multifamily-featured-images {
+    grid-template-columns: 1fr;
+  }
+
+  .multifamily-section {
+    padding: 48px 0;
+  }
+
+  .multifamily-hero {
+    padding-bottom: 48px;
+  }
+
+  .multifamily-featured-images img,
+  .multifamily-hero-image img {
+    height: 240px;
+  }
+
+  .multifamily-actions {
+    width: 100%;
+  }
+
+  .multifamily-btn {
+    width: 100%;
+  }
+}

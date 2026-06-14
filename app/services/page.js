@@ -101,6 +101,11 @@ export default function ServicesPage() {
     {service.linkLabel}
   </a>
 )}
+{service.id === "multifamily-adus" && (
+  <a href="/multifamily-contractor-san-antonio" className="service-card-link">
+    Learn more about multifamily projects →
+  </a>
+)}
               </div>
             </article>
           ))}
