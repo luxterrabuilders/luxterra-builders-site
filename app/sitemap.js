@@ -18,6 +18,13 @@ export default function sitemap() {
     "/projects/kings-modern-residence",
     "/projects/burnet-home",
     "/projects/industrial-lab",
+    "/industrial-build-outs-san-antonio",
+    "/adu-builder-san-antonio",
+"/custom-home-builder-san-antonio",
+"/commercial-contractor-san-antonio",
+"/multifamily-contractor-san-antonio",
+"/industrial-build-outs-san-antonio",
+
   ];
 
   return routes.map((route) => ({

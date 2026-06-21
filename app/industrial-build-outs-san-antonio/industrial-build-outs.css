@@ -1,0 +1,268 @@
+/* app/industrial-build-outs-san-antonio/industrial-build-outs.css */
+
+.industrial-page {
+  min-height: 100vh;
+  background: #020617;
+  color: #f9fafb;
+  padding: 96px 16px 96px;
+}
+
+.industrial-hero,
+.industrial-section,
+.industrial-final-cta {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.industrial-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+  gap: 42px;
+  align-items: center;
+  padding-bottom: 72px;
+}
+
+.industrial-kicker,
+.industrial-section-label {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.industrial-hero h1 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.05;
+  max-width: 760px;
+  margin-bottom: 18px;
+}
+
+.industrial-hero p {
+  max-width: 640px;
+  color: #d1d5db;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+.industrial-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.industrial-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.industrial-btn-primary {
+  background: #facc15;
+  color: #111827;
+}
+
+.industrial-btn-secondary {
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  color: #f9fafb;
+}
+
+.industrial-hero-image {
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.45);
+}
+
+.industrial-hero-image img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  display: block;
+}
+
+.industrial-section {
+  padding: 64px 0;
+  border-top: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.industrial-two-column {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 40px;
+}
+
+.industrial-section h2 {
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+
+.industrial-copy p,
+.industrial-section-header p,
+.industrial-card p,
+.industrial-process-step p,
+.industrial-featured-copy p,
+.industrial-faq-list p,
+.industrial-final-cta p {
+  color: #d1d5db;
+  line-height: 1.65;
+}
+
+.industrial-section-header {
+  max-width: 720px;
+  margin-bottom: 28px;
+}
+
+.industrial-card-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.industrial-card,
+.industrial-process-step,
+.industrial-faq-list article {
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.industrial-card h3,
+.industrial-process-step h3,
+.industrial-faq-list h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.industrial-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.industrial-process-step span {
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: #facc15;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.industrial-featured-project {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.industrial-text-link {
+  display: inline-flex;
+  color: #facc15;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+.industrial-featured-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.industrial-featured-images img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.industrial-faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.industrial-final-cta {
+  margin-top: 64px;
+  padding: 28px;
+  border-radius: 28px;
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border: 1px solid rgba(250, 204, 21, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.industrial-final-cta h2 {
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+@media (max-width: 980px) {
+  .industrial-hero,
+  .industrial-two-column,
+  .industrial-featured-project {
+    grid-template-columns: 1fr;
+  }
+
+  .industrial-card-grid,
+  .industrial-process-grid,
+  .industrial-faq-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .industrial-hero-image img {
+    height: 320px;
+  }
+
+  .industrial-final-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .industrial-page {
+    padding-top: 80px;
+  }
+
+  .industrial-card-grid,
+  .industrial-process-grid,
+  .industrial-faq-list,
+  .industrial-featured-images {
+    grid-template-columns: 1fr;
+  }
+
+  .industrial-section {
+    padding: 48px 0;
+  }
+
+  .industrial-hero {
+    padding-bottom: 48px;
+  }
+
+  .industrial-featured-images img,
+  .industrial-hero-image img {
+    height: 240px;
+  }
+
+  .industrial-actions {
+    width: 100%;
+  }
+
+  .industrial-btn {
+    width: 100%;
+  }
+}
