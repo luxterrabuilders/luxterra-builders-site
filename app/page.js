@@ -293,6 +293,48 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+<section className="home-testimonials">
+  <div className="home-testimonials-inner">
+    <div className="home-testimonials-header">
+      <p className="lp-section-label">Client & Trade Partner Feedback</p>
+      <h2>Trusted by homeowners, investors, and trade partners.</h2>
+      <p>
+        Luxterra Builders focuses on clear communication, organized project
+        management, and quality work from planning through final walkthrough.
+      </p>
+    </div>
+
+    <div className="home-testimonials-grid">
+      <article className="home-testimonial-card">
+        <p>
+          “Christian was professional, knowledgeable, and easy to communicate
+          with throughout the entire process. Building a custom home can feel
+          overwhelming, but Luxterra Builders made the process feel much more
+          manageable.”
+        </p>
+        <span>Custom Home Client</span>
+      </article>
+
+      <article className="home-testimonial-card">
+        <p>
+          “We had a great experience working with Luxterra Builders as a trade
+          partner. The jobsite was organized, communication was clear, and they
+          cared about quality workmanship.”
+        </p>
+        <span>Trade Partner</span>
+      </article>
+
+      <article className="home-testimonial-card">
+        <p>
+          “I hired Luxterra Builders to help with painting work on my fourplex.
+          Christian was responsive, organized, and made sure the work was done
+          properly. The property looks much better.”
+        </p>
+        <span>Fourplex Property Owner</span>
+      </article>
+    </div>
+  </div>
+</section>
 
 {/* FINAL CTA */}
 <section className="lp-final-cta">
