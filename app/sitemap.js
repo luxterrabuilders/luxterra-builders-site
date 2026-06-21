@@ -11,6 +11,7 @@ export default function sitemap() {
     "/gallery",
     "/quote",
     "/contact",
+    "/areas-we-serve",
     "/adu-builder-san-antonio",
     "/custom-home-builder-san-antonio",
     "/commercial-contractor-san-antonio",
