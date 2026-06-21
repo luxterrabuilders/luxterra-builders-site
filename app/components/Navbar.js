@@ -26,6 +26,7 @@ export default function Navbar() {
           <Link href="/" className="nav-link">
             Home
           </Link>
+          <a href="/areas-we-serve">Areas We Serve</a>
           <Link href="/projects" className="nav-link">
             Projects
           </Link>
