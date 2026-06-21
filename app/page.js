@@ -335,6 +335,57 @@ export default function HomePage() {
     </div>
   </div>
 </section>
+<section className="home-trust-seo">
+  <div className="home-trust-seo-inner">
+    <div className="home-trust-seo-header">
+      <p className="lp-section-label">Built for San Antonio & the Hill Country</p>
+      <h2>Construction services backed by real project experience.</h2>
+      <p>
+        Luxterra Builders helps homeowners, investors, and business owners plan
+        and build custom homes, ADUs, multifamily projects, commercial spaces,
+        and industrial build-outs across San Antonio and surrounding areas.
+      </p>
+    </div>
+
+    <div className="home-trust-seo-grid">
+      <a href="/custom-home-builder-san-antonio" className="home-trust-seo-card">
+        <span>01</span>
+        <h3>Custom Homes</h3>
+        <p>Ground-up custom homes, additions, and design-build coordination.</p>
+      </a>
+
+      <a href="/adu-builder-san-antonio" className="home-trust-seo-card">
+        <span>02</span>
+        <h3>ADUs & Guest Suites</h3>
+        <p>Mother-in-law suites, garage conversions, and backyard guest houses.</p>
+      </a>
+
+      <a href="/commercial-contractor-san-antonio" className="home-trust-seo-card">
+        <span>03</span>
+        <h3>Commercial Build-Outs</h3>
+        <p>Tenant improvements, offices, retail spaces, and business interiors.</p>
+      </a>
+
+      <a href="/industrial-build-outs-san-antonio" className="home-trust-seo-card">
+        <span>04</span>
+        <h3>Industrial Build-Outs</h3>
+        <p>Lab spaces, warehouses, flex spaces, and specialized build-outs.</p>
+      </a>
+
+      <a href="/multifamily-contractor-san-antonio" className="home-trust-seo-card">
+        <span>05</span>
+        <h3>Multifamily Projects</h3>
+        <p>Duplexes, small multifamily projects, ADUs, and investment properties.</p>
+      </a>
+
+      <a href="/areas-we-serve" className="home-trust-seo-card">
+        <span>06</span>
+        <h3>Areas We Serve</h3>
+        <p>San Antonio, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, and the Hill Country.</p>
+      </a>
+    </div>
+  </div>
+</section> 
 
 {/* FINAL CTA */}
 <section className="lp-final-cta">
