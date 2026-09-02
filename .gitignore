@@ -1,20 +1,5 @@
-# dependencies
 node_modules/
-
-# next.js build output
 .next/
-out/
-
-# environment files - NEVER commit these, they hold API keys
 .env
-.env.*
-!.env.example
-
-# vercel
-.vercel/
-
-# macOS
 .DS_Store
 
-# editor
-*.swp

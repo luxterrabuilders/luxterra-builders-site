@@ -1,20 +1,10 @@
 // app/contact/page.js
 
-import LeadForm from "../components/LeadForm";
-
 export const metadata = {
-  title: "Contact Us",
+  title: "Contact Luxterra Builders",
   description:
     "Have questions about a build, ADU, or commercial project in San Antonio? Contact Luxterra Builders to talk through your ideas.",
-  alternates: { canonical: "/contact" },
-  openGraph: {
-    title: "Contact Luxterra Builders",
-    description:
-      "Talk to a San Antonio design-build contractor about your custom home, ADU, commercial, or industrial project.",
-    url: "/contact",
-  },
 };
-
 export default function ContactPage() {
   return (
     <main className="page">
@@ -30,7 +20,7 @@ export default function ContactPage() {
         <div className="page-card">
           <h2>Get in touch</h2>
           <p>
-            Phone: <a href="tel:+12542902482">(254) 290-2482</a>
+            Phone: <a href="tel:12542902482">(254) 290-2482</a>
             <br />
             Email:{" "}
             <a href="mailto:info@luxterrabuilders.com">
@@ -40,23 +30,49 @@ export default function ContactPage() {
           <p>
             Business Hours:
             <br />
-            Monday &ndash; Friday, 8:00am &ndash; 5:00pm
+            Monday – Friday, 8:00am – 5:00pm
           </p>
           <p>
             Typical projects: custom homes, industrial buildings, commercial
             spaces, and multifamily developments.
           </p>
-          <p>
-            Planning something specific and want a budget conversation?{" "}
-            <a href="/quote">Request a free consultation</a> instead &mdash; it asks
-            a few more questions so we can give you a straighter answer.
-          </p>
         </div>
 
-        <div className="page-card form">
+        <form className="page-card form">
           <h2>Send a message</h2>
-          <LeadForm variant="short" sourcePage="/contact" />
-        </div>
+          <label>
+            Name
+            <input type="text" name="name" placeholder="Your name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" />
+          </label>
+          <label>
+            Phone
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Best number to reach you"
+            />
+          </label>
+          <label>
+            Message
+            <textarea
+              name="message"
+              rows={4}
+              placeholder="Tell us about your project..."
+              required
+            />
+          </label>
+          <button type="submit" disabled>
+            Submit (email setup coming next)
+          </button>
+          <p className="muted">
+            The button is disabled for now – we&apos;ll connect this form to
+            your email next.
+          </p>
+        </form>
       </section>
     </main>
   );

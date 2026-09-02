@@ -1,10 +1,8 @@
 // app/custom-home-builder-san-antonio/page.js
 import "./custom-home.css";
-import Image from "next/image";
 
 export const metadata = {
-  alternates: { canonical: "/custom-home-builder-san-antonio" },
-  title: "Custom Home Builder San Antonio",
+  title: "Custom Home Builder San Antonio | Luxterra Builders",
   description:
     "Luxterra Builders designs and builds custom homes in San Antonio and nearby areas with clear budgets, realistic schedules, and owner-level communication.",
 };
@@ -36,13 +34,9 @@ export default function CustomHomeBuilderSanAntonioPage() {
         </div>
 
         <div className="custom-home-hero-image">
-          <Image
+          <img
             src="/kings-01.jpg"
             alt="Custom home exterior in San Antonio built by Luxterra Builders"
-            width={1600}
-            height={1066}
-            sizes="(max-width: 900px) 100vw, 50vw"
-            priority
           />
         </div>
       </section>
@@ -176,19 +170,13 @@ export default function CustomHomeBuilderSanAntonioPage() {
         </div>
 
         <div className="custom-home-featured-images">
-          <Image
+          <img
             src="/kings-01.jpg"
             alt="Kings Modern Residence exterior by Luxterra Builders"
-            width={1600}
-            height={1066}
-            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <Image
+          <img
             src="/kings-15.jpg"
             alt="Kings Modern Residence interior by Luxterra Builders"
-            width={1600}
-            height={1066}
-            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>

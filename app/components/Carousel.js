@@ -2,7 +2,7 @@
 
 
 import Image from "next/image";
-import "../carousel.css";
+import "./navbar.css";
 
 export default function Navbar() {
   return (

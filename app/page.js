@@ -4,7 +4,10 @@ import Image from "next/image";
 
 export const metadata = {
   alternates: { canonical: "/" },
-  title: "San Antonio Design–Build Contractor",
+  // Next.js only applies the layout's title template to CHILD segments, and
+  // the homepage shares the root segment with the layout - so this title has
+  // to carry the brand itself or the homepage ships without it.
+  title: "San Antonio Design–Build Contractor | Luxterra Builders",
   description:
     "Custom homes, commercial, and multifamily projects in San Antonio with clear budgets, realistic schedules, and weekly communication.",
 };

@@ -1,10 +1,8 @@
 // app/areas-we-serve/page.js
 import "./areas.css";
-import Image from "next/image";
 
 export const metadata = {
-  alternates: { canonical: "/areas-we-serve" },
-  title: "Areas We Serve | San Antonio & Texas Hill Country",
+  title: "Areas We Serve | San Antonio & Texas Hill Country | Luxterra Builders",
   description:
     "Luxterra Builders serves San Antonio, the Texas Hill Country, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, Helotes, and nearby areas.",
 };
@@ -85,13 +83,9 @@ export default function AreasWeServePage() {
         </div>
 
         <div className="areas-hero-image">
-          <Image
+          <img
             src="/kings-01.jpg"
             alt="Custom home project by Luxterra Builders serving San Antonio and the Texas Hill Country"
-            width={1600}
-            height={1066}
-            sizes="(max-width: 900px) 100vw, 50vw"
-            priority
           />
         </div>
       </section>
@@ -165,19 +159,13 @@ export default function AreasWeServePage() {
         </div>
 
         <div className="areas-featured-images">
-          <Image
+          <img
             src="/kings-15.jpg"
             alt="Custom home interior by Luxterra Builders"
-            width={1600}
-            height={1066}
-            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <Image
+          <img
             src="/industrial-01.jpg"
             alt="Industrial build-out by Luxterra Builders"
-            width={2000}
-            height={1500}
-            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>
