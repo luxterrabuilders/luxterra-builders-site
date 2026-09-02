@@ -791,3 +791,35 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* Attributed Google review cards (replaces the anonymous testimonials) */
+.home-testimonial-role {
+  display: block;
+  margin-top: 4px;
+  color: #94a3b8 !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.06em !important;
+}
+
+.home-reviews-cta {
+  margin-top: 26px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.home-reviews-cta strong {
+  color: #f9fafb;
+}
+
+.home-reviews-cta a {
+  color: #facc15;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.home-reviews-cta a:focus-visible {
+  outline: 2px solid #facc15;
+  outline-offset: 3px;
+  border-radius: 2px;
+}

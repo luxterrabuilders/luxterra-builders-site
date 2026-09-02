@@ -21,6 +21,35 @@ export const GOOGLE_BUSINESS_PROFILE_URL =
   "https://maps.google.com/?cid=1436495679538126253";
 export const GOOGLE_REVIEW_URL = "https://g.page/r/Ca3dQKw1de8TEBM/review";
 
+// TODO (Christian): update these two when the review count moves. They are
+// displayed on the homepage, so they need to stay true. Checked 2 Sep 2026.
+export const GOOGLE_RATING = "5.0";
+export const GOOGLE_REVIEW_COUNT = 13;
+
+// Verbatim excerpts from public Google reviews. Each one stops at the end of a
+// complete sentence - never paraphrased, never extended. The link to the full
+// profile is what makes them verifiable, which is the whole point.
+export const REVIEWS = [
+  {
+    quote:
+      "We absolutely love our home built by Luxterra Builders. The design is beautiful, modern, and thoughtfully done down to the smallest details.",
+    name: "Stephanie",
+    role: "Custom home client",
+  },
+  {
+    quote:
+      "We had a very positive experience with Luxterra Builders. Christian was dependable, professional, and kept us informed throughout the project. He was easy to reach, answered our questions, and made sure the details were handled correctly.",
+    name: "Angie Russ",
+    role: "Custom home client",
+  },
+  {
+    quote:
+      "We had a great experience working with Luxterra Builders as a landscaping partner. Christian and his team were professional, organized, and easy to coordinate with throughout the project.",
+    name: "Omar Malagon",
+    role: "Landscaping partner",
+  },
+];
+
 export const SERVICE_AREAS = [
   "San Antonio",
   "Boerne",
