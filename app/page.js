@@ -429,7 +429,7 @@ export default function HomePage() {
       <a href="/quote" className="lp-btn lp-btn-primary">
         Request a Free Consultation
       </a>
-      <a href="tel:12542902482" className="lp-phone">
+      <a href="tel:+12542902482" className="lp-phone">
         Call (254) 290-2482
       </a>
     </div>

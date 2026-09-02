@@ -1,6 +1,10 @@
 // app/projects/kings-modern-residence/page.js
 
+import Image from "next/image";
+import Breadcrumbs from "../../components/Breadcrumbs";
+
 export const metadata = {
+  alternates: { canonical: "/projects/kings-modern-residence" },
   title: "Kings Modern Residence – Custom Home + ADU",
   description:
     "Modern custom home in San Antonio with a dedicated ADU / mother-in-law suite, open concept living, and high-contrast finishes by Luxterra Builders.",
@@ -27,6 +31,8 @@ const photos = [
 export default function KingsModernResidencePage() {
   return (
     <main className="lp project-detail-page">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Projects", href: "/projects" }, { name: "Kings Modern Residence", href: "/projects/kings-modern-residence" }]} />
+
       {/* HERO SECTION */}
       <section className="project-detail-hero">
         <div className="project-detail-inner">
@@ -100,7 +106,13 @@ export default function KingsModernResidencePage() {
             {photos.map((photo, idx) => (
               <figure key={idx} className="project-detail-gallery-item">
                 <div className="project-detail-image-wrap">
-                  <img src={photo.src} alt={photo.label} loading="lazy" />
+                  <Image
+                    src={photo.src}
+                    alt={photo.label}
+                    width={1600}
+                    height={1066}
+                    sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                  />
                 </div>
                 <figcaption>{photo.label}</figcaption>
               </figure>

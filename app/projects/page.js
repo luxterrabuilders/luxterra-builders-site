@@ -1,8 +1,11 @@
 // app/projects/page.js
 import Link from "next/link";
 import "./projects.css";
+import Image from "next/image";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export const metadata = {
+  alternates: { canonical: "/projects" },
   title: "Projects – Recent Luxterra Builds",
   description:
     "A curated look at Luxterra’s recent custom homes, commercial spaces, and multifamily projects built like long-term assets.",
@@ -54,6 +57,8 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <main className="projects-page">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Projects", href: "/projects" }]} />
+
       <div className="projects-inner">
         {/* HEADER */}
         <header className="projects-header">
@@ -71,7 +76,13 @@ export default function ProjectsPage() {
     <article key={project.slug} className="projects-card">
       <Link href={`/projects/${project.slug}`} className="projects-card-link">
         <div className="projects-card-image-wrap">
-          <img src={project.image} alt={project.alt} />
+          <Image
+            src={project.image}
+            alt={project.alt}
+            width={1600}
+            height={1066}
+            sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 380px"
+          />
         </div>
         <div className="projects-card-body">
           <p className="projects-card-tag">{project.tag}</p>

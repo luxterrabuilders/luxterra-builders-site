@@ -1,8 +1,33 @@
 // app/custom-home-builder-san-antonio/page.js
 import "./custom-home.css";
+import Image from "next/image";
+import Breadcrumbs from "../components/Breadcrumbs";
+import JsonLd from "../components/JsonLd";
+import { faqPageSchema, serviceSchema } from "../lib/schema";
+
+const FAQS = [
+  {
+    "q": "When should I contact a builder?",
+    "a": "Early. A builder can help you understand budget, timeline, site constraints, and constructability before you spend too much money on plans."
+  },
+  {
+    "q": "Can Luxterra help before I have plans?",
+    "a": "Yes. We can help discuss the project, budget expectations, lot conditions, and the next steps needed before construction."
+  },
+  {
+    "q": "Do you build outside San Antonio?",
+    "a": "Yes. Luxterra serves San Antonio and surrounding areas including Boerne, New Braunfels, Bulverde, Helotes, and nearby communities."
+  },
+  {
+    "q": "Do you only build luxury homes?",
+    "a": "No. We focus on well-planned custom homes and residential projects where quality, communication, and long-term value matter."
+  }
+];
+
 
 export const metadata = {
-  title: "Custom Home Builder San Antonio | Luxterra Builders",
+  alternates: { canonical: "/custom-home-builder-san-antonio" },
+  title: "Custom Home Builder San Antonio",
   description:
     "Luxterra Builders designs and builds custom homes in San Antonio and nearby areas with clear budgets, realistic schedules, and owner-level communication.",
 };
@@ -10,6 +35,8 @@ export const metadata = {
 export default function CustomHomeBuilderSanAntonioPage() {
   return (
     <main className="custom-home-page">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }, { name: "Custom Home Builder", href: "/custom-home-builder-san-antonio" }]} />
+
       {/* HERO */}
       <section className="custom-home-hero">
         <div className="custom-home-hero-copy">
@@ -27,16 +54,20 @@ export default function CustomHomeBuilderSanAntonioPage() {
             <a href="/quote" className="custom-home-btn custom-home-btn-primary">
               Request a Free Consultation
             </a>
-            <a href="tel:12542902482" className="custom-home-btn custom-home-btn-secondary">
+            <a href="tel:+12542902482" className="custom-home-btn custom-home-btn-secondary">
               Call (254) 290-2482
             </a>
           </div>
         </div>
 
         <div className="custom-home-hero-image">
-          <img
+          <Image
             src="/kings-01.jpg"
             alt="Custom home exterior in San Antonio built by Luxterra Builders"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            priority
           />
         </div>
       </section>
@@ -170,13 +201,19 @@ export default function CustomHomeBuilderSanAntonioPage() {
         </div>
 
         <div className="custom-home-featured-images">
-          <img
+          <Image
             src="/kings-01.jpg"
             alt="Kings Modern Residence exterior by Luxterra Builders"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <img
+          <Image
             src="/kings-15.jpg"
             alt="Kings Modern Residence interior by Luxterra Builders"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>
@@ -189,38 +226,12 @@ export default function CustomHomeBuilderSanAntonioPage() {
         </div>
 
         <div className="custom-home-faq-list">
-          <article>
-            <h3>When should I contact a builder?</h3>
-            <p>
-              Early. A builder can help you understand budget, timeline, site
-              constraints, and constructability before you spend too much money
-              on plans.
-            </p>
-          </article>
-
-          <article>
-            <h3>Can Luxterra help before I have plans?</h3>
-            <p>
-              Yes. We can help discuss the project, budget expectations, lot
-              conditions, and the next steps needed before construction.
-            </p>
-          </article>
-
-          <article>
-            <h3>Do you build outside San Antonio?</h3>
-            <p>
-              Yes. Luxterra serves San Antonio and surrounding areas including
-              Boerne, New Braunfels, Bulverde, Helotes, and nearby communities.
-            </p>
-          </article>
-
-          <article>
-            <h3>Do you only build luxury homes?</h3>
-            <p>
-              No. We focus on well-planned custom homes and residential projects
-              where quality, communication, and long-term value matter.
-            </p>
-          </article>
+          {FAQS.map((faq) => (
+            <article key={faq.q}>
+              <h3>{faq.q}</h3>
+              <p>{faq.a}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -239,11 +250,20 @@ export default function CustomHomeBuilderSanAntonioPage() {
           <a href="/quote" className="custom-home-btn custom-home-btn-primary">
             Request a Free Consultation
           </a>
-          <a href="tel:12542902482" className="custom-home-btn custom-home-btn-secondary">
+          <a href="tel:+12542902482" className="custom-home-btn custom-home-btn-secondary">
             Call (254) 290-2482
           </a>
         </div>
       </section>
+
+      <JsonLd data={faqPageSchema(FAQS)} />
+      <JsonLd
+        data={serviceSchema({
+          name: "Custom Home Construction",
+          description: "Luxterra Builders designs and builds custom homes in San Antonio and nearby areas with clear budgets, realistic schedules, and owner-level communication.",
+          path: "/custom-home-builder-san-antonio",
+        })}
+      />
     </main>
   );
 }

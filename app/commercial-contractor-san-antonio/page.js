@@ -1,8 +1,33 @@
 // app/commercial-contractor-san-antonio/page.js
 import "./commercial.css";
+import Image from "next/image";
+import Breadcrumbs from "../components/Breadcrumbs";
+import JsonLd from "../components/JsonLd";
+import { faqPageSchema, serviceSchema } from "../lib/schema";
+
+const FAQS = [
+  {
+    "q": "Do you handle tenant improvements?",
+    "a": "Yes. Luxterra can help with commercial tenant improvements, build-outs, layout changes, finishes, and coordination needed to prepare a space for business use."
+  },
+  {
+    "q": "Can you help before I sign a lease?",
+    "a": "Yes. It is smart to speak with a builder before signing a lease so you can better understand construction costs, timing, utilities, and potential code requirements."
+  },
+  {
+    "q": "Do you work on industrial or flex spaces?",
+    "a": "Yes. Luxterra works on industrial, lab, warehouse, and flex-space projects where function, durability, safety, and inspections need to be coordinated carefully."
+  },
+  {
+    "q": "How early should I contact a commercial contractor?",
+    "a": "Early. A contractor can help you avoid leasing, designing, or budgeting around a plan that may be expensive or difficult to build."
+  }
+];
+
 
 export const metadata = {
-  title: "Commercial Contractor San Antonio | Luxterra Builders",
+  alternates: { canonical: "/commercial-contractor-san-antonio" },
+  title: "Commercial Contractor San Antonio",
   description:
     "Luxterra Builders handles commercial build-outs, tenant improvements, office spaces, retail spaces, industrial spaces, and specialized commercial projects in San Antonio.",
 };
@@ -10,6 +35,8 @@ export const metadata = {
 export default function CommercialContractorSanAntonioPage() {
   return (
     <main className="commercial-page">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }, { name: "Commercial Contractor", href: "/commercial-contractor-san-antonio" }]} />
+
       {/* HERO */}
       <section className="commercial-hero">
         <div className="commercial-hero-copy">
@@ -29,7 +56,7 @@ export default function CommercialContractorSanAntonioPage() {
               Request a Free Consultation
             </a>
             <a
-              href="tel:12542902482"
+              href="tel:+12542902482"
               className="commercial-btn commercial-btn-secondary"
             >
               Call (254) 290-2482
@@ -38,9 +65,13 @@ export default function CommercialContractorSanAntonioPage() {
         </div>
 
         <div className="commercial-hero-image">
-          <img
+          <Image
             src="/industrial-01.jpg"
             alt="Commercial industrial build-out in San Antonio by Luxterra Builders"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            priority
           />
         </div>
       </section>
@@ -176,13 +207,19 @@ export default function CommercialContractorSanAntonioPage() {
         </div>
 
         <div className="commercial-featured-images">
-          <img
+          <Image
             src="/industrial-01.jpg"
             alt="Advanced Industrial Lab commercial build-out"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <img
+          <Image
             src="/industrial-03.jpg"
             alt="Industrial lab interior build-out by Luxterra Builders"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>
@@ -195,41 +232,12 @@ export default function CommercialContractorSanAntonioPage() {
         </div>
 
         <div className="commercial-faq-list">
-          <article>
-            <h3>Do you handle tenant improvements?</h3>
-            <p>
-              Yes. Luxterra can help with commercial tenant improvements,
-              build-outs, layout changes, finishes, and coordination needed to
-              prepare a space for business use.
-            </p>
-          </article>
-
-          <article>
-            <h3>Can you help before I sign a lease?</h3>
-            <p>
-              Yes. It is smart to speak with a builder before signing a lease so
-              you can better understand construction costs, timing, utilities,
-              and potential code requirements.
-            </p>
-          </article>
-
-          <article>
-            <h3>Do you work on industrial or flex spaces?</h3>
-            <p>
-              Yes. Luxterra works on industrial, lab, warehouse, and flex-space
-              projects where function, durability, safety, and inspections need
-              to be coordinated carefully.
-            </p>
-          </article>
-
-          <article>
-            <h3>How early should I contact a commercial contractor?</h3>
-            <p>
-              Early. A contractor can help you avoid leasing, designing, or
-              budgeting around a plan that may be expensive or difficult to
-              build.
-            </p>
-          </article>
+          {FAQS.map((faq) => (
+            <article key={faq.q}>
+              <h3>{faq.q}</h3>
+              <p>{faq.a}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -249,13 +257,22 @@ export default function CommercialContractorSanAntonioPage() {
             Request a Free Consultation
           </a>
           <a
-            href="tel:12542902482"
+            href="tel:+12542902482"
             className="commercial-btn commercial-btn-secondary"
           >
             Call (254) 290-2482
           </a>
         </div>
       </section>
+
+      <JsonLd data={faqPageSchema(FAQS)} />
+      <JsonLd
+        data={serviceSchema({
+          name: "Commercial Build-Outs",
+          description: "Luxterra Builders handles commercial build-outs, tenant improvements, office spaces, retail spaces, industrial spaces, and specialized commercial projects in San Antonio.",
+          path: "/commercial-contractor-san-antonio",
+        })}
+      />
     </main>
   );
 }

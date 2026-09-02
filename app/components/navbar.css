@@ -1,99 +1,151 @@
-/* app/components/navbar.css */
+/* app/components/navbar.css
+   Mobile navigation. The base .nav / .nav-inner / .nav-brand / .nav-links
+   rules live in globals.css; this file only adds the responsive behaviour,
+   and is imported after globals so these rules win at the same specificity.
 
-.navbar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  width: 100%;
-  background: #020617 !important; /* dark navy so logo is visible */
-  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
-}
+   (This file previously held an orphaned copy of the navbar styles using
+   class names the component never rendered, and was imported by an unused
+   Carousel component, so none of it ever reached the browser.) */
 
-.navbar-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 16px 24px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* Brand / logo area */
-
-.brand {
-  display: flex;
+.nav-mobile-actions {
+  display: none;
   align-items: center;
   gap: 10px;
-  text-decoration: none;
 }
 
-.brand-logo-wrap {
-  height: 40px;
-  width: 40px;
-  border-radius: 999px;
-  border: 1px solid rgba(250, 204, 21, 0.9);
-  background-color: #020617;
-  /* ⬇️ This is where we actually draw your logo */
-  background-image: url("/luxterra-logo.png");
-  background-size: 70%;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-shadow: 0 0 0 4px rgba(15, 23, 42, 0.9);
-}
-
-.brand-text {
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #e5e7eb;
-}
-
-/* Nav links */
-
-.nav-links {
-  display: flex;
+.nav-toggle {
+  display: inline-flex;
   align-items: center;
-  gap: 24px;
-  font-size: 0.9rem;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 1px solid rgba(17, 24, 39, 0.25);
+  border-radius: 10px;
+  background: transparent;
+  cursor: pointer;
 }
 
-.nav-link {
-  color: #e5e7eb;
-  text-decoration: none;
-  font-weight: 500;
-  letter-spacing: 0.03em;
+.nav-toggle:focus-visible,
+.nav-mobile-cta:focus-visible,
+.nav-drawer-link:focus-visible,
+.nav-drawer-call:focus-visible {
+  outline: 3px solid #facc15;
+  outline-offset: 2px;
 }
 
-.nav-link:hover {
-  color: #facc15;
+.nav-toggle-bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 20px;
 }
 
-.nav-link-cta {
+.nav-toggle-bars span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: #111827;
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle-bars.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle-bars.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle-bars.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-toggle-bars span { transition: none; }
+}
+
+.nav-mobile-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 40px;
   padding: 8px 16px;
   border-radius: 999px;
   border: 1px solid #facc15;
-}
-
-.nav-link-cta:hover {
   background: #facc15;
-  color: #020617;
+  color: #111827;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-/* Mobile tweaks */
+.nav-drawer {
+  display: none;
+  border-top: 1px solid rgba(148, 163, 184, 0.28);
+  background: #f9fafb;
+}
 
-@media (max-width: 768px) {
-  .navbar-inner {
-    padding: 12px 16px;
-  }
+.nav-drawer nav {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0 12px;
+}
 
+.nav-drawer-link,
+.nav-drawer-call {
+  padding: 14px 24px;
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.16);
+}
+
+.nav-drawer-link[aria-current="page"] {
+  color: #a16207;
+  font-weight: 700;
+}
+
+.nav-drawer-link:hover,
+.nav-drawer-call:hover {
+  background: rgba(250, 204, 21, 0.14);
+}
+
+.nav-drawer-call {
+  border-bottom: none;
+  font-weight: 700;
+  color: #a16207;
+}
+
+/* --- Breakpoint: collapse the desktop links --- */
+@media (max-width: 900px) {
   .nav-links {
-    gap: 16px;
-    font-size: 0.85rem;
+    display: none;
   }
 
-  .brand-text {
-    font-size: 0.8rem;
+  .nav-mobile-actions {
+    display: flex;
+  }
+
+  .nav-drawer {
+    display: block;
+  }
+
+  .nav-inner {
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .nav-brand-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
   }
 }
 
+@media (max-width: 400px) {
+  .nav-brand-text {
+    display: none;
+  }
+}

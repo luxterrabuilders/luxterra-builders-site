@@ -1,8 +1,33 @@
 // app/areas-we-serve/page.js
 import "./areas.css";
+import Image from "next/image";
+import Breadcrumbs from "../components/Breadcrumbs";
+import JsonLd from "../components/JsonLd";
+import { faqPageSchema } from "../lib/schema";
+
+const FAQS = [
+  {
+    "q": "Do you only work in San Antonio?",
+    "a": "No. Luxterra Builders serves San Antonio and surrounding communities including Boerne, New Braunfels, Bulverde, Helotes, Spring Branch, Canyon Lake, La Vernia, and other nearby areas."
+  },
+  {
+    "q": "Do you work in the Texas Hill Country?",
+    "a": "Yes. We review Hill Country projects based on location, scope, timeline, and fit. Reach out with your property address and project details so we can take a look."
+  },
+  {
+    "q": "Can you help before I buy land or sign a lease?",
+    "a": "Yes. Getting builder input early can help you understand site challenges, rough construction costs, utilities, permitting, and whether the project is realistic."
+  },
+  {
+    "q": "What types of projects do you take on?",
+    "a": "We focus on custom homes, ADUs, multifamily and investment-focused residential projects, commercial build-outs, and industrial or flex-space build-outs."
+  }
+];
+
 
 export const metadata = {
-  title: "Areas We Serve | San Antonio & Texas Hill Country | Luxterra Builders",
+  alternates: { canonical: "/areas-we-serve" },
+  title: "Areas We Serve | San Antonio & Texas Hill Country",
   description:
     "Luxterra Builders serves San Antonio, the Texas Hill Country, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, Helotes, and nearby areas.",
 };
@@ -59,6 +84,8 @@ const SERVICES = [
 export default function AreasWeServePage() {
   return (
     <main className="areas-page">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Areas We Serve", href: "/areas-we-serve" }]} />
+
       <section className="areas-hero">
         <div className="areas-hero-copy">
           <p className="areas-kicker">Areas We Serve</p>
@@ -76,16 +103,20 @@ export default function AreasWeServePage() {
             <a href="/quote" className="areas-btn areas-btn-primary">
               Request a Free Consultation
             </a>
-            <a href="tel:12542902482" className="areas-btn areas-btn-secondary">
+            <a href="tel:+12542902482" className="areas-btn areas-btn-secondary">
               Call (254) 290-2482
             </a>
           </div>
         </div>
 
         <div className="areas-hero-image">
-          <img
+          <Image
             src="/kings-01.jpg"
             alt="Custom home project by Luxterra Builders serving San Antonio and the Texas Hill Country"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            priority
           />
         </div>
       </section>
@@ -159,13 +190,19 @@ export default function AreasWeServePage() {
         </div>
 
         <div className="areas-featured-images">
-          <img
+          <Image
             src="/kings-15.jpg"
             alt="Custom home interior by Luxterra Builders"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <img
+          <Image
             src="/industrial-01.jpg"
             alt="Industrial build-out by Luxterra Builders"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>
@@ -177,41 +214,12 @@ export default function AreasWeServePage() {
         </div>
 
         <div className="areas-faq-list">
-          <article>
-            <h3>Do you only work in San Antonio?</h3>
-            <p>
-              No. Luxterra Builders serves San Antonio and surrounding
-              communities including Boerne, New Braunfels, Bulverde, Helotes,
-              Spring Branch, Canyon Lake, La Vernia, and other nearby areas.
-            </p>
-          </article>
-
-          <article>
-            <h3>Do you work in the Texas Hill Country?</h3>
-            <p>
-              Yes. We review Hill Country projects based on location, scope,
-              timeline, and fit. Reach out with your property address and project
-              details so we can take a look.
-            </p>
-          </article>
-
-          <article>
-            <h3>Can you help before I buy land or sign a lease?</h3>
-            <p>
-              Yes. Getting builder input early can help you understand site
-              challenges, rough construction costs, utilities, permitting, and
-              whether the project is realistic.
-            </p>
-          </article>
-
-          <article>
-            <h3>What types of projects do you take on?</h3>
-            <p>
-              We focus on custom homes, ADUs, multifamily and investment-focused
-              residential projects, commercial build-outs, and industrial or
-              flex-space build-outs.
-            </p>
-          </article>
+          {FAQS.map((faq) => (
+            <article key={faq.q}>
+              <h3>{faq.q}</h3>
+              <p>{faq.a}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -229,11 +237,13 @@ export default function AreasWeServePage() {
           <a href="/quote" className="areas-btn areas-btn-primary">
             Request a Free Consultation
           </a>
-          <a href="tel:12542902482" className="areas-btn areas-btn-secondary">
+          <a href="tel:+12542902482" className="areas-btn areas-btn-secondary">
             Call (254) 290-2482
           </a>
         </div>
       </section>
+
+      <JsonLd data={faqPageSchema(FAQS)} />
     </main>
   );
 }

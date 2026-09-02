@@ -1,8 +1,33 @@
 // app/multifamily-contractor-san-antonio/page.js
 import "./multifamily.css";
+import Image from "next/image";
+import Breadcrumbs from "../components/Breadcrumbs";
+import JsonLd from "../components/JsonLd";
+import { faqPageSchema, serviceSchema } from "../lib/schema";
+
+const FAQS = [
+  {
+    "q": "Do you build duplexes and small multifamily projects?",
+    "a": "Yes. Luxterra can help with duplexes, small multifamily projects, ADUs, additions, and investment-focused residential construction."
+  },
+  {
+    "q": "Can you help before I buy a lot or property?",
+    "a": "Yes. Getting builder input early can help you understand rough construction costs, site challenges, utility needs, and whether the project is realistic."
+  },
+  {
+    "q": "Do you work with investors?",
+    "a": "Yes. We work with property owners and investors who care about budget clarity, schedule, durability, and long-term property performance."
+  },
+  {
+    "q": "Can ADUs be part of a multifamily strategy?",
+    "a": "In many cases, yes. ADUs and secondary units can add flexibility, family space, rental potential, or long-term value depending on the property and local rules."
+  }
+];
+
 
 export const metadata = {
-  title: "Multifamily Contractor San Antonio | Luxterra Builders",
+  alternates: { canonical: "/multifamily-contractor-san-antonio" },
+  title: "Multifamily Contractor San Antonio",
   description:
     "Luxterra Builders helps investors and property owners build duplexes, small multifamily projects, ADUs, additions, and investment-focused residential projects in San Antonio.",
 };
@@ -10,6 +35,8 @@ export const metadata = {
 export default function MultifamilyContractorSanAntonioPage() {
   return (
     <main className="multifamily-page">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }, { name: "Multifamily Contractor", href: "/multifamily-contractor-san-antonio" }]} />
+
       {/* HERO */}
       <section className="multifamily-hero">
         <div className="multifamily-hero-copy">
@@ -32,7 +59,7 @@ export default function MultifamilyContractorSanAntonioPage() {
               Request a Free Consultation
             </a>
             <a
-              href="tel:12542902482"
+              href="tel:+12542902482"
               className="multifamily-btn multifamily-btn-secondary"
             >
               Call (254) 290-2482
@@ -41,9 +68,13 @@ export default function MultifamilyContractorSanAntonioPage() {
         </div>
 
         <div className="multifamily-hero-image">
-          <img
+          <Image
             src="/multifamily-services-01.png"
             alt="Multifamily construction project in San Antonio by Luxterra Builders"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            priority
           />
         </div>
       </section>
@@ -182,13 +213,19 @@ export default function MultifamilyContractorSanAntonioPage() {
         </div>
 
         <div className="multifamily-featured-images">
-          <img
+          <Image
             src="/kings-27.jpg"
             alt="ADU exterior at Kings Modern Residence"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <img
+          <Image
             src="/kings-31.jpg"
             alt="Interior space at Kings Modern Residence ADU"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>
@@ -201,40 +238,12 @@ export default function MultifamilyContractorSanAntonioPage() {
         </div>
 
         <div className="multifamily-faq-list">
-          <article>
-            <h3>Do you build duplexes and small multifamily projects?</h3>
-            <p>
-              Yes. Luxterra can help with duplexes, small multifamily projects,
-              ADUs, additions, and investment-focused residential construction.
-            </p>
-          </article>
-
-          <article>
-            <h3>Can you help before I buy a lot or property?</h3>
-            <p>
-              Yes. Getting builder input early can help you understand rough
-              construction costs, site challenges, utility needs, and whether the
-              project is realistic.
-            </p>
-          </article>
-
-          <article>
-            <h3>Do you work with investors?</h3>
-            <p>
-              Yes. We work with property owners and investors who care about
-              budget clarity, schedule, durability, and long-term property
-              performance.
-            </p>
-          </article>
-
-          <article>
-            <h3>Can ADUs be part of a multifamily strategy?</h3>
-            <p>
-              In many cases, yes. ADUs and secondary units can add flexibility,
-              family space, rental potential, or long-term value depending on the
-              property and local rules.
-            </p>
-          </article>
+          {FAQS.map((faq) => (
+            <article key={faq.q}>
+              <h3>{faq.q}</h3>
+              <p>{faq.a}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -257,13 +266,22 @@ export default function MultifamilyContractorSanAntonioPage() {
             Request a Free Consultation
           </a>
           <a
-            href="tel:12542902482"
+            href="tel:+12542902482"
             className="multifamily-btn multifamily-btn-secondary"
           >
             Call (254) 290-2482
           </a>
         </div>
       </section>
+
+      <JsonLd data={faqPageSchema(FAQS)} />
+      <JsonLd
+        data={serviceSchema({
+          name: "Duplex and Small Multifamily Construction",
+          description: "Luxterra Builders helps investors and property owners build duplexes, small multifamily projects, ADUs, additions, and investment-focused residential projects in San Antonio.",
+          path: "/multifamily-contractor-san-antonio",
+        })}
+      />
     </main>
   );
 }

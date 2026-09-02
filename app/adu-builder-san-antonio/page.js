@@ -1,8 +1,33 @@
 // app/adu-builder-san-antonio/page.js
 import "./adu.css";
+import Image from "next/image";
+import Breadcrumbs from "../components/Breadcrumbs";
+import JsonLd from "../components/JsonLd";
+import { faqPageSchema, serviceSchema } from "../lib/schema";
+
+const FAQS = [
+  {
+    "q": "Can I build an ADU on my property in San Antonio?",
+    "a": "It depends on your lot, zoning, setbacks, utilities, parking, and the scope of the unit. We can help review the site and determine what is realistic before you spend money on full plans."
+  },
+  {
+    "q": "Can an ADU be used as a rental?",
+    "a": "Many owners build ADUs for rental income, family use, or future flexibility. The right strategy depends on local rules, property layout, and your long-term plan."
+  },
+  {
+    "q": "Is a garage conversion cheaper than a detached ADU?",
+    "a": "Sometimes, but not always. Existing structure helps, but utilities, insulation, foundation, ceiling height, parking, and code upgrades can affect cost."
+  },
+  {
+    "q": "How early should I talk to a builder?",
+    "a": "Early. A builder can help you avoid designing something that is too expensive, difficult to permit, or hard to build on your lot."
+  }
+];
+
 
 export const metadata = {
-  title: "ADU Builder San Antonio | Mother-in-Law Suites | Luxterra Builders",
+  alternates: { canonical: "/adu-builder-san-antonio" },
+  title: "ADU Builder San Antonio | Mother-in-Law Suites",
   description:
     "Luxterra Builders designs and builds ADUs, mother-in-law suites, garage conversions, and backyard guest houses in San Antonio and nearby areas.",
 };
@@ -10,6 +35,8 @@ export const metadata = {
 export default function ADUBuilderSanAntonioPage() {
   return (
     <main className="adu-page">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }, { name: "ADU Builder", href: "/adu-builder-san-antonio" }]} />
+
       {/* HERO */}
       <section className="adu-hero">
         <div className="adu-hero-copy">
@@ -29,16 +56,20 @@ export default function ADUBuilderSanAntonioPage() {
             <a href="/quote" className="adu-btn adu-btn-primary">
               Request a Free Consultation
             </a>
-            <a href="tel:12542902482" className="adu-btn adu-btn-secondary">
+            <a href="tel:+12542902482" className="adu-btn adu-btn-secondary">
               Call (254) 290-2482
             </a>
           </div>
         </div>
 
         <div className="adu-hero-image">
-          <img
+          <Image
             src="/kings-27.jpg"
             alt="ADU mother-in-law suite exterior in San Antonio by Luxterra Builders"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            priority
           />
         </div>
       </section>
@@ -174,13 +205,19 @@ export default function ADUBuilderSanAntonioPage() {
         </div>
 
         <div className="adu-featured-images">
-          <img
+          <Image
             src="/kings-27.jpg"
             alt="Kings Modern Residence ADU exterior"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <img
+          <Image
             src="/kings-31.jpg"
             alt="Kings Modern Residence ADU living area"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>
@@ -193,40 +230,12 @@ export default function ADUBuilderSanAntonioPage() {
         </div>
 
         <div className="adu-faq-list">
-          <article>
-            <h3>Can I build an ADU on my property in San Antonio?</h3>
-            <p>
-              It depends on your lot, zoning, setbacks, utilities, parking, and
-              the scope of the unit. We can help review the site and determine
-              what is realistic before you spend money on full plans.
-            </p>
-          </article>
-
-          <article>
-            <h3>Can an ADU be used as a rental?</h3>
-            <p>
-              Many owners build ADUs for rental income, family use, or future
-              flexibility. The right strategy depends on local rules, property
-              layout, and your long-term plan.
-            </p>
-          </article>
-
-          <article>
-            <h3>Is a garage conversion cheaper than a detached ADU?</h3>
-            <p>
-              Sometimes, but not always. Existing structure helps, but utilities,
-              insulation, foundation, ceiling height, parking, and code upgrades
-              can affect cost.
-            </p>
-          </article>
-
-          <article>
-            <h3>How early should I talk to a builder?</h3>
-            <p>
-              Early. A builder can help you avoid designing something that is
-              too expensive, difficult to permit, or hard to build on your lot.
-            </p>
-          </article>
+          {FAQS.map((faq) => (
+            <article key={faq.q}>
+              <h3>{faq.q}</h3>
+              <p>{faq.a}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -244,11 +253,20 @@ export default function ADUBuilderSanAntonioPage() {
           <a href="/quote" className="adu-btn adu-btn-primary">
             Request a Free Consultation
           </a>
-          <a href="tel:12542902482" className="adu-btn adu-btn-secondary">
+          <a href="tel:+12542902482" className="adu-btn adu-btn-secondary">
             Call (254) 290-2482
           </a>
         </div>
       </section>
+
+      <JsonLd data={faqPageSchema(FAQS)} />
+      <JsonLd
+        data={serviceSchema({
+          name: "ADU and Mother-in-Law Suite Construction",
+          description: "Luxterra Builders designs and builds ADUs, mother-in-law suites, garage conversions, and backyard guest houses in San Antonio and nearby areas.",
+          path: "/adu-builder-san-antonio",
+        })}
+      />
     </main>
   );
 }

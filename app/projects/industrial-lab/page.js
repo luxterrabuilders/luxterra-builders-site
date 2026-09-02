@@ -1,7 +1,10 @@
 // app/projects/industrial-lab/page.js
 import "../project.css";
+import Image from "next/image";
+import Breadcrumbs from "../../components/Breadcrumbs";
 
 export const metadata = {
+  alternates: { canonical: "/projects/industrial-lab" },
   title: "Advanced Industrial Lab – Tenant Build-Out",
   description:
     "High-performance industrial lab and flex space build-out with durable finishes, organized circulation, and equipment-ready infrastructure.",
@@ -18,6 +21,8 @@ const labImages = [
 export default function IndustrialLabPage() {
   return (
     <main className="project-detail-page">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Projects", href: "/projects" }, { name: "Advanced Industrial Lab", href: "/projects/industrial-lab" }]} />
+
       <div className="project-detail-inner">
         {/* HERO */}
         <header className="project-detail-hero">
@@ -74,9 +79,12 @@ export default function IndustrialLabPage() {
           <div className="project-detail-gallery-grid">
             {labImages.map((src, index) => (
               <figure key={src} className="project-detail-gallery-item">
-                <img
+                <Image
                   src={src}
                   alt={`Advanced Industrial Lab – photo ${index + 1}`}
+                  width={2000}
+                  height={1500}
+                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
                 />
               </figure>
             ))}
@@ -96,7 +104,7 @@ export default function IndustrialLabPage() {
               <a href="/quote" className="lp-btn lp-btn-primary">
                 Request a Free Consultation
               </a>
-              <a href="tel:12542902482" className="lp-phone">
+              <a href="tel:+12542902482" className="lp-phone">
                 Call (254) 290-2482
               </a>
             </div>

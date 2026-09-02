@@ -1,7 +1,10 @@
 // app/services/page.js
 import "./services.css";
+import Image from "next/image";
+import Breadcrumbs from "../components/Breadcrumbs";
 
 export const metadata = {
+  alternates: { canonical: "/services" },
   title: "Services – Custom Homes, Commercial & Multifamily",
   description:
     "Custom homes, commercial and industrial build-outs, and multifamily projects coordinated from planning and permits through final inspection.",
@@ -62,6 +65,8 @@ linkLabel: "Learn more about commercial work →"
 export default function ServicesPage() {
   return (
     <main className="services-page">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }]} />
+
       <div className="services-inner">
         <header className="services-header">
           <p className="lp-section-label">Services</p>
@@ -85,7 +90,13 @@ export default function ServicesPage() {
               className="service-card"
             >
               <div className="service-card-media">
-                <img src={service.image} alt={service.imageAlt} />
+                <Image
+                  src={service.image}
+                  alt={service.imageAlt}
+                  width={1600}
+                  height={1066}
+                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 380px"
+                />
               </div>
 
               <div className="service-card-body">
@@ -129,7 +140,7 @@ export default function ServicesPage() {
               <a href="/quote" className="lp-btn-primary">
                 Request a Free Consultation
               </a>
-              <a href="tel:12542902482" className="lp-btn-secondary">
+              <a href="tel:+12542902482" className="lp-btn-secondary">
                 Call (254) 290-2482
               </a>
             </div>

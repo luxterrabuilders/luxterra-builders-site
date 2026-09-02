@@ -1,8 +1,33 @@
 // app/industrial-build-outs-san-antonio/page.js
 import "./industrial-build-outs.css";
+import Image from "next/image";
+import Breadcrumbs from "../components/Breadcrumbs";
+import JsonLd from "../components/JsonLd";
+import { faqPageSchema, serviceSchema } from "../lib/schema";
+
+const FAQS = [
+  {
+    "q": "Do you handle industrial build-outs?",
+    "a": "Yes. Luxterra Builders can help with industrial spaces, lab spaces, warehouse improvements, flex spaces, and specialized commercial build-outs."
+  },
+  {
+    "q": "Can you help before I lease or buy a space?",
+    "a": "Yes. It is smart to speak with a builder early so you can better understand construction costs, timing, utilities, inspections, and possible build-out limitations."
+  },
+  {
+    "q": "Do you coordinate inspections and trades?",
+    "a": "Yes. Luxterra helps coordinate trades, jobsite scheduling, inspections, construction details, and communication throughout the project."
+  },
+  {
+    "q": "What areas do you serve?",
+    "a": "Luxterra Builders serves San Antonio and surrounding areas, including Boerne, New Braunfels, Bulverde, Helotes, and nearby communities."
+  }
+];
+
 
 export const metadata = {
-  title: "Industrial Build-Outs San Antonio | Luxterra Builders",
+  alternates: { canonical: "/industrial-build-outs-san-antonio" },
+  title: "Industrial Build-Outs San Antonio",
   description:
     "Luxterra Builders handles industrial build-outs, lab spaces, warehouse improvements, flex spaces, and specialized commercial construction in San Antonio.",
 };
@@ -10,6 +35,8 @@ export const metadata = {
 export default function IndustrialBuildOutsSanAntonioPage() {
   return (
     <main className="industrial-page">
+      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Services", href: "/services" }, { name: "Industrial Build-Outs", href: "/industrial-build-outs-san-antonio" }]} />
+
       <section className="industrial-hero">
         <div className="industrial-hero-copy">
           <p className="industrial-kicker">San Antonio Industrial Build-Outs</p>
@@ -27,16 +54,20 @@ export default function IndustrialBuildOutsSanAntonioPage() {
             <a href="/quote" className="industrial-btn industrial-btn-primary">
               Request a Free Consultation
             </a>
-            <a href="tel:12542902482" className="industrial-btn industrial-btn-secondary">
+            <a href="tel:+12542902482" className="industrial-btn industrial-btn-secondary">
               Call (254) 290-2482
             </a>
           </div>
         </div>
 
         <div className="industrial-hero-image">
-          <img
+          <Image
             src="/industrial-01.jpg"
             alt="Industrial build-out in San Antonio by Luxterra Builders"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            priority
           />
         </div>
       </section>
@@ -167,13 +198,19 @@ export default function IndustrialBuildOutsSanAntonioPage() {
         </div>
 
         <div className="industrial-featured-images">
-          <img
+          <Image
             src="/industrial-01.jpg"
             alt="Advanced Industrial Lab project by Luxterra Builders"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <img
+          <Image
             src="/industrial-03.jpg"
             alt="Industrial lab interior build-out in San Antonio"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>
@@ -185,41 +222,12 @@ export default function IndustrialBuildOutsSanAntonioPage() {
         </div>
 
         <div className="industrial-faq-list">
-          <article>
-            <h3>Do you handle industrial build-outs?</h3>
-            <p>
-              Yes. Luxterra Builders can help with industrial spaces, lab spaces,
-              warehouse improvements, flex spaces, and specialized commercial
-              build-outs.
-            </p>
-          </article>
-
-          <article>
-            <h3>Can you help before I lease or buy a space?</h3>
-            <p>
-              Yes. It is smart to speak with a builder early so you can better
-              understand construction costs, timing, utilities, inspections, and
-              possible build-out limitations.
-            </p>
-          </article>
-
-          <article>
-            <h3>Do you coordinate inspections and trades?</h3>
-            <p>
-              Yes. Luxterra helps coordinate trades, jobsite scheduling,
-              inspections, construction details, and communication throughout the
-              project.
-            </p>
-          </article>
-
-          <article>
-            <h3>What areas do you serve?</h3>
-            <p>
-              Luxterra Builders serves San Antonio and surrounding areas,
-              including Boerne, New Braunfels, Bulverde, Helotes, and nearby
-              communities.
-            </p>
-          </article>
+          {FAQS.map((faq) => (
+            <article key={faq.q}>
+              <h3>{faq.q}</h3>
+              <p>{faq.a}</p>
+            </article>
+          ))}
         </div>
       </section>
 
@@ -237,11 +245,20 @@ export default function IndustrialBuildOutsSanAntonioPage() {
           <a href="/quote" className="industrial-btn industrial-btn-primary">
             Request a Free Consultation
           </a>
-          <a href="tel:12542902482" className="industrial-btn industrial-btn-secondary">
+          <a href="tel:+12542902482" className="industrial-btn industrial-btn-secondary">
             Call (254) 290-2482
           </a>
         </div>
       </section>
+
+      <JsonLd data={faqPageSchema(FAQS)} />
+      <JsonLd
+        data={serviceSchema({
+          name: "Industrial and Laboratory Build-Outs",
+          description: "Luxterra Builders handles industrial build-outs, lab spaces, warehouse improvements, flex spaces, and specialized commercial construction in San Antonio.",
+          path: "/industrial-build-outs-san-antonio",
+        })}
+      />
     </main>
   );
 }
