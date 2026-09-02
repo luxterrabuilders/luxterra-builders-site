@@ -1,8 +1,10 @@
 // app/commercial-contractor-san-antonio/page.js
 import "./commercial.css";
+import Image from "next/image";
 
 export const metadata = {
-  title: "Commercial Contractor San Antonio | Luxterra Builders",
+  alternates: { canonical: "/commercial-contractor-san-antonio" },
+  title: "Commercial Contractor San Antonio",
   description:
     "Luxterra Builders handles commercial build-outs, tenant improvements, office spaces, retail spaces, industrial spaces, and specialized commercial projects in San Antonio.",
 };
@@ -38,9 +40,13 @@ export default function CommercialContractorSanAntonioPage() {
         </div>
 
         <div className="commercial-hero-image">
-          <img
+          <Image
             src="/industrial-01.jpg"
             alt="Commercial industrial build-out in San Antonio by Luxterra Builders"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            priority
           />
         </div>
       </section>
@@ -176,13 +182,19 @@ export default function CommercialContractorSanAntonioPage() {
         </div>
 
         <div className="commercial-featured-images">
-          <img
+          <Image
             src="/industrial-01.jpg"
             alt="Advanced Industrial Lab commercial build-out"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <img
+          <Image
             src="/industrial-03.jpg"
             alt="Industrial lab interior build-out by Luxterra Builders"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>

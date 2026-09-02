@@ -1,8 +1,10 @@
 // app/adu-builder-san-antonio/page.js
 import "./adu.css";
+import Image from "next/image";
 
 export const metadata = {
-  title: "ADU Builder San Antonio | Mother-in-Law Suites | Luxterra Builders",
+  alternates: { canonical: "/adu-builder-san-antonio" },
+  title: "ADU Builder San Antonio | Mother-in-Law Suites",
   description:
     "Luxterra Builders designs and builds ADUs, mother-in-law suites, garage conversions, and backyard guest houses in San Antonio and nearby areas.",
 };
@@ -36,9 +38,13 @@ export default function ADUBuilderSanAntonioPage() {
         </div>
 
         <div className="adu-hero-image">
-          <img
+          <Image
             src="/kings-27.jpg"
             alt="ADU mother-in-law suite exterior in San Antonio by Luxterra Builders"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            priority
           />
         </div>
       </section>
@@ -174,13 +180,19 @@ export default function ADUBuilderSanAntonioPage() {
         </div>
 
         <div className="adu-featured-images">
-          <img
+          <Image
             src="/kings-27.jpg"
             alt="Kings Modern Residence ADU exterior"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <img
+          <Image
             src="/kings-31.jpg"
             alt="Kings Modern Residence ADU living area"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>

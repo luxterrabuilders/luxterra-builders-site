@@ -1,7 +1,9 @@
 // app/page.js
 import "./home.css";
+import Image from "next/image";
 
 export const metadata = {
+  alternates: { canonical: "/" },
   title: "San Antonio Design–Build Contractor",
   description:
     "Custom homes, commercial, and multifamily projects in San Antonio with clear budgets, realistic schedules, and weekly communication.",
@@ -57,10 +59,14 @@ export default function HomePage() {
     {/* RIGHT – LOGO / VISUAL (keep using your existing styles) */}
     <div className="hero-visual">
       <div className="hero-logo-card">
-        <img
+        <Image
           src="/luxterra-logo.png"
           alt="Luxterra Builders logo"
+          width={2132}
+          height={1547}
+          sizes="(max-width: 900px) 100vw, 50vw"
           className="hero-logo-image"
+          priority
         />
       </div>
     </div>
@@ -85,9 +91,12 @@ export default function HomePage() {
       {/* Custom Homes */}
       <article className="home-services-card">
         <div className="home-services-media">
-          <img
+          <Image
             src="/custom-home-services-01.jpg"
             alt="Custom home exterior built by Luxterra Builders"
+            width={750}
+            height={750}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
 
@@ -107,9 +116,12 @@ export default function HomePage() {
       {/* Commercial & Industrial */}
       <article className="home-services-card">
         <div className="home-services-media">
-          <img
+          <Image
             src="/industrial-services-01.png"
             alt="Industrial or lab build-out by Luxterra Builders"
+            width={2500}
+            height={1666}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
 
@@ -129,9 +141,12 @@ export default function HomePage() {
       {/* Multifamily & ADUs */}
       <article className="home-services-card">
         <div className="home-services-media">
-          <img
+          <Image
             src="/multifamily-services-01.png"
             alt="Multifamily or ADU project by Luxterra Builders"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
 
@@ -165,9 +180,12 @@ export default function HomePage() {
           {/* Project 1 – Kings Modern Residence */}
           <article className="lp-project-card">
             <div className="lp-project-image-wrap">
-              <img
+              <Image
                 src="/kings-01.jpg"
                 alt="Kings Modern Residence exterior"
+                width={1600}
+                height={1066}
+                sizes="(max-width: 900px) 100vw, 50vw"
               />
             </div>
             <div className="lp-project-body">
@@ -193,9 +211,12 @@ export default function HomePage() {
           {/* Project 2 – Burnet Rooftop Residence */}
           <article className="lp-project-card">
             <div className="lp-project-image-wrap">
-              <img
+              <Image
                 src="/burnet-01.jpg"
                 alt="Burnet rooftop custom home"
+                width={1600}
+                height={2000}
+                sizes="(max-width: 900px) 100vw, 50vw"
               />
             </div>
             <div className="lp-project-body">
@@ -217,9 +238,12 @@ export default function HomePage() {
           {/* Project 3 – Advanced Industrial Lab */}
           <article className="lp-project-card">
             <div className="lp-project-image-wrap">
-              <img
+              <Image
                 src="/industrial-01.jpg"
                 alt="Advanced industrial lab interior"
+                width={2000}
+                height={1500}
+                sizes="(max-width: 900px) 100vw, 50vw"
               />
             </div>
             <div className="lp-project-body">

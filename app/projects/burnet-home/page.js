@@ -1,6 +1,9 @@
 // app/projects/burnet-home/page.js
 
+import Image from "next/image";
+
 export const metadata = {
+  alternates: { canonical: "/projects/burnet-home" },
   title: "Burnet Rooftop Residence – Custom Home with Rooftop Deck",
   description:
     "Design-driven custom home in Burnet, TX featuring a rooftop deck, indoor–outdoor living, and modern elevations tailored to the site.",
@@ -93,9 +96,12 @@ export default function BurnetRooftopResidencePage() {
             {/* 01 */}
             <figure className="project-detail-gallery-item">
               <div className="project-detail-image-wrap">
-                <img
+                <Image
                   src="/burnet-01.jpg"
                   alt="Burnet Rooftop Residence – front elevation"
+                  width={1600}
+                  height={2000}
+                  sizes="(max-width: 900px) 100vw, 50vw"
                 />
               </div>
               <figcaption>Front elevation of the Burnet Rooftop Residence.</figcaption>
@@ -104,9 +110,12 @@ export default function BurnetRooftopResidencePage() {
             {/* 02 */}
             <figure className="project-detail-gallery-item">
               <div className="project-detail-image-wrap">
-                <img
+                <Image
                   src="/burnet-02.jpg"
                   alt="Rear yard and outdoor space"
+                  width={1600}
+                  height={2000}
+                  sizes="(max-width: 900px) 100vw, 50vw"
                 />
               </div>
               <figcaption>
@@ -117,9 +126,12 @@ export default function BurnetRooftopResidencePage() {
             {/* 03 – rooftop */}
             <figure className="project-detail-gallery-item">
               <div className="project-detail-image-wrap">
-                <img
+                <Image
                   src="/burnet-03.jpg"
                   alt="Rooftop deck 3D rendering"
+                  width={1600}
+                  height={2000}
+                  sizes="(max-width: 900px) 100vw, 50vw"
                 />
               </div>
               <figcaption>
@@ -130,9 +142,12 @@ export default function BurnetRooftopResidencePage() {
             {/* 04 – living / kitchen */}
             <figure className="project-detail-gallery-item">
               <div className="project-detail-image-wrap">
-                <img
+                <Image
                   src="/burnet-04.jpg"
                   alt="Living and kitchen 3D view"
+                  width={2000}
+                  height={1600}
+                  sizes="(max-width: 900px) 100vw, 50vw"
                 />
               </div>
               <figcaption>
@@ -143,9 +158,12 @@ export default function BurnetRooftopResidencePage() {
             {/* 05 – primary suite */}
             <figure className="project-detail-gallery-item">
               <div className="project-detail-image-wrap">
-                <img
+                <Image
                   src="/burnet-05.jpg"
                   alt="Primary suite rendering"
+                  width={2000}
+                  height={1600}
+                  sizes="(max-width: 900px) 100vw, 50vw"
                 />
               </div>
               <figcaption>
@@ -156,9 +174,12 @@ export default function BurnetRooftopResidencePage() {
             {/* 06 – plans */}
             <figure className="project-detail-gallery-item">
               <div className="project-detail-image-wrap">
-                <img
+                <Image
                   src="/burnet-06.jpg"
                   alt="Floor plan / 3D diagram"
+                  width={2000}
+                  height={1600}
+                  sizes="(max-width: 900px) 100vw, 50vw"
                 />
               </div>
               <figcaption>

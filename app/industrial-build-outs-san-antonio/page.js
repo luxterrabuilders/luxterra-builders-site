@@ -1,8 +1,10 @@
 // app/industrial-build-outs-san-antonio/page.js
 import "./industrial-build-outs.css";
+import Image from "next/image";
 
 export const metadata = {
-  title: "Industrial Build-Outs San Antonio | Luxterra Builders",
+  alternates: { canonical: "/industrial-build-outs-san-antonio" },
+  title: "Industrial Build-Outs San Antonio",
   description:
     "Luxterra Builders handles industrial build-outs, lab spaces, warehouse improvements, flex spaces, and specialized commercial construction in San Antonio.",
 };
@@ -34,9 +36,13 @@ export default function IndustrialBuildOutsSanAntonioPage() {
         </div>
 
         <div className="industrial-hero-image">
-          <img
+          <Image
             src="/industrial-01.jpg"
             alt="Industrial build-out in San Antonio by Luxterra Builders"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            priority
           />
         </div>
       </section>
@@ -167,13 +173,19 @@ export default function IndustrialBuildOutsSanAntonioPage() {
         </div>
 
         <div className="industrial-featured-images">
-          <img
+          <Image
             src="/industrial-01.jpg"
             alt="Advanced Industrial Lab project by Luxterra Builders"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <img
+          <Image
             src="/industrial-03.jpg"
             alt="Industrial lab interior build-out in San Antonio"
+            width={2000}
+            height={1500}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>

@@ -1,7 +1,9 @@
 // app/services/page.js
 import "./services.css";
+import Image from "next/image";
 
 export const metadata = {
+  alternates: { canonical: "/services" },
   title: "Services – Custom Homes, Commercial & Multifamily",
   description:
     "Custom homes, commercial and industrial build-outs, and multifamily projects coordinated from planning and permits through final inspection.",
@@ -85,7 +87,13 @@ export default function ServicesPage() {
               className="service-card"
             >
               <div className="service-card-media">
-                <img src={service.image} alt={service.imageAlt} />
+                <Image
+                  src={service.image}
+                  alt={service.imageAlt}
+                  width={1600}
+                  height={1066}
+                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 380px"
+                />
               </div>
 
               <div className="service-card-body">

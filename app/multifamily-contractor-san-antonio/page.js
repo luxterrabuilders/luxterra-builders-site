@@ -1,8 +1,10 @@
 // app/multifamily-contractor-san-antonio/page.js
 import "./multifamily.css";
+import Image from "next/image";
 
 export const metadata = {
-  title: "Multifamily Contractor San Antonio | Luxterra Builders",
+  alternates: { canonical: "/multifamily-contractor-san-antonio" },
+  title: "Multifamily Contractor San Antonio",
   description:
     "Luxterra Builders helps investors and property owners build duplexes, small multifamily projects, ADUs, additions, and investment-focused residential projects in San Antonio.",
 };
@@ -41,9 +43,13 @@ export default function MultifamilyContractorSanAntonioPage() {
         </div>
 
         <div className="multifamily-hero-image">
-          <img
+          <Image
             src="/multifamily-services-01.png"
             alt="Multifamily construction project in San Antonio by Luxterra Builders"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
+            priority
           />
         </div>
       </section>
@@ -182,13 +188,19 @@ export default function MultifamilyContractorSanAntonioPage() {
         </div>
 
         <div className="multifamily-featured-images">
-          <img
+          <Image
             src="/kings-27.jpg"
             alt="ADU exterior at Kings Modern Residence"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
-          <img
+          <Image
             src="/kings-31.jpg"
             alt="Interior space at Kings Modern Residence ADU"
+            width={1600}
+            height={1066}
+            sizes="(max-width: 900px) 100vw, 50vw"
           />
         </div>
       </section>

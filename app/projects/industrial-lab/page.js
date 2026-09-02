@@ -1,7 +1,9 @@
 // app/projects/industrial-lab/page.js
 import "../project.css";
+import Image from "next/image";
 
 export const metadata = {
+  alternates: { canonical: "/projects/industrial-lab" },
   title: "Advanced Industrial Lab – Tenant Build-Out",
   description:
     "High-performance industrial lab and flex space build-out with durable finishes, organized circulation, and equipment-ready infrastructure.",
@@ -74,9 +76,12 @@ export default function IndustrialLabPage() {
           <div className="project-detail-gallery-grid">
             {labImages.map((src, index) => (
               <figure key={src} className="project-detail-gallery-item">
-                <img
+                <Image
                   src={src}
                   alt={`Advanced Industrial Lab – photo ${index + 1}`}
+                  width={2000}
+                  height={1500}
+                  sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
                 />
               </figure>
             ))}

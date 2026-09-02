@@ -1,6 +1,9 @@
 // app/gallery/page.js
 
+import Image from "next/image";
+
 export const metadata = {
+  alternates: { canonical: "/gallery" },
   title: "Gallery – Custom Homes, Commercial, and Multifamily",
   description:
     "Project photos from Luxterra Builders, including custom homes with ADUs, commercial labs, and multifamily buildings in San Antonio.",
@@ -132,7 +135,13 @@ export default function GalleryPage() {
                   className="gallery-item"
                 >
                   <div className="gallery-image-wrap">
-                    <img src={photo.src} alt={photo.alt} />
+                    <Image
+                      src={photo.src}
+                      alt={photo.alt}
+                      width={1600}
+                      height={1066}
+                      sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
+                    />
                   </div>
                   <figcaption className="gallery-caption">
                     <p className="gallery-name">{photo.name}</p>
