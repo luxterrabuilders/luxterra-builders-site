@@ -14,6 +14,7 @@ const routes = [
 
   // Core service pages
   { path: "/services", lastModified: "2026-06-21", priority: 0.9, changeFrequency: "monthly" },
+  { path: "/about", lastModified: "2026-09-03", priority: 0.8, changeFrequency: "monthly" },
   { path: "/process", lastModified: "2026-09-02", priority: 0.8, changeFrequency: "monthly" },
   { path: "/custom-home-builder-san-antonio", lastModified: "2026-08-29", priority: 0.9, changeFrequency: "monthly" },
   { path: "/build-on-your-lot", lastModified: "2026-09-03", priority: 0.9, changeFrequency: "monthly" },

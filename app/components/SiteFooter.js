@@ -19,6 +19,7 @@ const SERVICES = [
 ];
 
 const COMPANY = [
+  { href: "/about", label: "About Christian" },
   { href: "/process", label: "Our process" },
   { href: "/projects", label: "Projects" },
   { href: "/services", label: "Services" },

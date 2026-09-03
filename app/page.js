@@ -326,7 +326,7 @@ export default function HomePage() {
         Weekly updates so you always know what&apos;s happening on site.
       </li>
       <li>
-        Licensed, insured, and working with vetted trades on every job.
+        $1M general liability insurance, and vetted trades on every job.
       </li>
     </ul>
   </div>
