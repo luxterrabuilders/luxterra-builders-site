@@ -18,6 +18,7 @@ const SERVICES = [
 ];
 
 const COMPANY = [
+  { href: "/process", label: "Our process" },
   { href: "/projects", label: "Projects" },
   { href: "/services", label: "Services" },
   { href: "/areas-we-serve", label: "Areas we serve" },

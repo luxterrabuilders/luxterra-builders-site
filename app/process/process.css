@@ -1,0 +1,207 @@
+/* app/process/process.css */
+
+.process-page { padding-bottom: 40px; }
+
+.process-hero {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 44px 24px 8px;
+}
+
+.process-kicker {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #facc15;
+  margin-bottom: 14px;
+}
+
+.process-hero h1 {
+  font-size: clamp(1.9rem, 5vw, 2.9rem);
+  line-height: 1.08;
+  letter-spacing: -0.022em;
+  color: #f9fafb;
+  margin-bottom: 18px;
+}
+
+.process-intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.process-stages {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 44px 24px 0;
+}
+
+.process-stages ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.process-stages li {
+  display: grid;
+  grid-template-columns: 74px 1fr;
+  gap: 18px;
+  padding: 26px 26px;
+  background: rgba(15, 23, 42, 0.62);
+}
+
+.process-stage-marker {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #facc15;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  padding-top: 3px;
+}
+
+.process-stage-body h2 {
+  font-size: 1.2rem;
+  color: #f9fafb;
+  margin-bottom: 6px;
+}
+
+.process-stage-summary {
+  font-size: 1rem;
+  color: #e2e8f0;
+  margin-bottom: 10px;
+}
+
+.process-stage-detail {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #94a3b8;
+  margin-bottom: 14px;
+}
+
+.process-stage-from-you {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  border-left: 2px solid rgba(250, 204, 21, 0.55);
+  padding-left: 14px;
+}
+
+.process-stage-from-you span {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #facc15;
+  margin-bottom: 3px;
+}
+
+.process-fit {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 56px 24px 0;
+}
+
+.process-fit h2 {
+  font-size: clamp(1.3rem, 3.2vw, 1.7rem);
+  color: #f9fafb;
+  margin-bottom: 22px;
+}
+
+.process-fit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.process-fit-grid article {
+  background: radial-gradient(circle at top left, #111827, #020617);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 18px;
+  padding: 22px;
+}
+
+.process-fit-grid h3 {
+  font-size: 1.02rem;
+  color: #f9fafb;
+  margin-bottom: 8px;
+}
+
+.process-fit-grid p {
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: #94a3b8;
+  margin-bottom: 14px;
+}
+
+.process-fit-grid a {
+  color: #facc15;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.process-fit-grid a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+.process-cta {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 20px;
+  text-align: center;
+}
+
+.process-cta h2 {
+  font-size: clamp(1.4rem, 3.6vw, 1.9rem);
+  color: #f9fafb;
+  margin-bottom: 10px;
+}
+
+.process-cta p {
+  color: #94a3b8;
+  margin-bottom: 24px;
+}
+
+.process-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.process-btn-primary,
+.process-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.process-btn-primary { background: linear-gradient(135deg, #fbbf24, #eab308); color: #111827; }
+.process-btn-secondary { border: 1px solid #facc15; color: #facc15; }
+
+.process-page a:focus-visible {
+  outline: 3px solid #fde68a;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+  .process-hero, .process-stages, .process-fit, .process-cta { padding-left: 16px; padding-right: 16px; }
+  .process-stages li { grid-template-columns: 46px 1fr; gap: 12px; padding: 22px 18px; }
+  .process-stage-marker { font-size: 1.15rem; }
+  .process-cta-actions > * { width: 100%; }
+}
