@@ -123,7 +123,7 @@ export default function ProcessPage() {
               We start at feasibility: what the site allows, what it will cost to
               build on, and whether the plan you have in mind fits it.
             </p>
-            <Link href="/custom-home-builder-san-antonio">Custom home building &rarr;</Link>
+            <Link href="/build-on-your-lot">Building on your lot &rarr;</Link>
           </article>
           <article>
             <h3>You&apos;re still looking for land</h3>
@@ -132,7 +132,7 @@ export default function ProcessPage() {
               swing in a build budget, and they are far cheaper to discover
               before closing than after.
             </p>
-            <Link href="/quote">Ask about a lot &rarr;</Link>
+            <Link href="/build-on-your-lot">What we check on a lot &rarr;</Link>
           </article>
           <article>
             <h3>You&apos;re building to hold or rent</h3>
