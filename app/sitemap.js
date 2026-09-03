@@ -26,6 +26,7 @@ const routes = [
 
   // Proof
   { path: "/projects", lastModified: "2026-06-21", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/projects/917-burnet", lastModified: "2026-09-03", priority: 0.8, changeFrequency: "yearly" },
   { path: "/projects/kings-modern-residence", lastModified: "2026-06-21", priority: 0.7, changeFrequency: "yearly" },
   { path: "/projects/burnet-home", lastModified: "2026-06-21", priority: 0.7, changeFrequency: "yearly" },
   { path: "/projects/industrial-lab", lastModified: "2026-06-21", priority: 0.7, changeFrequency: "yearly" },
