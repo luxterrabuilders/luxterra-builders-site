@@ -40,12 +40,12 @@ const projects = [
 
   {
     slug: "burnet-home",
-    tag: "Custom Home",
+    tag: "Design Concept — Available to Build",
     title: "Burnet Rooftop Residence",
     location: "Burnet, TX",
     summary:
-      "Ground-up custom home with a rooftop deck, indoor–outdoor living, and modern elevations tailored to the site.",
-    details: "Rooftop deck • 3D design • New construction custom home",
+      "A design concept shown in 3D renderings — this home has not been built yet. A rooftop deck and indoor-outdoor living, available to build on your lot.",
+    details: "Renderings • Rooftop deck • Available to build",
     image: "/burnet-01.jpg",
     alt: "Burnet custom home with rooftop deck at sunset",
     href: "/projects/burnet-home",

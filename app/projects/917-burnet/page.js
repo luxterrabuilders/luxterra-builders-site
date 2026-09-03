@@ -73,14 +73,18 @@ export default function Burnet917Page() {
         <p className="b917-kicker">Historic full renovation &middot; Custom pool &amp; spa &middot; Model home</p>
         <h1>917 Burnet Street</h1>
         <p className="b917-lede">
-          A historic San Antonio home taken back to the studs and rebuilt &mdash;
+          A 1902 home taken back to the studs and rebuilt over six months &mdash;
           the porch, the proportions and the street presence kept, everything
-          behind them new. It sits minutes from downtown, and it is the house we
-          use to show people what our work actually looks like in person.
+          behind them new. 1,976 square feet, minutes from downtown, and the
+          house we use to show people what our work actually looks like in
+          person.
         </p>
         <dl className="b917-facts">
           <div><dt>Location</dt><dd>917 Burnet Street, San Antonio</dd></div>
+          <div><dt>Originally built</dt><dd>1902</dd></div>
+          <div><dt>Size</dt><dd>1,976 sq ft</dd></div>
           <div><dt>Scope</dt><dd>Full historic renovation</dd></div>
+          <div><dt>Build time</dt><dd>Six months</dd></div>
           <div><dt>Outdoor</dt><dd>Custom-built pool, spa and rock waterfall</dd></div>
           <div><dt>Status</dt><dd>Complete &mdash; Luxterra model home</dd></div>
         </dl>
@@ -101,10 +105,10 @@ export default function Burnet917Page() {
         <div>
           <h2>Keeping the house, replacing everything else</h2>
           <p>
-            Older houses near downtown are worth saving for their character, and
-            that character lives in things a new build can&apos;t easily
-            reproduce: the depth of the porch, the window rhythm, the way the
-            roof meets the street. The renovation kept all of it.
+            A house built in 1902 has details a new build can&apos;t easily
+            reproduce &mdash; the depth of the porch, the window rhythm, the way
+            the roof meets the street. Those were worth keeping. Everything
+            behind them, over six months, was replaced.
           </p>
           <p>
             Inside, the plan opens up the way people actually live now &mdash;

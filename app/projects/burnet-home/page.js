@@ -5,9 +5,9 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/projects/burnet-home" },
-  title: "Burnet Rooftop Residence – Custom Home with Rooftop Deck",
+  title: "Burnet Rooftop Residence – Design Concept, Available to Build",
   description:
-    "Design-driven custom home in Burnet, TX featuring a rooftop deck, indoor–outdoor living, and modern elevations tailored to the site.",
+    "A design concept from Luxterra Builders: a custom home with a rooftop deck and indoor-outdoor living, shown in 3D renderings and available to build on your lot.",
 };
 
 export default function BurnetRooftopResidencePage() {
@@ -18,12 +18,20 @@ export default function BurnetRooftopResidencePage() {
       <div className="project-detail-inner">
         {/* HERO */}
         <section className="project-detail-hero">
-          <p className="lp-section-label">Featured Project</p>
+          <p className="lp-section-label">Design Concept &middot; Renderings</p>
           <h1 className="lp-section-title">Burnet Rooftop Residence</h1>
           <p className="lp-section-sub">
-            A custom home in Burnet, Texas with a dedicated rooftop deck and
-            indoor–outdoor living. Designed with 3D plans so the owner could
-            see every space before we broke ground.
+            A custom home design with a dedicated rooftop deck and
+            indoor&ndash;outdoor living, developed in 3D so every space can be
+            seen before construction starts.
+          </p>
+          <p className="project-detail-notice">
+            <strong>These images are 3D renderings, not photographs.</strong>{" "}
+            This home has not been built yet &mdash; it is a design we can build
+            on your lot, or adapt to suit a different site. For photographs of
+            completed work, see{" "}
+            <a href="/projects/917-burnet">917 Burnet Street</a> or{" "}
+            <a href="/projects/kings-modern-residence">Kings Modern Residence</a>.
           </p>
 
           <div className="project-detail-meta">

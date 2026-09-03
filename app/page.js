@@ -179,7 +179,7 @@ export default function HomePage() {
          {/* FEATURED PROJECTS */}
       <section className="lp-featured" id="projects">
         <p className="lp-section-label">Featured Projects</p>
-        <h2 className="lp-section-title">Recent Luxterra builds.</h2>
+        <h2 className="lp-section-title">Recent Luxterra projects.</h2>
         <p className="lp-section-sub">
           A quick look at the kind of detail and craftsmanship we bring to
           every project.
@@ -257,14 +257,15 @@ export default function HomePage() {
               />
             </div>
             <div className="lp-project-body">
-              <p className="lp-project-tag">Custom Home</p>
+              <p className="lp-project-tag">Design Concept &mdash; Available to Build</p>
               <h3>Burnet Rooftop Residence</h3>
               <p className="lp-project-text">
-                Design-driven custom home with a rooftop deck, indoor–outdoor
-                living, and modern elevations tailored for the site.
+                A design concept shown in 3D renderings, not yet built. A
+                rooftop deck, indoor–outdoor living and modern elevations &mdash;
+                available to build on your lot.
               </p>
               <p className="lp-project-meta">
-                New construction • Rooftop deck • San Antonio, Texas
+                Renderings • Rooftop deck • Available to build
               </p>
               <a href="/projects/burnet-home" className="lp-project-link">
                 View project →
