@@ -1,19 +1,5 @@
 // app/projects/917-burnet/page.js
 //
-// TODO (Christian): I wrote only what the photographs and the address
-// actually show. These would make the page much stronger, and I won't
-// invent any of them:
-//   1. Square footage, and the year the house was originally built.
-//   2. How long the renovation took, start to finish.
-//   3. What the house threw at you once you opened it up - foundation,
-//      framing, knob-and-tube, whatever it was. The problems you solved are
-//      the most persuasive part of a renovation story and nobody else can
-//      write them.
-//   4. Whether the property sits in a designated historic district, and
-//      whether that meant a design review. Do not claim this until checked.
-//   5. Confirm how visits work before we publish times - the page currently
-//      says "by appointment", which also matches the Google listing.
-
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumbs from "../../components/Breadcrumbs";
@@ -24,7 +10,7 @@ export const metadata = {
   alternates: { canonical: "/projects/917-burnet" },
   title: "917 Burnet Street \u2013 Historic Renovation, Custom Pool & Spa",
   description:
-    "A full historic renovation at 917 Burnet Street in San Antonio: restored exterior, open-plan interior, waterfall granite kitchen, stone baths, and a pool with a rock waterfall. Luxterra's model home.",
+    "A 1902 home in a designated San Antonio historic district, fully renovated in six months: new foundation piers, all-new electrical and plumbing, restored original windows, and a custom-built pool and spa. Luxterra's model home.",
   openGraph: {
     title: "917 Burnet Street \u2013 Historic Renovation, Custom Pool & Spa | Luxterra Builders",
     description:
@@ -86,6 +72,7 @@ export default function Burnet917Page() {
           <div><dt>Scope</dt><dd>Full historic renovation</dd></div>
           <div><dt>Build time</dt><dd>Six months</dd></div>
           <div><dt>Outdoor</dt><dd>Custom-built pool, spa and rock waterfall</dd></div>
+          <div><dt>Historic district</dt><dd>Design review approved</dd></div>
           <div><dt>Status</dt><dd>Complete &mdash; Luxterra model home</dd></div>
         </dl>
       </section>
@@ -138,6 +125,83 @@ export default function Burnet917Page() {
           </p>
           <p className="b917-story-cta">
             <Link href="/quote">Arrange a visit &rarr;</Link>
+          </p>
+        </div>
+      </section>
+
+
+      <section className="b917-found">
+        <div className="b917-found-inner">
+          <h2>What we found when we opened it up</h2>
+          <p className="b917-found-lede">
+            A house built in 1902 doesn&apos;t tell you everything up front. This
+            is what was behind the walls at 917 Burnet, and what we did about it.
+            None of it shows in the photographs, and it is most of where the six
+            months went.
+          </p>
+
+          <dl className="b917-found-list">
+            <div>
+              <dt>The foundation needed more support than it had</dt>
+              <dd>
+                We brought in an engineer rather than guess. The report called for
+                additional piers, so we added them before anything else went back
+                in. Structure first, always &mdash; everything you see in these
+                photos is sitting on that decision.
+              </dd>
+            </div>
+
+            <div>
+              <dt>We planned to keep the electrical. We couldn&apos;t.</dt>
+              <dd>
+                The intention was to reuse the existing service. Then we got
+                underneath the house and saw how many cables had been run below it
+                over the decades. Reusing that wasn&apos;t something we were willing
+                to defend to an owner, so we replaced all of it &mdash; wiring and
+                panels included. It cost more than the plan allowed. It was still
+                the only answer.
+              </dd>
+            </div>
+
+            <div>
+              <dt>All the plumbing was replaced and inspected</dt>
+              <dd>
+                One hundred percent of it, not the accessible runs. In a house this
+                age, patching supply lines just moves the failure somewhere you
+                can&apos;t reach later.
+              </dd>
+            </div>
+
+            <div>
+              <dt>Nothing in the house was square</dt>
+              <dd>
+                A century of settling means no wall is plumb and no floor is level.
+                That is a real problem when you are setting cabinets and
+                full-height stone tile, where a sixteenth of an inch compounds
+                across a run. We worked it through with the framers, the tile
+                installers and the cabinet installer so the finished work reads
+                straight even where the structure underneath it isn&apos;t. The
+                kitchen and bathroom photos are the evidence.
+              </dd>
+            </div>
+
+            <div>
+              <dt>The original windows were restored, not replaced</dt>
+              <dd>
+                The property is in a designated historic district, so the
+                renovation went through design review and the windows were
+                restored. It was also the right call: the window rhythm is a large
+                part of why the house still reads as a 1902 home from the street.
+              </dd>
+            </div>
+          </dl>
+
+          <p className="b917-found-close">
+            If you are weighing up an older house, this is the honest shape of it.
+            Some of what you find will cost more than the plan allowed. What
+            matters is whether your builder tells you early, prices it properly,
+            and doesn&apos;t quietly take the cheaper way out where nobody would
+            ever look.
           </p>
         </div>
       </section>

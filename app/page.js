@@ -265,7 +265,7 @@ export default function HomePage() {
                 available to build on your lot.
               </p>
               <p className="lp-project-meta">
-                Renderings • Rooftop deck • Available to build
+                Renderings • 814 Burnet St, San Antonio • Available to build
               </p>
               <a href="/projects/burnet-home" className="lp-project-link">
                 View project →

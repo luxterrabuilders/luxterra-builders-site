@@ -85,3 +85,28 @@
   .b917-grid img { height: 220px; }
   .b917-cta-actions > * { width: 100%; }
 }
+
+/* "What we found when we opened it up" - the renovation reality section */
+.b917-found { max-width: 1100px; margin: 0 auto; padding: 56px 24px 0; }
+.b917-found-inner {
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  border-radius: 20px;
+  background: radial-gradient(circle at top left, #111827, #020617);
+  padding: 32px 34px;
+}
+.b917-found h2 { font-size: clamp(1.3rem, 3.4vw, 1.8rem); color: #f9fafb; margin-bottom: 12px; }
+.b917-found-lede { font-size: 1rem; line-height: 1.7; color: #cbd5e1; max-width: 68ch; margin-bottom: 26px; }
+.b917-found-list { display: flex; flex-direction: column; gap: 22px; margin: 0; }
+.b917-found-list > div { border-left: 2px solid rgba(250, 204, 21, 0.5); padding-left: 18px; }
+.b917-found-list dt { font-size: 1.02rem; font-weight: 700; color: #facc15; margin-bottom: 6px; }
+.b917-found-list dd { margin: 0; font-size: 0.95rem; line-height: 1.72; color: #94a3b8; max-width: 70ch; }
+.b917-found-close {
+  margin-top: 28px; padding-top: 20px;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+  font-size: 0.98rem; line-height: 1.72; color: #cbd5e1; max-width: 70ch;
+}
+@media (max-width: 640px) {
+  .b917-found { padding-left: 16px; padding-right: 16px; }
+  .b917-found-inner { padding: 24px 20px; }
+  .b917-found-list > div { padding-left: 14px; }
+}

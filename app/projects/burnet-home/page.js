@@ -27,8 +27,9 @@ export default function BurnetRooftopResidencePage() {
           </p>
           <p className="project-detail-notice">
             <strong>These images are 3D renderings, not photographs.</strong>{" "}
-            This home has not been built yet &mdash; it is a design we can build
-            on your lot, or adapt to suit a different site. For photographs of
+            This home has not been built yet &mdash; it is a design planned for 814
+            Burnet Street, one block from Dignowity Park, and one we can build on
+            your lot or adapt to another site. For photographs of
             completed work, see{" "}
             <a href="/projects/917-burnet">917 Burnet Street</a> or{" "}
             <a href="/projects/kings-modern-residence">Kings Modern Residence</a>.
@@ -44,7 +45,7 @@ export default function BurnetRooftopResidencePage() {
             <div className="project-detail-meta-item">
               <span className="project-detail-meta-label">Location</span>
               <span className="project-detail-meta-value">
-                Burnet, Texas
+                814 Burnet Street, San Antonio
               </span>
             </div>
             <div className="project-detail-meta-item">
