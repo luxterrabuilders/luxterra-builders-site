@@ -22,11 +22,11 @@ import "./burnet-917.css";
 
 export const metadata = {
   alternates: { canonical: "/projects/917-burnet" },
-  title: "917 Burnet Street \u2013 Historic Renovation & Model Home",
+  title: "917 Burnet Street \u2013 Historic Renovation, Custom Pool & Spa",
   description:
     "A full historic renovation at 917 Burnet Street in San Antonio: restored exterior, open-plan interior, waterfall granite kitchen, stone baths, and a pool with a rock waterfall. Luxterra's model home.",
   openGraph: {
-    title: "917 Burnet Street \u2013 Historic Renovation & Model Home | Luxterra Builders",
+    title: "917 Burnet Street \u2013 Historic Renovation, Custom Pool & Spa | Luxterra Builders",
     description:
       "A historic San Antonio home taken back to the studs and rebuilt, minutes from downtown. Now Luxterra's model home.",
     url: "/projects/917-burnet",
@@ -70,7 +70,7 @@ export default function Burnet917Page() {
       />
 
       <section className="b917-hero">
-        <p className="b917-kicker">Historic renovation &middot; Model home</p>
+        <p className="b917-kicker">Historic full renovation &middot; Custom pool &amp; spa &middot; Model home</p>
         <h1>917 Burnet Street</h1>
         <p className="b917-lede">
           A historic San Antonio home taken back to the studs and rebuilt &mdash;
@@ -81,7 +81,7 @@ export default function Burnet917Page() {
         <dl className="b917-facts">
           <div><dt>Location</dt><dd>917 Burnet Street, San Antonio</dd></div>
           <div><dt>Scope</dt><dd>Full historic renovation</dd></div>
-          <div><dt>Outdoor</dt><dd>Pool, spa and rock waterfall, deck</dd></div>
+          <div><dt>Outdoor</dt><dd>Custom-built pool, spa and rock waterfall</dd></div>
           <div><dt>Status</dt><dd>Complete &mdash; Luxterra model home</dd></div>
         </dl>
       </section>
@@ -125,6 +125,12 @@ export default function Burnet917Page() {
             If you&apos;re planning a build or a major renovation, you can walk
             it by appointment and see the level of finish in person before you
             commit to anything.
+          </p>
+          <p>
+            The pool, spa and rock waterfall in the back yard are ours too
+            &mdash; designed and built as part of the same project rather than
+            subcontracted out afterwards, which is why the deck, the coping and
+            the house all line up the way they do.
           </p>
           <p className="b917-story-cta">
             <Link href="/quote">Arrange a visit &rarr;</Link>

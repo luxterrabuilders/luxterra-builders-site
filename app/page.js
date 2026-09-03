@@ -186,7 +186,35 @@ export default function HomePage() {
         </p>
 
         <div className="lp-project-grid">
-          {/* Project 1 – Kings Modern Residence */}
+          {/* Project 1 – 917 Burnet Street */}
+          <article className="lp-project-card">
+            <div className="lp-project-image-wrap">
+              <Image
+                src="/917-burnet-front-elevation-twilight.jpg"
+                alt="917 Burnet Street historic home renovation at twilight, San Antonio"
+                width={2000}
+                height={1342}
+                sizes="(max-width: 900px) 100vw, 50vw"
+              />
+            </div>
+            <div className="lp-project-body">
+              <p className="lp-project-tag">Historic Renovation + Custom Pool &amp; Spa</p>
+              <h3>917 Burnet Street</h3>
+              <p className="lp-project-text">
+                A historic San Antonio home taken back to the studs and rebuilt,
+                with a custom-built pool, spa and rock waterfall in the yard.
+                Minutes from downtown, and now our model home.
+              </p>
+              <p className="lp-project-meta">
+                Full historic renovation • Custom pool &amp; spa • Model home
+              </p>
+              <a href="/projects/917-burnet" className="lp-project-link">
+                View project →
+              </a>
+            </div>
+          </article>
+
+          {/* Project 2 – Kings Modern Residence */}
           <article className="lp-project-card">
             <div className="lp-project-image-wrap">
               <Image

@@ -14,12 +14,12 @@ export const metadata = {
 const projects = [
   {
     slug: "917-burnet",
-    tag: "Historic Renovation + Model Home",
+    tag: "Historic Renovation + Custom Pool & Spa",
     title: "917 Burnet Street",
     location: "San Antonio, TX",
     summary:
-      "A historic San Antonio home taken back to the studs and rebuilt, minutes from downtown. Now our model home \u2014 walk it by appointment and see the finish level in person.",
-    details: "Full historic renovation \u2022 Pool, spa & rock waterfall \u2022 Model home",
+      "A historic San Antonio home taken back to the studs and rebuilt, with a custom-built pool, spa and rock waterfall. Minutes from downtown, and now our model home \u2014 walk it by appointment.",
+    details: "Full historic renovation \u2022 Custom pool & spa \u2022 Model home",
     image: "/917-burnet-front-elevation-twilight.jpg",
     alt: "917 Burnet Street historic home renovation at twilight, San Antonio",
     href: "/projects/917-burnet",
