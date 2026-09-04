@@ -3,20 +3,17 @@
 // Written from Christian's own account. Every fact here came from him.
 //
 // TODO (Christian):
-//   1. A photo of you on a job site - not a studio headshot. This page is
-//      about proving a real person is running the build, and a picture of
-//      you in a half-finished house does that better than anything I write.
-//      Save it as /public/christian-hernandez.jpg and tell me.
+//   1. The hero photo is cropped from a picture Christian sent, to show him
+//      and the framing only. /public/christian-hernandez-couple.jpg is the
+//      original including his wife - swap it in only if she is happy to
+//      appear on a commercial site.
 //   2. Confirm the broker line below. You are a licensed Texas real estate
 //      broker, which is unusual and useful for buyers evaluating land - but
 //      builder-plus-broker has disclosure implications I am not qualified to
 //      advise on. Check with your attorney before this goes live.
-//   3. See the note in our conversation about renovations: this page says
-//      you focus on custom homes, ADUs, multifamily, commercial and
-//      industrial. It does not yet say you decline renovation work, because
-//      the quote form and several service pages still offer it.
 
 import Link from "next/link";
+import Image from "next/image";
 import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { SITE_URL, PHONE_DISPLAY, PHONE_HREF } from "../lib/business";
@@ -60,13 +57,26 @@ export default function AboutPage() {
       <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "About", href: "/about" }]} />
 
       <section className="about-hero">
-        <p className="about-kicker">About</p>
-        <h1>The builder you&apos;ll actually be working with.</h1>
-        <p className="about-lede">
-          Luxterra Builders is Christian Hernandez. When you call the number on
-          this site, that is who answers, and that is who runs your job. Here is
-          how he got here, because you should know who you are hiring.
-        </p>
+        <div className="about-hero-copy">
+          <p className="about-kicker">About</p>
+          <h1>The builder you&apos;ll actually be working with.</h1>
+          <p className="about-lede">
+            Luxterra Builders is Christian Hernandez. When you call the number on
+            this site, that is who answers, and that is who runs your job. Here is
+            how he got here, because you should know who you are hiring.
+          </p>
+        </div>
+        <figure className="about-hero-photo">
+          <Image
+            src="/christian-hernandez.jpg"
+            alt="Christian Hernandez, founder of Luxterra Builders, on site in front of a house under framing"
+            width={430}
+            height={1235}
+            sizes="(max-width: 860px) 100vw, 340px"
+            priority
+          />
+          <figcaption>Christian Hernandez, on site.</figcaption>
+        </figure>
       </section>
 
       <section className="about-story">
@@ -164,6 +174,16 @@ export default function AboutPage() {
             replaced, finishing to a standard you would want in your own home
             &mdash; does not fit that budget, and pretending otherwise helps
             nobody.
+          </p>
+          <p>
+            We also don&apos;t take routine remodels &mdash; a kitchen refresh, a
+            bathroom swap, a list of small jobs. We will take the right
+            renovation: a house worth saving, taken far enough back that it comes
+            out genuinely right.{" "}
+            <Link href="/projects/917-burnet">917 Burnet</Link> is what the right
+            one looks like. If you&apos;re not sure which yours is, ask &mdash;
+            we&apos;ll tell you honestly, including when the answer is that you
+            want a different contractor.
           </p>
         </div>
       </section>

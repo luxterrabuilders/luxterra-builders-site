@@ -82,3 +82,31 @@
   .about section { padding-left: 16px; padding-right: 16px; }
   .about-cta-actions > * { width: 100%; }
 }
+
+/* Hero with the founder photo */
+.about-hero {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 36px;
+  align-items: center;
+  max-width: 1000px !important;
+}
+.about-hero-photo { margin: 0; }
+.about-hero-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.25);
+}
+.about-hero-photo figcaption {
+  margin-top: 9px;
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  color: #64748b;
+  text-align: center;
+}
+@media (max-width: 860px) {
+  .about-hero { grid-template-columns: 1fr; gap: 26px; }
+  .about-hero-photo { max-width: 260px; }
+}

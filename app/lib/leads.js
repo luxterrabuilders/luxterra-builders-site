@@ -9,7 +9,7 @@ export const PROJECT_TYPES = [
   "Custom home",
   "Build on my lot",
   "ADU / mother-in-law suite",
-  "Home addition or major remodel",
+  "Major renovation (not routine remodels)",
   "Duplex / small multifamily",
   "Commercial build-out",
   "Industrial / warehouse / lab",
