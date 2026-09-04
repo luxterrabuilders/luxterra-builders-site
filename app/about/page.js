@@ -3,10 +3,12 @@
 // Written from Christian's own account. Every fact here came from him.
 //
 // TODO (Christian):
-//   1. The hero photo is cropped from a picture Christian sent, to show him
-//      and the framing only. /public/christian-hernandez-couple.jpg is the
-//      original including his wife - swap it in only if she is happy to
-//      appear on a commercial site.
+//   1. The hero photo includes Christian's wife, published with her
+//      agreement. /public/christian-hernandez.jpg is a crop of Christian
+//      alone if that is ever wanted instead.
+//   2. TODO: her name, if she should be named in the caption, and whether
+//      she has a role in the business - the family-business section can say
+//      more once we know, but I won't invent a role for her.
 //   2. Confirm the broker line below. You are a licensed Texas real estate
 //      broker, which is unusual and useful for buyers evaluating land - but
 //      builder-plus-broker has disclosure implications I am not qualified to
@@ -68,14 +70,14 @@ export default function AboutPage() {
         </div>
         <figure className="about-hero-photo">
           <Image
-            src="/christian-hernandez.jpg"
-            alt="Christian Hernandez, founder of Luxterra Builders, on site in front of a house under framing"
-            width={430}
+            src="/christian-hernandez-couple.jpg"
+            alt="Christian Hernandez and his wife on site at a Luxterra Builders house under framing in San Antonio"
+            width={926}
             height={1235}
-            sizes="(max-width: 860px) 100vw, 340px"
+            sizes="(max-width: 860px) 100vw, 360px"
             priority
           />
-          <figcaption>Christian Hernandez, on site.</figcaption>
+          <figcaption>Christian and his wife, on site.</figcaption>
         </figure>
       </section>
 
@@ -156,6 +158,14 @@ export default function AboutPage() {
           </p>
         </div>
         <div>
+          <h2>A family business</h2>
+          <p>
+            Luxterra is family-run, and deliberately small. Christian&apos;s name
+            is on every house &mdash; which is the simplest reason the standard
+            doesn&apos;t slip. There is no layer of company sitting between you
+            and the person who is accountable for the work.
+          </p>
+
           <h2>The name</h2>
           <p>
             <strong>Lux</strong> for luxury. <strong>Terra</strong> for land. The
