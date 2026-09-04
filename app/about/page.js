@@ -6,9 +6,6 @@
 //   1. The hero photo includes Christian's wife, published with her
 //      agreement. /public/christian-hernandez.jpg is a crop of Christian
 //      alone if that is ever wanted instead.
-//   2. TODO: her name, if she should be named in the caption, and whether
-//      she has a role in the business - the family-business section can say
-//      more once we know, but I won't invent a role for her.
 //   2. Confirm the broker line below. You are a licensed Texas real estate
 //      broker, which is unusual and useful for buyers evaluating land - but
 //      builder-plus-broker has disclosure implications I am not qualified to
@@ -25,7 +22,7 @@ export const metadata = {
   alternates: { canonical: "/about" },
   title: "About Christian Hernandez",
   description:
-    "Christian Hernandez founded Luxterra Builders in San Antonio. He worked unpaid for a year and a half to learn to build properly before taking on his first custom home. Here's the whole story.",
+    "Luxterra Builders is Christian Hernandez and Mi Hee Yoo, a family business in San Antonio. He worked unpaid for a year and a half to learn to build properly before his first custom home in 2022.",
   openGraph: {
     title: "About Christian Hernandez | Luxterra Builders",
     description:
@@ -71,13 +68,13 @@ export default function AboutPage() {
         <figure className="about-hero-photo">
           <Image
             src="/christian-hernandez-couple.jpg"
-            alt="Christian Hernandez and his wife on site at a Luxterra Builders house under framing in San Antonio"
+            alt="Christian Hernandez and Mi Hee Yoo of Luxterra Builders on site at a house under framing in San Antonio"
             width={926}
             height={1235}
             sizes="(max-width: 860px) 100vw, 360px"
             priority
           />
-          <figcaption>Christian and his wife, on site.</figcaption>
+          <figcaption>Christian Hernandez and Mi Hee Yoo, on site.</figcaption>
         </figure>
       </section>
 
@@ -160,10 +157,36 @@ export default function AboutPage() {
         <div>
           <h2>A family business</h2>
           <p>
-            Luxterra is family-run, and deliberately small. Christian&apos;s name
-            is on every house &mdash; which is the simplest reason the standard
+            Luxterra is family-run and deliberately small. Christian builds;{" "}
+            <strong>Mi Hee Yoo</strong>, his wife, handles interior design and
+            selections. If you have walked{" "}
+            <Link href="/projects/917-burnet">917 Burnet</Link> or looked at the
+            photographs of it, her work is the reason the finishes hold together
+            the way they do.
+          </p>
+          <p>
+            Two names on every house is the simplest reason the standard
             doesn&apos;t slip. There is no layer of company sitting between you
-            and the person who is accountable for the work.
+            and the people accountable for the work.
+          </p>
+
+          <h2>What we&apos;re built on</h2>
+          <p>
+            We&apos;re a Christian family, and we run the business that way. The
+            part of that which should matter to you is conduct rather than
+            language: doing the work properly in the places nobody will ever
+            check, pricing something before we do it rather than after, and
+            telling you the truth when the truth is inconvenient.
+          </p>
+          <p>
+            The electrical at 917 Burnet is the version of that you can actually
+            inspect. We planned to keep it, the plan would have been cheaper, and
+            we replaced all of it because what was under the house wasn&apos;t
+            something we were willing to leave for an owner to find later.
+          </p>
+          <p>
+            We build for anyone who wants a house built properly. That has never
+            been a condition of working with us and never will be.
           </p>
 
           <h2>The name</h2>
@@ -224,6 +247,17 @@ export default function AboutPage() {
       </section>
 
       <JsonLd data={personSchema} />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Mi Hee Yoo",
+          jobTitle: "Interior Design and Selections",
+          worksFor: { "@id": `${SITE_URL}/#business` },
+          url: `${SITE_URL}/about`,
+          knowsAbout: ["Interior design", "Finish and fixture selections"],
+        }}
+      />
     </main>
   );
 }
