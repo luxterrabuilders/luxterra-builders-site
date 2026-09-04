@@ -328,6 +328,11 @@ export default function HomePage() {
       <li>
         $1M general liability insurance, and vetted trades on every job.
       </li>
+      <li>
+        A family business, run by a Christian family &mdash; which shows up as
+        work done properly where nobody will ever check.{" "}
+        <a href="/about">More about us &rarr;</a>
+      </li>
     </ul>
   </div>
 
@@ -336,7 +341,7 @@ export default function HomePage() {
       <span className="lp-why-label">Completed builds</span>
       <span className="lp-why-value">12+</span>
       <p>
-        Custom homes, ADUs, remodels, and industrial projects around San Antonio.
+        Custom homes, ADUs, multifamily, commercial and industrial projects around San Antonio.
       </p>
     </div>
     <div className="lp-why-card">

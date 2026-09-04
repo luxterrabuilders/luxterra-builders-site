@@ -12,6 +12,7 @@ import "./site-footer.css";
 const SERVICES = [
   { href: "/custom-home-builder-san-antonio", label: "Custom home builder" },
   { href: "/build-on-your-lot", label: "Build on your lot" },
+  { href: "/design-build-contractor-san-antonio", label: "Design-build" },
   { href: "/adu-builder-san-antonio", label: "ADUs & guest suites" },
   { href: "/multifamily-contractor-san-antonio", label: "Multifamily & duplexes" },
   { href: "/commercial-contractor-san-antonio", label: "Commercial build-outs" },
