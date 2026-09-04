@@ -252,6 +252,10 @@ export async function POST(request) {
       subject: "We received your project details - Luxterra Builders",
       html: confirmationHtml(data),
       to: data.email,
+      // The "from" address only has to exist as a sender on the verified
+      // domain - no mailbox needed. But a customer WILL hit reply on this
+      // email, so point replies at the inbox that is actually monitored.
+      replyTo: toAddress,
     });
     if (!confirmation.ok) {
       console.warn("LUXTERRA_LEAD_CONFIRMATION_FAILED", confirmation.reason);
