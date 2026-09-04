@@ -25,6 +25,13 @@ export const dynamic = "force-dynamic";
 
 const RESEND_ENDPOINT = "https://api.resend.com/emails";
 
+// Neither of these is a secret - they appear on outgoing mail - so they get
+// sensible defaults in code. That leaves exactly one thing that has to be
+// configured in the hosting environment: the API key. Fewer moving parts,
+// fewer ways for delivery to silently fall back.
+const DEFAULT_FROM = "Luxterra Builders <leads@luxterrabuilders.com>";
+const DEFAULT_TO = "info@luxterrabuilders.com";
+
 function clientIp(request) {
   const forwarded = request.headers.get("x-forwarded-for");
   if (forwarded) return forwarded.split(",")[0].trim();
@@ -32,10 +39,10 @@ function clientIp(request) {
 }
 
 async function sendViaResend({ subject, html, text, to, replyTo }) {
-  const apiKey = process.env.RESEND_API_KEY;
-  const from = process.env.LEAD_FROM_EMAIL;
+  const apiKey = (process.env.RESEND_API_KEY || "").trim();
+  const from = (process.env.LEAD_FROM_EMAIL || DEFAULT_FROM).trim();
 
-  if (!apiKey || !from) {
+  if (!apiKey) {
     return { ok: false, reason: "not_configured" };
   }
 
@@ -195,7 +202,7 @@ export async function POST(request) {
   const flag = isHighIntent(data) ? "[QUALIFIED] " : "";
   const subject = `${flag}New lead: ${data.projectType} - ${data.fullName}`;
 
-  const toAddress = process.env.LEAD_TO_EMAIL || "info@luxterrabuilders.com";
+  const toAddress = (process.env.LEAD_TO_EMAIL || DEFAULT_TO).trim();
 
   const notification = await sendViaResend({
     subject,
@@ -231,7 +238,7 @@ export async function POST(request) {
     };
     if (process.env.NODE_ENV !== "production") {
       payload.diagnostics = {
-        resendConfigured: Boolean(process.env.RESEND_API_KEY && process.env.LEAD_FROM_EMAIL),
+        resendConfigured: Boolean(process.env.RESEND_API_KEY),
         resendReason: notification.reason || null,
         resendDetail: (notification.detail || "").slice(0, 300) || null,
         fallbackReason: lastFallbackReason,

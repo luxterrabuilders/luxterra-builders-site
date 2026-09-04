@@ -24,8 +24,8 @@ export async function GET(request) {
   }
 
   const apiKey = process.env.RESEND_API_KEY || "";
-  const from = process.env.LEAD_FROM_EMAIL || "";
-  const to = process.env.LEAD_TO_EMAIL || "";
+  const from = process.env.LEAD_FROM_EMAIL || "Luxterra Builders <leads@luxterrabuilders.com> (default in code)";
+  const to = process.env.LEAD_TO_EMAIL || "info@luxterrabuilders.com (default in code)";
   const fallback = process.env.LEAD_FALLBACK_ENDPOINT || "(using built-in default)";
 
   const report = {
@@ -41,7 +41,7 @@ export async function GET(request) {
     },
     // This is the exact condition the lead route uses to decide whether to
     // attempt Resend at all.
-    wouldAttemptResend: Boolean(apiKey && from),
+    wouldAttemptResend: Boolean(apiKey),
   };
 
   // If a key is present, ask Resend directly whether it works and whether the
