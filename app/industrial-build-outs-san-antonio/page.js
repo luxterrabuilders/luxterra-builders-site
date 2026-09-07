@@ -20,7 +20,7 @@ const FAQS = [
   },
   {
     "q": "What areas do you serve?",
-    "a": "Luxterra Builders serves San Antonio and surrounding areas, including Boerne, New Braunfels, Bulverde, Helotes, and nearby communities."
+    "a": "Luxterra Builders serves San Antonio and the surrounding Hill Country, including San Antonio, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, Schertz, Cibolo, Selma, Blanco, Castroville and Hondo, and nearby communities."
   }
 ];
 

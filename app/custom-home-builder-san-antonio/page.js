@@ -16,7 +16,7 @@ const FAQS = [
   },
   {
     "q": "Do you build outside San Antonio?",
-    "a": "Yes. Luxterra serves San Antonio and surrounding areas including Boerne, New Braunfels, Bulverde, Helotes, and nearby communities."
+    "a": "Yes. Luxterra serves San Antonio and the surrounding Hill Country, including San Antonio, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, Schertz, Cibolo, Selma, Blanco, Castroville and Hondo, and nearby communities."
   },
   {
     "q": "Do you only build luxury homes?",

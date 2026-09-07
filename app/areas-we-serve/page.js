@@ -8,7 +8,7 @@ import { faqPageSchema } from "../lib/schema";
 const FAQS = [
   {
     "q": "Do you only work in San Antonio?",
-    "a": "No. Luxterra Builders serves San Antonio and surrounding communities including Boerne, New Braunfels, Bulverde, Helotes, Spring Branch, Canyon Lake, La Vernia, and other nearby areas."
+    "a": "No. Luxterra Builders serves San Antonio and the surrounding Hill Country, including San Antonio, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, Schertz, Cibolo, Selma, Blanco, Castroville and Hondo, and other nearby communities."
   },
   {
     "q": "Do you work in the Texas Hill Country?",
@@ -29,7 +29,7 @@ export const metadata = {
   alternates: { canonical: "/areas-we-serve" },
   title: "Areas We Serve | San Antonio & Texas Hill Country",
   description:
-    "Luxterra Builders serves San Antonio, the Texas Hill Country, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, Helotes, and nearby areas.",
+    "Luxterra Builders serves San Antonio and the Texas Hill Country, including San Antonio, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, Schertz, Cibolo, Selma, Blanco, Castroville and Hondo." ,
 };
 
 const AREAS = [
@@ -51,6 +51,9 @@ const AREAS = [
   "Castroville",
   "Floresville",
   "Texas Hill Country",
+  "Selma",
+  "Blanco",
+  "Hondo",
 ];
 
 const SERVICES = [

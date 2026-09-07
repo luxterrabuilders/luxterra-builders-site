@@ -87,8 +87,8 @@ export default function SiteFooter() {
           <p className="sf-heading">Service area</p>
           <p className="sf-areas">
             San Antonio, Boerne, New Braunfels, Bulverde, Spring Branch,
-            Canyon Lake, La Vernia, Schertz, Cibolo and nearby Hill Country
-            communities.
+            Canyon Lake, La Vernia, Schertz, Cibolo, Selma, Blanco,
+            Castroville, Hondo and nearby Hill Country communities.
           </p>
         </div>
       </div>

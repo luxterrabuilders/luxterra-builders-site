@@ -60,7 +60,11 @@ export const SERVICE_AREAS = [
   "La Vernia",
   "Schertz",
   "Cibolo",
+  "Selma",
   "Helotes",
+  "Blanco",
+  "Castroville",
+  "Hondo",
 ];
 
 export const SERVICES = [

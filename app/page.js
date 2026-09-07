@@ -441,7 +441,7 @@ export default function HomePage() {
       <a href="/areas-we-serve" className="home-trust-seo-card">
         <span>06</span>
         <h3>Areas We Serve</h3>
-        <p>San Antonio, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, and the Hill Country.</p>
+        <p>San Antonio, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, Schertz, Cibolo, Selma, Blanco, Castroville and Hondo, and the wider Hill Country.</p>
       </a>
     </div>
   </div>

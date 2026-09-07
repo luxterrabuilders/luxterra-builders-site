@@ -43,7 +43,7 @@ const FAQS = [
   },
   {
     q: "Do you build outside San Antonio?",
-    a: "Yes. We build across San Antonio and the surrounding Hill Country, including Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, Schertz and Cibolo. Which authority reviews your permit depends on where the lot sits, and we handle that either way.",
+    a: "Yes. We build across San Antonio and the surrounding Hill Country, including San Antonio, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, Schertz, Cibolo, Selma, Blanco, Castroville and Hondo. Which authority reviews your permit depends on where the lot sits, and we handle that either way.",
   },
 ];
 
