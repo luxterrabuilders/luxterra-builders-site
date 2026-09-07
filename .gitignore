@@ -18,3 +18,5 @@ out/
 
 # editor
 *.swp
+.vercel
+.env*
