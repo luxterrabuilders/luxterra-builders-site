@@ -6,7 +6,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/projects" },
-  title: "Projects – Recent Luxterra Builds",
+  title: "Projects – Custom Homes, Renovations & Build-Outs",
   description:
     "A curated look at Luxterra’s recent custom homes, commercial spaces, and multifamily projects built like long-term assets.",
 };
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
         {/* HEADER */}
         <header className="projects-header">
           <p className="projects-kicker">Project Gallery</p>
-          <h1 className="projects-title">Recent Luxterra builds.</h1>
+          <h1 className="projects-title">Recent Luxterra projects.</h1>
           <p className="projects-lede">
             A closer look at the custom homes, commercial spaces, and industrial
             projects we&apos;ve delivered around San Antonio.
