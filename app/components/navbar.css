@@ -87,6 +87,14 @@
   background: #f9fafb;
 }
 
+/* The component toggles the drawer with the `hidden` attribute. A class
+   selector outranks the browser's built-in [hidden] { display: none }, so
+   the `display: block` rule in the mobile breakpoint below was winning and
+   the menu stayed open permanently. This puts `hidden` back in charge. */
+.nav-drawer[hidden] {
+  display: none !important;
+}
+
 .nav-drawer nav {
   display: flex;
   flex-direction: column;
