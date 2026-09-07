@@ -342,7 +342,8 @@ footer {
 
 .page-hero p {
   max-width: 720px;
-  color: #4b5563;
+  color: #94a3b8;
+  line-height: 1.6;
 }
 
 /* Grid of cards */
@@ -353,12 +354,38 @@ footer {
   gap: 1.75rem;
 }
 
+/* The site ground is #020617 with #f9fafb text (see body, top of file).
+   This card used to be white while its text stayed inherited-light, which
+   rendered the contact page as white-on-white. It now matches the card
+   treatment already used on /quote (.quote-form-card). */
 .page-card {
-  background: #ffffff;
-  border-radius: 0.9rem;
+  background: #020617;
+  border-radius: 18px;
   padding: 1.5rem 1.75rem;
-  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.05);
-  border: 1px solid #e5e7eb;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  color: #f9fafb;
+}
+
+.page-card p {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.page-card p + p {
+  margin-top: 0.85rem;
+}
+
+/* Links inside the card were falling back to the browser default blue,
+   which is both off-brand and low contrast on the dark ground. */
+.page-card a {
+  color: #facc15;
+  font-weight: 600;
+  text-underline-offset: 2px;
+}
+
+.page-card a:hover {
+  text-decoration: none;
 }
 
 .page-card h2 {
@@ -441,7 +468,7 @@ footer {
   font-weight: 600;
   background: #111827;
   color: #f9fafb;
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 /* Wider form layout */

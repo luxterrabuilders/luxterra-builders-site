@@ -53,7 +53,7 @@ export default function ContactPage() {
           </p>
         </div>
 
-        <div className="page-card form">
+        <div className="page-card">
           <h2>Send a message</h2>
           <LeadForm variant="short" sourcePage="/contact" />
         </div>
