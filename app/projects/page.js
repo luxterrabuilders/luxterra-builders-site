@@ -6,7 +6,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/projects" },
-  title: "Projects – Custom Homes, Renovations & Build-Outs",
+  title: "Completed Projects in San Antonio",
   description:
     "A curated look at Luxterra’s recent custom homes, commercial spaces, and multifamily projects built like long-term assets.",
 };

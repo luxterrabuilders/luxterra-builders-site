@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export const metadata = {
   alternates: { canonical: "/gallery" },
-  title: "Gallery – Custom Homes, Commercial, and Multifamily",
+  title: "Project Photo Gallery",
   description:
     "Project photos from Luxterra Builders, including custom homes with ADUs, commercial labs, and multifamily buildings in San Antonio.",
 };

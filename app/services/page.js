@@ -5,7 +5,7 @@ import Breadcrumbs from "../components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/services" },
-  title: "Services – Custom Homes, Commercial & Multifamily",
+  title: "Custom Home & Commercial Construction",
   description:
     "Custom homes, commercial and industrial build-outs, and multifamily projects coordinated from planning and permits through final inspection.",
 };

@@ -27,7 +27,7 @@ const FAQS = [
 
 export const metadata = {
   alternates: { canonical: "/areas-we-serve" },
-  title: "Areas We Serve | San Antonio & Texas Hill Country",
+  title: "San Antonio & Hill Country Service Areas",
   description:
     "Luxterra Builders serves San Antonio and the Texas Hill Country, including San Antonio, Boerne, New Braunfels, Bulverde, Spring Branch, Canyon Lake, La Vernia, Schertz, Cibolo, Selma, Blanco, Castroville and Hondo." ,
 };

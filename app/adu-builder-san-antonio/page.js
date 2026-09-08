@@ -27,7 +27,7 @@ const FAQS = [
 
 export const metadata = {
   alternates: { canonical: "/adu-builder-san-antonio" },
-  title: "ADU Builder San Antonio | Mother-in-Law Suites",
+  title: "ADU Builder in San Antonio",
   description:
     "Luxterra Builders designs and builds ADUs, mother-in-law suites, garage conversions, and backyard guest houses in San Antonio and nearby areas.",
 };

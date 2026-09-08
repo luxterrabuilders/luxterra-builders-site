@@ -6,7 +6,7 @@ import "../project.css"; // was missing: Next only bundles CSS a route imports, 
 
 export const metadata = {
   alternates: { canonical: "/projects/burnet-home" },
-  title: "Burnet Rooftop Residence – Design Concept, Available to Build",
+  title: "Burnet Rooftop Residence – Concept",
   description:
     "A design concept from Luxterra Builders: a custom home with a rooftop deck and indoor-outdoor living, shown in 3D renderings and available to build on your lot.",
 };

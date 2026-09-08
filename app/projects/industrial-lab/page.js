@@ -5,7 +5,7 @@ import Breadcrumbs from "../../components/Breadcrumbs";
 
 export const metadata = {
   alternates: { canonical: "/projects/industrial-lab" },
-  title: "Advanced Industrial Lab – Tenant Build-Out",
+  title: "Advanced Industrial Lab Build-Out",
   description:
     "High-performance industrial lab and flex space build-out with durable finishes, organized circulation, and equipment-ready infrastructure.",
 };
