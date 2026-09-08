@@ -193,11 +193,17 @@ export default function ADUBuilderSanAntonioPage() {
       <section className="adu-section adu-featured-project">
         <div className="adu-featured-copy">
           <p className="adu-section-label">Project proof</p>
-          <h2>Kings Modern Residence: Custom home + ADU</h2>
+          <h2>Kings Modern Residence: 433 square feet that earns income</h2>
           <p>
-            Kings Modern Residence includes a dedicated ADU / mother-in-law suite
-            designed for flexibility on a single property. It is a strong example
-            of how a custom home and secondary living space can work together.
+            We built a 1,358 square foot custom home and a fully independent 433
+            square foot ADU on one San Antonio lot, finished in 2024. The ADU is
+            one bedroom and one full bathroom with its own kitchen and its own
+            entrance &mdash; not a converted room.
+          </p>
+          <p>
+            Both units operate as short-term rentals today. That is the case for
+            building a second dwelling properly, in one sentence: it is not
+            storage, it is a second income.
           </p>
           <a href="/projects/kings-modern-residence" className="adu-text-link">
             View Kings Modern Residence →
@@ -206,15 +212,15 @@ export default function ADUBuilderSanAntonioPage() {
 
         <div className="adu-featured-images">
           <Image
-            src="/kings-27.jpg"
-            alt="Kings Modern Residence ADU exterior"
+            src="/kings-32.jpg"
+            alt="Interior of a 433 square foot ADU in San Antonio, sleeping area opening onto its own kitchen"
             width={1600}
             height={1066}
             sizes="(max-width: 900px) 100vw, 50vw"
           />
           <Image
-            src="/kings-31.jpg"
-            alt="Kings Modern Residence ADU living area"
+            src="/kings-29.jpg"
+            alt="ADU kitchen with white cabinetry, stainless range and a navy accent wall, San Antonio"
             width={1600}
             height={1066}
             sizes="(max-width: 900px) 100vw, 50vw"
