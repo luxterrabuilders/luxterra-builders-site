@@ -35,6 +35,9 @@ const routes = [
   { path: "/projects/industrial-lab", lastModified: "2026-06-21", priority: 0.7, changeFrequency: "yearly" },
   { path: "/gallery", lastModified: "2026-06-21", priority: 0.5, changeFrequency: "monthly" },
 
+  // Answers
+  { path: "/faq", lastModified: "2026-09-08", priority: 0.8, changeFrequency: "monthly" },
+
   // Conversion
   { path: "/quote", lastModified: "2026-08-29", priority: 0.9, changeFrequency: "monthly" },
   { path: "/contact", lastModified: "2026-08-29", priority: 0.8, changeFrequency: "monthly" },

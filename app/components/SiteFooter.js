@@ -25,6 +25,7 @@ const COMPANY = [
   { href: "/projects", label: "Projects" },
   { href: "/services", label: "Services" },
   { href: "/areas-we-serve", label: "Areas we serve" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
   { href: "/quote", label: "Request a consultation" },
 ];

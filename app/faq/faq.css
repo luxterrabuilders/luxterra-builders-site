@@ -1,0 +1,141 @@
+/* app/faq/faq.css
+   Palette follows the site: #020617 ground, #facc15 accent, #f9fafb text. */
+
+.faq {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 1.5rem 4rem;
+}
+
+.faq-hero {
+  margin-bottom: 3rem;
+}
+
+.faq-kicker {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #facc15;
+  margin-bottom: 0.75rem;
+}
+
+.faq-hero h1 {
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.faq-lede {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: #94a3b8;
+  max-width: 640px;
+}
+
+.faq-group {
+  margin-bottom: 3rem;
+}
+
+.faq-group h2 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #cbd5e1;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.faq-list article h3 {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin-bottom: 0.6rem;
+  color: #f9fafb;
+}
+
+.faq-list article p {
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.faq-more {
+  margin-top: 1rem;
+  padding: 1.75rem;
+  border-radius: 18px;
+  background: #020617;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.7);
+}
+
+.faq-more h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.faq-more p {
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+.faq-more a {
+  color: #facc15;
+  text-underline-offset: 2px;
+}
+
+.faq-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.faq-btn-primary,
+.faq-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.faq-btn-primary {
+  background: linear-gradient(135deg, #fbbf24, #eab308);
+  color: #111827;
+}
+
+.faq-btn-secondary {
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  color: #f9fafb;
+}
+
+.faq-btn-primary:hover {
+  filter: brightness(1.06);
+}
+
+.faq-btn-secondary:hover {
+  border-color: #facc15;
+  color: #facc15;
+}
+
+@media (max-width: 640px) {
+  .faq {
+    padding: 4.5rem 1.1rem 3rem;
+  }
+
+  .faq-actions a {
+    width: 100%;
+  }
+}
