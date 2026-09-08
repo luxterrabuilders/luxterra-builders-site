@@ -40,7 +40,7 @@
   text-transform: uppercase; color: #94a3b8; margin-bottom: 8px;
 }
 .db-compare-card-ours .db-compare-tag { color: #facc15; }
-.db-compare-card h3 { font-size: 1.08rem; color: #f9fafb; margin-bottom: 14px; line-height: 1.35; }
+.db-compare-card h3 { font-size: 1.2rem; color: #f9fafb; margin-bottom: 14px; line-height: 1.35; }
 .db-compare-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
 .db-compare-card li {
   font-size: 0.93rem; line-height: 1.62; color: #94a3b8;
@@ -64,7 +64,7 @@
   border: 1px solid rgba(148, 163, 184, 0.2); border-radius: 16px; overflow: hidden;
 }
 .db-how-grid > div { background: #0b1120; padding: 18px 20px; }
-.db-how-grid h3 { font-size: 0.98rem; color: #f9fafb; margin-bottom: 6px; }
+.db-how-grid h3 { font-size: 1.2rem; color: #f9fafb; margin-bottom: 6px; }
 .db-how-grid p { font-size: 0.9rem; line-height: 1.62; color: #94a3b8; }
 .db-how-link { margin-top: 16px; }
 .db-how-link a { color: #facc15; font-weight: 600; text-decoration: none; }
@@ -83,7 +83,7 @@
   font-size: 0.68rem; font-weight: 700; letter-spacing: 0.13em;
   text-transform: uppercase; color: #facc15; margin-bottom: 6px;
 }
-.db-proof-card h3 { font-size: 1.05rem; color: #f9fafb; margin-bottom: 6px; }
+.db-proof-card h3 { font-size: 1.2rem; color: #f9fafb; margin-bottom: 6px; }
 .db-proof-card p { font-size: 0.9rem; line-height: 1.6; color: #94a3b8; }
 .db-proof-card:hover { border-color: rgba(250, 204, 21, 0.5); }
 
@@ -91,7 +91,7 @@
 .db-faq h2 { font-size: clamp(1.3rem, 3.4vw, 1.75rem); color: #f9fafb; margin-bottom: 18px; }
 .db-faq-list { display: flex; flex-direction: column; gap: 18px; }
 .db-faq-list article { border-left: 2px solid rgba(250, 204, 21, 0.5); padding-left: 18px; }
-.db-faq-list h3 { font-size: 1rem; color: #f9fafb; margin-bottom: 6px; }
+.db-faq-list h3 { font-size: 1.2rem; color: #f9fafb; margin-bottom: 6px; }
 .db-faq-list p { font-size: 0.95rem; line-height: 1.7; color: #94a3b8; max-width: 72ch; }
 
 .db-cta { padding-top: 60px; text-align: center; max-width: 720px !important; }
