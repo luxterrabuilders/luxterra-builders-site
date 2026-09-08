@@ -1,148 +1,219 @@
 // app/projects/kings-modern-residence/page.js
+//
+// Rebuilt 8 Sep 2026. The previous version never imported its stylesheet, so
+// it rendered with no layout at all - text flush to the left edge, labels
+// running into their values, images breaking out of the viewport.
+//
+// Everything written here is described from the photographs themselves. The
+// two dwellings really are finished in different palettes: the main house is
+// light oak, white and brass; the ADU is navy, dark tile and brass. That
+// contrast is the story of the project, so the galleries are grouped to show it.
+//
+// TODO (Christian): five facts I will not invent. Send them over and I will
+// drop them into the facts list at the top:
+//   1. Square footage - main house and ADU separately.
+//   2. Bedroom and bathroom count for each.
+//   3. Year completed.
+//   4. Was the pool and the outdoor kitchen in Luxterra's scope, or a separate
+//      contractor? The photos are strong either way, but I will not imply you
+//      built it if you did not.
+//   5. Is the ADU rented, used by family, or a short-term rental? The bunk
+//      room and the gaming setup suggest it earns its keep, and "this ADU pays
+//      for itself" is a far better line than anything I can write generically.
 
+import Link from "next/link";
 import Image from "next/image";
 import Breadcrumbs from "../../components/Breadcrumbs";
+import JsonLd from "../../components/JsonLd";
+import { breadcrumbSchema } from "../../lib/schema";
+import { PHONE_DISPLAY, PHONE_HREF, SITE_URL } from "../../lib/business";
+import "./kings.css";
 
 export const metadata = {
   alternates: { canonical: "/projects/kings-modern-residence" },
-  title: "Kings Modern Residence – Custom Home + ADU",
+  title: "Kings Modern Residence - Custom Home + ADU in San Antonio",
   description:
-    "Modern custom home in San Antonio with a dedicated ADU / mother-in-law suite, open concept living, and high-contrast finishes by Luxterra Builders.",
+    "A ground-up custom home with a fully separate ADU on one San Antonio lot: light oak and brass in the main house, navy and dark tile in the guest unit, and a pool between them.",
+  openGraph: {
+    title: "Kings Modern Residence | Luxterra Builders",
+    description:
+      "Custom home and a fully independent ADU on a single San Antonio lot, built ground-up by Luxterra Builders.",
+    url: "/projects/kings-modern-residence",
+    images: [{ url: "/kings-01.jpg" }],
+  },
 };
 
-const photos = [
-  { src: "/kings-01.jpg", label: "Front elevation – Kings Modern Residence" },
-  { src: "/kings-02.jpg", label: "Street view and entry approach" },
-  { src: "/kings-03.jpg", label: "Modern exterior with warm materials" },
-  { src: "/kings-04.jpg", label: "Overall exterior perspective" },
+const FACTS = [
+  ["Project type", "Custom home + detached ADU"],
+  ["Location", "San Antonio, Texas"],
+  ["Scope", "Ground-up build, interior finishes, site planning"],
+  ["Finishes", "Two complete kitchens, two full bath sets, pool and outdoor living"],
+];
 
-  { src: "/kings-11.jpg", label: "Open-concept living room" },
-  { src: "/kings-15.jpg", label: "Kitchen island and main prep area" },
-  { src: "/kings-18.jpg", label: "Kitchen + dining connection" },
-
-  { src: "/kings-19.jpg", label: "Primary bedroom" },
-  { src: "/kings-23.jpg", label: "Primary bathroom – vanity and mirrors" },
-
-  { src: "/kings-27.jpg", label: "ADU – exterior" },
-  { src: "/kings-31.jpg", label: "ADU – living area" },
-  { src: "/kings-34.jpg", label: "ADU – bathroom" },
+const GALLERIES = [
+  {
+    title: "The main house",
+    blurb:
+      "Board-and-batten outside, light oak and white inside, with brass carried through the kitchen, the bar and the bathrooms.",
+    shots: [
+      ["/kings-02.jpg", "Covered front porch with dark stained columns and a black entry door, Kings Modern Residence, San Antonio"],
+      ["/kings-05.jpg", "Open living room with a linear fireplace, mounted television and coffered ceiling detail"],
+      ["/kings-06.jpg", "Dining area open to the living room, with a linear glass pendant over the table"],
+      ["/kings-07.jpg", "Main kitchen with white cabinetry, brass hardware and a patterned dark tile backsplash"],
+      ["/kings-18.jpg", "Brass farmhouse sink set against the dark patterned backsplash in the main kitchen"],
+      ["/kings-09.jpg", "Detail of the textured glass and brass linear pendant above the dining table"],
+      ["/kings-19.jpg", "Built-in coffee bar in navy cabinetry with brass pulls and open shelving"],
+      ["/kings-14.jpg", "Guest bedroom with two windows, a ceiling fan and light oak flooring"],
+      ["/kings-15.jpg", "Bedroom with a built-in desk run and concealed LED lighting"],
+      ["/kings-17.jpg", "Full bathroom with a double vanity, white cabinetry and brass fixtures"],
+      ["/kings-16.jpg", "Black marble shower surround with a recessed niche"],
+      ["/kings-20.jpg", "Full-size washer and dryer set into a finished laundry closet"],
+    ],
+  },
+  {
+    title: "The ADU",
+    blurb:
+      "A genuinely separate home rather than a converted room: its own kitchen, its own full bath, its own entry - and a completely different palette of navy, dark tile and brass.",
+    shots: [
+      ["/kings-32.jpg", "ADU sleeping area opening directly onto its own kitchen, San Antonio accessory dwelling unit"],
+      ["/kings-29.jpg", "ADU kitchen with white cabinetry, stainless range and a navy accent wall"],
+      ["/kings-31.jpg", "ADU bedroom with navy walls and built-in shelving"],
+      ["/kings-30.jpg", "Farmhouse sink and pull-out storage in the ADU kitchen"],
+      ["/kings-34.jpg", "ADU bathroom with a dark tiled shower and a backlit mirror"],
+      ["/kings-35.jpg", "ADU vanity with a vessel basin, stone counter and backlit mirror"],
+    ],
+  },
+  {
+    title: "Pool and outdoor living",
+    blurb:
+      "The lot does the work here. The pool sits between the two buildings, under a mature oak, with a covered patio and string lighting for the evenings.",
+    shots: [
+      ["/kings-22.jpg", "Pool running the length of the lot beneath a mature oak, with the house lit at dusk"],
+      ["/kings-21.jpg", "Pool and spa with the main house and ADU lit at twilight"],
+      ["/kings-27.jpg", "Covered patio strung with festoon lighting looking across the pool at dusk"],
+      ["/kings-28.jpg", "Wide view of the pool, patio and mature oak between the two buildings"],
+      ["/kings-25.jpg", "Outdoor dining table set for six beside the pool"],
+      ["/kings-03.jpg", "Covered side porch looking out toward the street at dusk"],
+    ],
+  },
 ];
 
 export default function KingsModernResidencePage() {
   return (
-    <main className="lp project-detail-page">
-      <Breadcrumbs items={[{ name: "Home", href: "/" }, { name: "Projects", href: "/projects" }, { name: "Kings Modern Residence", href: "/projects/kings-modern-residence" }]} />
+    <main className="kings">
+      <Breadcrumbs
+        items={[
+          { name: "Home", href: "/" },
+          { name: "Projects", href: "/projects" },
+          { name: "Kings Modern Residence", href: "/projects/kings-modern-residence" },
+        ]}
+      />
 
-      {/* HERO SECTION */}
-      <section className="project-detail-hero">
-        <div className="project-detail-inner">
-          <p className="lp-section-label">Featured Project</p>
-          <h1 className="lp-section-title">Kings Modern Residence</h1>
-          <p className="lp-section-sub">
-            A modern custom home in San Antonio with a dedicated ADU / mother-in-law
-            suite. Designed for multigenerational living, rental potential, and
-            long-term flexibility on a single lot.
+      <section className="kings-hero">
+        <p className="kings-kicker">Custom home &middot; Detached ADU &middot; Pool</p>
+        <h1>Kings Modern Residence</h1>
+        <p className="kings-lede">
+          Two complete homes on one San Antonio lot. A ground-up custom house at
+          the front, a fully independent ADU behind it, and a pool between the
+          two &mdash; built so the second dwelling adds real value instead of
+          reading as a spare room bolted on the back.
+        </p>
+        <dl className="kings-facts">
+          {FACTS.map(([label, value]) => (
+            <div key={label}>
+              <dt>{label}</dt>
+              <dd>{value}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <figure className="kings-hero-image">
+        <Image
+          src="/kings-01.jpg"
+          alt="Front elevation of Kings Modern Residence at twilight, a board-and-batten custom home in San Antonio"
+          width={1600}
+          height={1066}
+          sizes="100vw"
+          priority
+        />
+      </figure>
+
+      <section className="kings-story">
+        <div>
+          <h2>Two homes, deliberately not matching</h2>
+          <p>
+            The main house is light: white oak floors, white cabinetry, brass
+            fixtures, a dark patterned backsplash as the one strong note. The
+            ADU is the opposite &mdash; navy walls, dark tile, backlit mirrors.
           </p>
-
-          <div className="project-detail-meta">
-            <div className="project-detail-meta-item">
-              <span className="project-detail-meta-label">Project type</span>
-              <span className="project-detail-meta-value">
-                Custom Home + ADU / Mother-in-law Suite
-              </span>
-            </div>
-            <div className="project-detail-meta-item">
-              <span className="project-detail-meta-label">Location</span>
-              <span className="project-detail-meta-value">
-                San Antonio, Texas
-              </span>
-            </div>
-            <div className="project-detail-meta-item">
-              <span className="project-detail-meta-label">Scope</span>
-              <span className="project-detail-meta-value">
-                Ground-up build, interior finishes, site planning
-              </span>
-            </div>
-          </div>
+          <p>
+            That was the point. When a second unit is finished as a slightly
+            cheaper copy of the main house, it reads like an afterthought and it
+            is valued like one. Giving it its own character makes it feel like
+            somewhere you would choose to live rather than somewhere you were
+            put.
+          </p>
+        </div>
+        <div>
+          <h2>Why an ADU is worth building properly</h2>
+          <p>
+            A detached unit with its own kitchen, its own full bathroom and its
+            own entrance can house family, guests or a tenant without anyone
+            walking through anyone else&apos;s living room. It is the single
+            most flexible thing you can add to a residential lot in San Antonio.
+          </p>
+          <p>
+            The cost difference between a proper ADU and a glorified guest room
+            is smaller than most people expect. The difference in what it is
+            worth afterwards is not.
+          </p>
+          <p className="kings-story-cta">
+            <Link href="/adu-builder-san-antonio">More on building an ADU in San Antonio &rarr;</Link>
+          </p>
         </div>
       </section>
 
-      {/* STORY / COPY */}
-      <section className="project-detail-copy">
-        <div className="project-detail-inner project-detail-copy-inner">
-          <div className="project-detail-copy-main">
-            <h2>Built like an asset, lived in like a home.</h2>
-            <p>
-              Kings Modern Residence was designed for an owner who wanted modern
-              architecture, warm interiors, and an additional dwelling unit that
-              could flex between family, guests, or rental income.
-            </p>
-            <p>
-              Luxterra managed the full process—from planning and permits to final
-              punch list—coordinating trades, inspections, and finishes to deliver
-              a clean, on-budget project.
-            </p>
-          </div>
-
-          <div className="project-detail-copy-list">
-            <h3>Project highlights</h3>
-            <ul>
-              <li>Custom floor plan for main home + ADU on one property</li>
-              <li>Open-concept living, kitchen, and dining for everyday use</li>
-              <li>High-contrast kitchen finishes and durable materials</li>
-              <li>
-                Private ADU / mother-in-law suite with its own entry and amenities
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* IMAGE GRID */}
-      <section className="project-detail-gallery">
-        <div className="project-detail-inner">
-          <h2 className="project-detail-gallery-title">Project Photos</h2>
-          <div className="project-detail-gallery-grid">
-            {photos.map((photo, idx) => (
-              <figure key={idx} className="project-detail-gallery-item">
-                <div className="project-detail-image-wrap">
-                  <Image
-                    src={photo.src}
-                    alt={photo.label}
-                    width={1600}
-                    height={1066}
-                    sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
-                  />
-                </div>
-                <figcaption>{photo.label}</figcaption>
+      {GALLERIES.map((g) => (
+        <section className="kings-gallery" key={g.title}>
+          <h2>{g.title}</h2>
+          <p className="kings-gallery-blurb">{g.blurb}</p>
+          <div className="kings-grid">
+            {g.shots.map(([src, alt]) => (
+              <figure key={src}>
+                <Image src={src} alt={alt} width={1600} height={1066} sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw" />
               </figure>
             ))}
           </div>
+        </section>
+      ))}
+
+      <section className="kings-cta">
+        <h2>Thinking about a custom home, an ADU, or both?</h2>
+        <p>
+          Tell us about the lot. If it will take a second dwelling, that is
+          worth knowing before you design the first one &mdash; it changes where
+          the house sits, where the utilities run and where the driveway goes.
+        </p>
+        <div className="kings-cta-actions">
+          <Link href="/quote" className="kings-btn-primary">Request a free consultation</Link>
+          <a href={PHONE_HREF} className="kings-btn-secondary">Call {PHONE_DISPLAY}</a>
         </div>
+        <p className="kings-back"><Link href="/projects">&larr; All projects</Link></p>
       </section>
 
-      {/* CTA BACK TO PROJECTS / QUOTE */}
-      <section className="project-detail-cta">
-        <div className="project-detail-inner project-detail-cta-inner">
-          <div>
-            <h2>Planning a custom home or ADU?</h2>
-            <p>
-              Whether it&apos;s a ground-up build, a mother-in-law suite, or an
-              income-producing ADU, we approach your project like an owner—not just
-              a contractor.
-            </p>
-          </div>
-          <div className="project-detail-cta-actions">
-            <a href="/quote" className="lp-btn lp-btn-primary">
-              Request a Free Consultation
-            </a>
-            <a href="/projects" className="lp-btn lp-btn-secondary">
-              Back to Projects
-            </a>
-          </div>
-        </div>
-      </section>
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CreativeWork",
+          name: "Kings Modern Residence",
+          description:
+            "A ground-up custom home with a fully independent detached ADU on a single San Antonio lot, built by Luxterra Builders.",
+          url: `${SITE_URL}/projects/kings-modern-residence`,
+          image: `${SITE_URL}/kings-01.jpg`,
+          creator: { "@id": `${SITE_URL}/#business` },
+        }}
+      />
     </main>
   );
 }
-

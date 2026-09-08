@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Breadcrumbs from "../../components/Breadcrumbs";
+import "../project.css"; // was missing: Next only bundles CSS a route imports, so this page rendered unstyled
 
 export const metadata = {
   alternates: { canonical: "/projects/burnet-home" },
