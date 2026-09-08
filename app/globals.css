@@ -18,6 +18,26 @@ body {
 }
 
 
+/* Responsive media safety net.
+   Without this, an image renders at its intrinsic width and pushes the page
+   sideways on any screen narrower than the file. next/image usually sets its
+   own sizing, but raw <img>, svg, video and iframe had nothing holding them
+   in, and neither did any image whose page stylesheet forgot to size it. */
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Long unbroken strings - a URL, an email address - used to force the same
+   sideways scroll on narrow screens. */
+body {
+  overflow-wrap: break-word;
+}
+
 /* NAVBAR */
 .navbar {
   width: 100%;
@@ -299,14 +319,11 @@ body {
   background: #009b75;
 }
 
-/* FOOTER */
-footer {
-  padding: 20px;
-  text-align: center;
-  border-top: 1px solid #ddd;
-  background: #fff;
-  font-size: 14px;
-}
+/* FOOTER
+   The old element-level `footer { ... }` rule was removed. SiteFooter styles
+   itself through .sf in components/site-footer.css, but this rule's padding,
+   text-align: center and font-size still leaked past it, because an element
+   selector loses to a class only on the properties the class actually sets. */
 
 /* RESPONSIVE */
 @media (max-width: 850px) {
