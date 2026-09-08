@@ -50,6 +50,20 @@ export const REVIEWS = [
   },
 ];
 
+// Pricing. Confirmed by Christian on 8 Sep 2026.
+//
+// These are TURNKEY CONSTRUCTION figures: the slab, site work, driveway and
+// appliances are inside the number. The lot and the architect/design fees are
+// NOT. Getting that distinction wrong is the most common way a builder's
+// quoted price per square foot ends up feeling like a bait and switch, so it
+// is stated everywhere the number appears.
+//
+// Change them here and /faq and /custom-home-builder-san-antonio both follow.
+export const PRICE_SEMI_CUSTOM_PSF = "$160";
+export const PRICE_CUSTOM_PSF_RANGE = "$220 to $300";
+export const PRICE_INCLUDES = "slab, site work, driveway and appliances";
+export const PRICE_EXCLUDES = "the lot and the architect and design fees";
+
 export const SERVICE_AREAS = [
   "San Antonio",
   "Boerne",

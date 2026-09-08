@@ -266,3 +266,76 @@
     width: 100%;
   }
 }
+
+
+/* ---------- Pricing block ---------- */
+
+.custom-home-price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.custom-home-price-card {
+  padding: 1.75rem;
+  border-radius: 18px;
+  background: #020617;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.7);
+}
+
+.custom-home-price-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #facc15;
+  margin-bottom: 0.75rem;
+}
+
+.custom-home-price {
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: #f9fafb;
+  margin-bottom: 0.85rem;
+}
+
+.custom-home-price span {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #94a3b8;
+  margin-left: 0.3rem;
+}
+
+.custom-home-price-card p:last-child {
+  color: #cbd5e1;
+  line-height: 1.65;
+}
+
+.custom-home-price-note {
+  padding: 1.5rem 1.75rem;
+  border-radius: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  background: rgba(15, 23, 42, 0.5);
+}
+
+.custom-home-price-note p {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.custom-home-price-note p + p {
+  margin-top: 0.85rem;
+}
+
+.custom-home-price-note strong {
+  color: #f9fafb;
+}
+
+.custom-home-price-note a {
+  color: #facc15;
+  font-weight: 600;
+  text-underline-offset: 2px;
+}

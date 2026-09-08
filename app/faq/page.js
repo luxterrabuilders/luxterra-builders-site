@@ -6,30 +6,27 @@
 // take, and are you legitimate. Those are also the questions ChatGPT and AI
 // Overviews get asked about builders, so they are worth owning in one place.
 //
-// TODO (Christian): I need real answers before these go live. I have left each
-// one visibly incomplete rather than guessing, because a wrong number here is
-// worse than no number.
-//   1. CUSTOM HOME PRICING. You gave me $160/sqft as the semi-custom starting
-//      point. I need the custom range. A range is fine - "$220 to $300 depending
-//      on finish level" answers the question honestly.
-//   2. WHAT THE PER-SQFT NUMBER INCLUDES. Does it cover the slab, or start
-//      above it? Site work? Driveway? Landscaping? Appliances? This is the
-//      single most misread number in homebuilding and being straight about it
-//      is a real advantage over the builders who aren't.
-//   3. SEMI-CUSTOM VS CUSTOM. What actually separates them in your business -
-//      a plan library vs a blank sheet? Fixed selections vs open? One sentence.
-//   4. CITY REGISTRATION. Are you registered as a contractor with San Antonio
-//      Development Services? You pulled permits on 917 Burnet so I assume yes,
-//      but I won't state it without you confirming. A registration number would
-//      be even better.
-//   5. FINANCING. Do you refer people to construction lenders, or stay out of
-//      it? Either answer is fine. Silence is what costs leads.
+// The pricing figures come from app/lib/business.js, which is the single
+// source of truth for them. Do not hardcode a number here.
+//
+// Everything else on this page was confirmed by Christian on 8 Sep 2026:
+// semi-custom ships with a set upgrade package while custom means the owner
+// chooses every selection; Luxterra is registered as a contractor with San
+// Antonio Development Services; and he refers clients to construction lenders
+// rather than lending himself.
 
 import Link from "next/link";
 import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
 import { faqPageSchema } from "../lib/schema";
-import { PHONE_DISPLAY, PHONE_HREF } from "../lib/business";
+import {
+  PHONE_DISPLAY,
+  PHONE_HREF,
+  PRICE_SEMI_CUSTOM_PSF,
+  PRICE_CUSTOM_PSF_RANGE,
+  PRICE_INCLUDES,
+  PRICE_EXCLUDES,
+} from "../lib/business";
 import "./faq.css";
 
 export const metadata = {
@@ -52,7 +49,12 @@ const FAQS = [
   {
     group: "Cost and timeline",
     q: "What does it cost to build with Luxterra?",
-    a: "Semi-custom homes start at $160 per square foot. A per-square-foot number is a starting point, not a quote - the same house costs different amounts on different lots, because site work, foundation requirements, utility runs and finish level all move the total. We would rather give you a real range for your specific project after looking at the site than a headline number that turns out to be wrong.",
+    a: `Semi-custom homes start at ${PRICE_SEMI_CUSTOM_PSF} per square foot. Custom homes generally run ${PRICE_CUSTOM_PSF_RANGE} per square foot depending on finish level. Those figures are turnkey for the construction itself - ${PRICE_INCLUDES} are in the number, not added afterwards. They do not include ${PRICE_EXCLUDES}, which are separate. Treat any per-square-foot figure as a starting point rather than a quote: the same house costs different amounts on different lots, because site work, foundation requirements and utility runs move with the property.`,
+  },
+  {
+    group: "Cost and timeline",
+    q: "What is the difference between semi-custom and custom?",
+    a: "A semi-custom home comes with a set package of upgrades already included, so most of the specification is settled before you start and the budget is more predictable. On a custom home you choose every selection and every upgrade yourself. The construction standard is the same either way - the difference is how many decisions are yours, and how far the finish level can move the final number.",
   },
   {
     group: "Cost and timeline",
@@ -77,7 +79,12 @@ const FAQS = [
   {
     group: "Working with us",
     q: "Is Luxterra licensed and insured?",
-    a: "Texas does not issue a state general contractor license - no residential builder in Texas has one, and any builder telling you they are state-licensed is describing something that does not exist. What does exist: electrical, plumbing and HVAC are licensed at the state level, and those trades on our jobs hold their own current licenses. Luxterra carries $1,000,000 in general liability insurance, and contractors must be registered with San Antonio Development Services before the city will issue permits. We are happy to send our certificate of insurance on request.",
+    a: "Texas does not issue a state general contractor license - no residential builder in Texas has one, and any builder telling you they are state-licensed is describing something that does not exist. What does exist: electrical, plumbing and HVAC are licensed at the state level, and those trades on our jobs hold their own current licenses. Luxterra carries $1,000,000 in general liability insurance, and is registered as a contractor with San Antonio Development Services, which the city requires before it will issue a permit. We are happy to send our certificate of insurance on request.",
+  },
+  {
+    group: "Working with us",
+    q: "Can you help with financing?",
+    a: "We do not lend, but we can introduce you to construction lenders who write this kind of loan regularly. A construction loan does not work like a normal mortgage - it funds in stages against work actually completed, and it is inspected along the way - so going to a lender who does them routinely saves a lot of friction. Ask and we will point you at the right people.",
   },
   {
     group: "Working with us",

@@ -3,7 +3,14 @@ import "./custom-home.css";
 import Image from "next/image";
 import Breadcrumbs from "../components/Breadcrumbs";
 import JsonLd from "../components/JsonLd";
+import Link from "next/link";
 import { faqPageSchema, serviceSchema } from "../lib/schema";
+import {
+  PRICE_SEMI_CUSTOM_PSF,
+  PRICE_CUSTOM_PSF_RANGE,
+  PRICE_INCLUDES,
+  PRICE_EXCLUDES,
+} from "../lib/business";
 
 const FAQS = [
   {
@@ -136,6 +143,65 @@ export default function CustomHomeBuilderSanAntonioPage() {
               homes that add flexibility and long-term value.
             </p>
           </article>
+        </div>
+      </section>
+
+      {/* PRICING - figures live in app/lib/business.js, not here. This page
+          ranks for "custom home builder san antonio", where the first thing
+          anyone wants is a number. Saying it plainly, with what it does and
+          does not cover, is the whole point. */}
+      <section className="custom-home-section custom-home-pricing">
+        <div className="custom-home-section-header">
+          <p className="custom-home-section-label">What it costs</p>
+          <h2>Real numbers, and what they actually include.</h2>
+          <p>
+            Most builders will not put a figure on a page. Here is ours, with
+            the part that usually gets left out.
+          </p>
+        </div>
+
+        <div className="custom-home-price-grid">
+          <article className="custom-home-price-card">
+            <p className="custom-home-price-label">Semi-custom</p>
+            <p className="custom-home-price">
+              from {PRICE_SEMI_CUSTOM_PSF}
+              <span>/sq ft</span>
+            </p>
+            <p>
+              Comes with a set package of upgrades already included, so most of
+              the specification is settled up front and the budget moves less.
+            </p>
+          </article>
+
+          <article className="custom-home-price-card">
+            <p className="custom-home-price-label">Fully custom</p>
+            <p className="custom-home-price">
+              {PRICE_CUSTOM_PSF_RANGE}
+              <span>/sq ft</span>
+            </p>
+            <p>
+              You choose every selection and every upgrade. Same construction
+              standard &mdash; the range reflects how far finish level can move
+              the number.
+            </p>
+          </article>
+        </div>
+
+        <div className="custom-home-price-note">
+          <p>
+            <strong>Included:</strong> {PRICE_INCLUDES}. These are turnkey
+            construction figures, not a shell price with the rest added later.
+          </p>
+          <p>
+            <strong>Not included:</strong> {PRICE_EXCLUDES}.
+          </p>
+          <p>
+            A per-square-foot figure is a starting point, not a quote. The same
+            house costs different amounts on different lots &mdash; site work,
+            foundation requirements and utility runs all move with the property.
+            We would rather price your actual site than defend a headline
+            number. <Link href="/faq">More answers on cost and timeline &rarr;</Link>
+          </p>
         </div>
       </section>
 
