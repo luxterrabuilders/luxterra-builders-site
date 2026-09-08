@@ -10,7 +10,7 @@ export const metadata = {
   alternates: { canonical: "/projects/917-burnet" },
   title: "917 Burnet Street Historic Renovation",
   description:
-    "A 1902 home in a designated San Antonio historic district, fully renovated in six months: new foundation piers, all-new electrical and plumbing, restored original windows, and a custom-built pool and spa. Luxterra's model home.",
+    "A 1902 San Antonio home in a historic district, fully renovated in six months: new foundation piers, all-new electrical and plumbing, restored windows.",
   openGraph: {
     title: "917 Burnet Street \u2013 Historic Renovation, Custom Pool & Spa | Luxterra Builders",
     description:

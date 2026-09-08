@@ -29,7 +29,7 @@ export const metadata = {
   alternates: { canonical: "/multifamily-contractor-san-antonio" },
   title: "Multifamily Contractor San Antonio",
   description:
-    "Luxterra Builders helps investors and property owners build duplexes, small multifamily projects, ADUs, additions, and investment-focused residential projects in San Antonio.",
+    "Duplexes, small multifamily, ADUs and investment-focused residential builds in San Antonio. Luxterra Builders works with investors and owners.",
 };
 
 export default function MultifamilyContractorSanAntonioPage() {

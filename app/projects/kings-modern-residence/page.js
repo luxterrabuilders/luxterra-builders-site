@@ -32,7 +32,7 @@ export const metadata = {
   alternates: { canonical: "/projects/kings-modern-residence" },
   title: "Kings Modern Residence: Custom Home + ADU",
   description:
-    "A 1,358 sq ft custom home and a fully independent 433 sq ft ADU on one San Antonio lot, completed 2024. Both units run as short-term rentals. Built by Luxterra Builders.",
+    "A 1,358 sq ft custom home and an independent 433 sq ft ADU on one San Antonio lot, completed 2024. Both units run as short-term rentals.",
   openGraph: {
     title: "Kings Modern Residence | Luxterra Builders",
     description:

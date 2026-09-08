@@ -19,7 +19,7 @@ export const metadata = {
   alternates: { canonical: "/build-on-your-lot" },
   title: "Build on Your Lot in San Antonio",
   description:
-    "Already own land, or looking for it? Luxterra Builders reviews the site, tells you what it will realistically cost to build on, and builds the home. Serving San Antonio and the Hill Country.",
+    "Already own land, or still looking? Luxterra Builders reviews the site, tells you what it will really cost to build on, and builds the home.",
   openGraph: {
     title: "Build on Your Lot in San Antonio | Luxterra Builders",
     description:

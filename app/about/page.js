@@ -22,7 +22,7 @@ export const metadata = {
   alternates: { canonical: "/about" },
   title: "About Christian Hernandez",
   description:
-    "Luxterra Builders is Christian Hernandez and Mi Hee Yoo, a family business in San Antonio. He worked unpaid for a year and a half to learn to build properly before his first custom home in 2022.",
+    "Luxterra Builders is Christian Hernandez and Mi Hee Yoo, a family business in San Antonio. He worked unpaid for 18 months to learn to build properly.",
   openGraph: {
     title: "About Christian Hernandez | Luxterra Builders",
     description:

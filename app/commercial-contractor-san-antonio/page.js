@@ -29,7 +29,7 @@ export const metadata = {
   alternates: { canonical: "/commercial-contractor-san-antonio" },
   title: "Commercial Contractor San Antonio",
   description:
-    "Luxterra Builders handles commercial build-outs, tenant improvements, office spaces, retail spaces, industrial spaces, and specialized commercial projects in San Antonio.",
+    "Commercial build-outs, tenant improvements, office, retail and industrial space in San Antonio, managed end to end by Luxterra Builders.",
 };
 
 export default function CommercialContractorSanAntonioPage() {

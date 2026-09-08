@@ -33,7 +33,7 @@ export const metadata = {
   alternates: { canonical: "/faq" },
   title: "Frequently Asked Questions",
   description:
-    "What it costs to build with Luxterra Builders, how long a custom home takes in San Antonio, what we do and don't take on, and how insurance and licensing actually work for Texas contractors.",
+    "What it costs to build with Luxterra Builders, how long a custom home takes in San Antonio, and how licensing and insurance really work in Texas.",
   openGraph: {
     title: "Frequently Asked Questions | Luxterra Builders",
     description:

@@ -18,7 +18,7 @@ export const metadata = {
   alternates: { canonical: "/design-build-contractor-san-antonio" },
   title: "Design-Build Contractor San Antonio",
   description:
-    "One contract from design through construction. Luxterra Builders coordinates architect, engineer, permitting and build in San Antonio, so the drawings and the budget stay attached to each other.",
+    "One contract from design through construction. Luxterra Builders coordinates architect, engineer, permitting and build across San Antonio.",
   openGraph: {
     title: "Design-Build Contractor San Antonio | Luxterra Builders",
     description:
