@@ -1,72 +1,70 @@
-// app/projects/917-burnet/page.js
+// app/projects/dignowity-hill-historic-renovation/page.js
 //
 import Link from "next/link";
 import Image from "next/image";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import { PHONE_DISPLAY, PHONE_HREF } from "../../lib/business";
-import "./burnet-917.css";
+import "./dignowity.css";
 
 export const metadata = {
-  alternates: { canonical: "/projects/917-burnet" },
-  title: "917 Burnet Street Historic Renovation",
+  alternates: { canonical: "/projects/dignowity-hill-historic-renovation" },
+  title: "Dignowity Hill Historic Renovation",
   description:
     "A 1902 San Antonio home in a historic district, fully renovated in six months: new foundation piers, all-new electrical and plumbing, restored windows.",
   openGraph: {
-    title: "917 Burnet Street \u2013 Historic Renovation, Custom Pool & Spa | Luxterra Builders",
+    title: "Dignowity Hill Historic Renovation | Luxterra Builders",
     description:
       "A historic San Antonio home taken back to the studs and rebuilt, minutes from downtown. Now Luxterra's model home.",
-    url: "/projects/917-burnet",
-    images: [{ url: "/917-burnet-front-elevation-twilight.jpg", width: 2000, height: 1342, alt: "917 Burnet Street at twilight" }],
+    url: "/projects/dignowity-hill-historic-renovation",
+    images: [{ url: "/dignowity-front-elevation-twilight.jpg", width: 2000, height: 1342, alt: "Dignowity Hill historic renovation at twilight" }],
   },
 };
 
 const PHOTOS = [
-  { src: "/917-burnet-front-elevation-twilight.jpg", alt: "917 Burnet Street historic home renovation at twilight, San Antonio", w: 2000, h: 1342, group: "Exterior" },
-  { src: "/917-burnet-front-elevation-day.jpg", alt: "Front elevation of the restored 917 Burnet Street home in San Antonio", w: 2000, h: 1125, group: "Exterior" },
-  { src: "/917-burnet-front-porch-detail.jpg", alt: "Restored front porch and original 917 house number at 917 Burnet Street", w: 2000, h: 1333, group: "Exterior" },
-  { src: "/917-burnet-porch-twilight.jpg", alt: "Wraparound porch seating at 917 Burnet Street in the evening", w: 2000, h: 1342, group: "Exterior" },
-  { src: "/917-burnet-living-room.jpg", alt: "Open living room with built-in media wall at 917 Burnet Street", w: 2000, h: 1333, group: "Living and kitchen" },
-  { src: "/917-burnet-living-dining-open-plan.jpg", alt: "Open plan living and dining area with chandelier at 917 Burnet Street", w: 2000, h: 1333, group: "Living and kitchen" },
-  { src: "/917-burnet-dining-kitchen.jpg", alt: "Dining area looking through to the kitchen at 917 Burnet Street", w: 2000, h: 1333, group: "Living and kitchen" },
-  { src: "/917-burnet-kitchen-island.jpg", alt: "Kitchen with waterfall granite island and custom cabinetry at 917 Burnet Street", w: 2000, h: 1333, group: "Living and kitchen" },
-  { src: "/917-burnet-granite-detail.jpg", alt: "Close view of the waterfall granite island in the 917 Burnet Street kitchen", w: 2000, h: 1332, group: "Living and kitchen" },
-  { src: "/917-burnet-kitchen-sink-range.jpg", alt: "Kitchen island with farmhouse sink and range at 917 Burnet Street", w: 2000, h: 1333, group: "Living and kitchen" },
-  { src: "/917-burnet-primary-bedroom.jpg", alt: "Primary bedroom at 917 Burnet Street with natural light", w: 2000, h: 1333, group: "Bedrooms and baths" },
-  { src: "/917-burnet-bedroom-pool-view.jpg", alt: "Bedroom overlooking the pool at 917 Burnet Street", w: 2000, h: 1333, group: "Bedrooms and baths" },
-  { src: "/917-burnet-primary-bath-stone.jpg", alt: "Primary bathroom with blue stone tile at 917 Burnet Street", w: 2000, h: 1332, group: "Bedrooms and baths" },
-  { src: "/917-burnet-walk-in-shower.jpg", alt: "Walk-in shower with blue stone tile and brass fixtures at 917 Burnet Street", w: 2000, h: 1332, group: "Bedrooms and baths" },
-  { src: "/917-burnet-double-vanity.jpg", alt: "Double vanity with granite countertop at 917 Burnet Street", w: 2000, h: 1333, group: "Bedrooms and baths" },
-  { src: "/917-burnet-pool-twilight.jpg", alt: "Pool and rock waterfall lit at twilight at 917 Burnet Street", w: 2000, h: 1342, group: "Outdoor" },
-  { src: "/917-burnet-pool-waterfall.jpg", alt: "Rock waterfall feature on the pool at 917 Burnet Street", w: 2000, h: 1333, group: "Outdoor" },
-  { src: "/917-burnet-back-deck-twilight.jpg", alt: "Back deck and outdoor dining at 917 Burnet Street in the evening", w: 2000, h: 1342, group: "Outdoor" },
-  { src: "/917-burnet-aerial-downtown.jpg", alt: "Aerial view of 917 Burnet Street with the downtown San Antonio skyline", w: 2000, h: 1125, group: "Outdoor" },
+  { src: "/dignowity-front-elevation-twilight.jpg", alt: "Dignowity Hill historic home renovation at twilight, San Antonio", w: 2000, h: 1342, group: "Exterior" },
+  { src: "/dignowity-front-porch-detail.jpg", alt: "Restored front porch with arched openings and original leaded-glass door, Dignowity Hill, San Antonio", w: 1350, h: 1333, group: "Exterior" },
+  { src: "/dignowity-porch-twilight.jpg", alt: "Wraparound porch seating at the Dignowity Hill house in the evening", w: 2000, h: 1342, group: "Exterior" },
+  { src: "/dignowity-living-room.jpg", alt: "Open living room with built-in media wall at the Dignowity Hill house", w: 2000, h: 1333, group: "Living and kitchen" },
+  { src: "/dignowity-living-dining-open-plan.jpg", alt: "Open plan living and dining area with chandelier at the Dignowity Hill house", w: 2000, h: 1333, group: "Living and kitchen" },
+  { src: "/dignowity-dining-kitchen.jpg", alt: "Dining area looking through to the kitchen at the Dignowity Hill house", w: 2000, h: 1333, group: "Living and kitchen" },
+  { src: "/dignowity-kitchen-island.jpg", alt: "Kitchen with waterfall granite island and custom cabinetry at the Dignowity Hill house", w: 2000, h: 1333, group: "Living and kitchen" },
+  { src: "/dignowity-granite-detail.jpg", alt: "Close view of the waterfall granite island in the Dignowity Hill house kitchen", w: 2000, h: 1332, group: "Living and kitchen" },
+  { src: "/dignowity-kitchen-sink-range.jpg", alt: "Kitchen island with farmhouse sink and range at the Dignowity Hill house", w: 2000, h: 1333, group: "Living and kitchen" },
+  { src: "/dignowity-primary-bedroom.jpg", alt: "Primary bedroom at the Dignowity Hill house with natural light", w: 2000, h: 1333, group: "Bedrooms and baths" },
+  { src: "/dignowity-bedroom-pool-view.jpg", alt: "Bedroom overlooking the pool at the Dignowity Hill house", w: 2000, h: 1333, group: "Bedrooms and baths" },
+  { src: "/dignowity-primary-bath-stone.jpg", alt: "Primary bathroom with blue stone tile at the Dignowity Hill house", w: 2000, h: 1332, group: "Bedrooms and baths" },
+  { src: "/dignowity-walk-in-shower.jpg", alt: "Walk-in shower with blue stone tile and brass fixtures at the Dignowity Hill house", w: 2000, h: 1332, group: "Bedrooms and baths" },
+  { src: "/dignowity-double-vanity.jpg", alt: "Double vanity with granite countertop at the Dignowity Hill house", w: 2000, h: 1333, group: "Bedrooms and baths" },
+  { src: "/dignowity-pool-twilight.jpg", alt: "Pool and rock waterfall lit at twilight at the Dignowity Hill house", w: 2000, h: 1342, group: "Outdoor" },
+  { src: "/dignowity-pool-waterfall.jpg", alt: "Rock waterfall feature on the pool at the Dignowity Hill house", w: 2000, h: 1333, group: "Outdoor" },
+  { src: "/dignowity-back-deck-twilight.jpg", alt: "Back deck and outdoor dining at the Dignowity Hill house in the evening", w: 2000, h: 1342, group: "Outdoor" },
 ];
 
 const GROUPS = ["Exterior", "Living and kitchen", "Bedrooms and baths", "Outdoor"];
 
-export default function Burnet917Page() {
+export default function DignowityHillPage() {
   return (
-    <main className="b917">
+    <main className="dhr">
       <Breadcrumbs
         items={[
           { name: "Home", href: "/" },
           { name: "Projects", href: "/projects" },
-          { name: "917 Burnet Street", href: "/projects/917-burnet" },
+          { name: "Dignowity Hill Renovation", href: "/projects/dignowity-hill-historic-renovation" },
         ]}
       />
 
-      <section className="b917-hero">
-        <p className="b917-kicker">Historic full renovation &middot; Custom pool &amp; spa &middot; Model home</p>
-        <h1>917 Burnet Street</h1>
-        <p className="b917-lede">
+      <section className="dhr-hero">
+        <p className="dhr-kicker">Historic full renovation &middot; Custom pool &amp; spa &middot; Model home</p>
+        <h1>Dignowity Hill Historic Renovation</h1>
+        <p className="dhr-lede">
           A 1902 home taken back to the studs and rebuilt over six months &mdash;
           the porch, the proportions and the street presence kept, everything
           behind them new. 1,976 square feet, minutes from downtown, and the
           house we use to show people what our work actually looks like in
           person.
         </p>
-        <dl className="b917-facts">
-          <div><dt>Location</dt><dd>917 Burnet Street, San Antonio</dd></div>
+        <dl className="dhr-facts">
+          <div><dt>Location</dt><dd>Dignowity Hill, San Antonio</dd></div>
           <div><dt>Originally built</dt><dd>1902</dd></div>
           <div><dt>Size</dt><dd>1,976 sq ft</dd></div>
           <div><dt>Scope</dt><dd>Full historic renovation</dd></div>
@@ -77,10 +75,10 @@ export default function Burnet917Page() {
         </dl>
       </section>
 
-      <figure className="b917-hero-image">
+      <figure className="dhr-hero-image">
         <Image
-          src="/917-burnet-front-elevation-twilight.jpg"
-          alt="917 Burnet Street historic home renovation at twilight, San Antonio"
+          src="/dignowity-front-elevation-twilight.jpg"
+          alt="Dignowity Hill historic home renovation at twilight, San Antonio"
           width={2000}
           height={1342}
           sizes="(max-width: 1100px) 100vw, 1100px"
@@ -88,7 +86,7 @@ export default function Burnet917Page() {
         />
       </figure>
 
-      <section className="b917-story">
+      <section className="dhr-story">
         <div>
           <h2>Keeping the house, replacing everything else</h2>
           <p>
@@ -123,24 +121,24 @@ export default function Burnet917Page() {
             subcontracted out afterwards, which is why the deck, the coping and
             the house all line up the way they do.
           </p>
-          <p className="b917-story-cta">
+          <p className="dhr-story-cta">
             <Link href="/quote">Arrange a visit &rarr;</Link>
           </p>
         </div>
       </section>
 
 
-      <section className="b917-found">
-        <div className="b917-found-inner">
+      <section className="dhr-found">
+        <div className="dhr-found-inner">
           <h2>What we found when we opened it up</h2>
-          <p className="b917-found-lede">
+          <p className="dhr-found-lede">
             A house built in 1902 doesn&apos;t tell you everything up front. This
-            is what was behind the walls at 917 Burnet, and what we did about it.
+            is what was behind the walls at the Dignowity Hill house, and what we did about it.
             None of it shows in the photographs, and it is most of where the six
             months went.
           </p>
 
-          <dl className="b917-found-list">
+          <dl className="dhr-found-list">
             <div>
               <dt>The foundation needed more support than it had</dt>
               <dd>
@@ -196,7 +194,7 @@ export default function Burnet917Page() {
             </div>
           </dl>
 
-          <p className="b917-found-close">
+          <p className="dhr-found-close">
             If you are weighing up an older house, this is the honest shape of it.
             Some of what you find will cost more than the plan allowed. What
             matters is whether your builder tells you early, prices it properly,
@@ -207,9 +205,9 @@ export default function Burnet917Page() {
       </section>
 
       {GROUPS.map((group) => (
-        <section className="b917-gallery" key={group}>
+        <section className="dhr-gallery" key={group}>
           <h2>{group}</h2>
-          <div className="b917-grid">
+          <div className="dhr-grid">
             {PHOTOS.filter((p) => p.group === group).map((photo) => (
               <figure key={photo.src}>
                 <Image
@@ -225,17 +223,17 @@ export default function Burnet917Page() {
         </section>
       ))}
 
-      <section className="b917-cta">
+      <section className="dhr-cta">
         <h2>Planning a renovation or a custom build?</h2>
         <p>
           Come and see this one first. It is a great deal easier to describe what
           you want when you are standing in a finished example of it.
         </p>
-        <div className="b917-cta-actions">
-          <Link href="/quote" className="b917-btn-primary">Request a free consultation</Link>
-          <a href={PHONE_HREF} className="b917-btn-secondary">Call {PHONE_DISPLAY}</a>
+        <div className="dhr-cta-actions">
+          <Link href="/quote" className="dhr-btn-primary">Request a free consultation</Link>
+          <a href={PHONE_HREF} className="dhr-btn-secondary">Call {PHONE_DISPLAY}</a>
         </div>
-        <p className="b917-back"><Link href="/projects">&larr; All projects</Link></p>
+        <p className="dhr-back"><Link href="/projects">&larr; All projects</Link></p>
       </section>
     </main>
   );

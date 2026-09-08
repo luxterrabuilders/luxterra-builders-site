@@ -136,17 +136,17 @@ export default function DesignBuildPage() {
       <section className="db-proof">
         <h2>Built this way</h2>
         <div className="db-proof-grid">
-          <Link href="/projects/917-burnet" className="db-proof-card">
+          <Link href="/projects/dignowity-hill-historic-renovation" className="db-proof-card">
             <Image
-              src="/917-burnet-kitchen-island.jpg"
-              alt="Kitchen with waterfall granite island at 917 Burnet Street, San Antonio"
+              src="/dignowity-kitchen-island.jpg"
+              alt="Kitchen with waterfall granite island at the Dignowity Hill house, San Antonio"
               width={2000}
               height={1333}
               sizes="(max-width: 800px) 100vw, 50vw"
             />
             <div>
               <p className="db-proof-tag">Historic renovation + custom pool &amp; spa</p>
-              <h3>917 Burnet Street</h3>
+              <h3>Dignowity Hill Historic Renovation</h3>
               <p>
                 A 1902 house through design review, an engineer&apos;s foundation
                 report, and six months of construction &mdash; with the same team

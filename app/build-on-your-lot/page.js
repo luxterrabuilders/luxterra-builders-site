@@ -136,17 +136,17 @@ export default function BuildOnYourLotPage() {
       <section className="boyl-proof">
         <h2>What that looks like finished</h2>
         <div className="boyl-proof-grid">
-          <Link href="/projects/917-burnet" className="boyl-proof-card">
+          <Link href="/projects/dignowity-hill-historic-renovation" className="boyl-proof-card">
             <Image
-              src="/917-burnet-front-elevation-twilight.jpg"
-              alt="917 Burnet Street historic home renovation at twilight, San Antonio"
+              src="/dignowity-front-elevation-twilight.jpg"
+              alt="Dignowity Hill historic home renovation at twilight, San Antonio"
               width={2000}
               height={1342}
               sizes="(max-width: 800px) 100vw, 50vw"
             />
             <div>
               <p className="boyl-proof-tag">Historic renovation + custom pool &amp; spa</p>
-              <h3>917 Burnet Street</h3>
+              <h3>Dignowity Hill Historic Renovation</h3>
               <p>A 1902 house rebuilt in six months, including everything the site threw at us.</p>
             </div>
           </Link>

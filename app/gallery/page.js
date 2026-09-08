@@ -32,7 +32,7 @@ const gallerySections = [
         src: "/burnet-01.jpg",
         alt: "Burnet Rooftop Residence front elevation",
         name: "Burnet Rooftop Residence – Front Elevation",
-        meta: "Custom Home • Burnet, TX",
+        meta: "Custom Home • San Antonio, TX",
       },
       {
         src: "/burnet-03.jpg",

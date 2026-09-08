@@ -13,16 +13,16 @@ export const metadata = {
 
 const projects = [
   {
-    slug: "917-burnet",
+    slug: "dignowity-hill-historic-renovation",
     tag: "Historic Renovation + Custom Pool & Spa",
-    title: "917 Burnet Street",
+    title: "Dignowity Hill Historic Renovation",
     location: "San Antonio, TX",
     summary:
       "A historic San Antonio home taken back to the studs and rebuilt, with a custom-built pool, spa and rock waterfall. Minutes from downtown, and now our model home \u2014 walk it by appointment.",
     details: "Full historic renovation \u2022 Custom pool & spa \u2022 Model home",
-    image: "/917-burnet-front-elevation-twilight.jpg",
-    alt: "917 Burnet Street historic home renovation at twilight, San Antonio",
-    href: "/projects/917-burnet",
+    image: "/dignowity-front-elevation-twilight.jpg",
+    alt: "Dignowity Hill historic home renovation at twilight, San Antonio",
+    href: "/projects/dignowity-hill-historic-renovation",
   },
 
   {
@@ -42,7 +42,7 @@ const projects = [
     slug: "burnet-home",
     tag: "Design Concept — Available to Build",
     title: "Burnet Rooftop Residence",
-    location: "Burnet, TX",
+    location: "San Antonio, TX",
     summary:
       "A design concept shown in 3D renderings — this home has not been built yet. A rooftop deck and indoor-outdoor living, available to build on your lot.",
     details: "Renderings • Rooftop deck • Available to build",

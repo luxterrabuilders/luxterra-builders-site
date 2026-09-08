@@ -32,7 +32,7 @@ export default function BurnetRooftopResidencePage() {
             Burnet Street, one block from Dignowity Park, and one we can build on
             your lot or adapt to another site. For photographs of
             completed work, see{" "}
-            <a href="/projects/917-burnet">917 Burnet Street</a> or{" "}
+            <a href="/projects/dignowity-hill-historic-renovation">the Dignowity Hill renovation</a> or{" "}
             <a href="/projects/kings-modern-residence">Kings Modern Residence</a>.
           </p>
 

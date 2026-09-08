@@ -69,7 +69,7 @@ const FAQS = [
   {
     group: "What we build",
     q: "Do you do renovations or remodels?",
-    a: "Not routine remodels - kitchens, bathrooms, flooring and similar single-room work are not what we are set up for, and you will get better service and a better price from a remodeler who does them every week. We do take on major renovations. 917 Burnet Street was a 1902 house taken down to its structure and rebuilt over six months, including new foundation piers, all new electrical and one hundred percent new plumbing.",
+    a: "Not routine remodels - kitchens, bathrooms, flooring and similar single-room work are not what we are set up for, and you will get better service and a better price from a remodeler who does them every week. We do take on major renovations. The Dignowity Hill house was a 1902 house taken down to its structure and rebuilt over six months, including new foundation piers, all new electrical and one hundred percent new plumbing.",
   },
   {
     group: "What we build",

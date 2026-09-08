@@ -148,7 +148,7 @@ export default function AboutPage() {
           <p>
             Practically, that means the decisions that cost money get made the
             expensive way when the cheap way would not survive scrutiny. At{" "}
-            <Link href="/projects/917-burnet">917 Burnet</Link>, the plan was to
+            <Link href="/projects/dignowity-hill-historic-renovation">the Dignowity Hill house</Link>, the plan was to
             keep the existing electrical. What was under the house said otherwise,
             so all of it was replaced, panels included. That is what the phrase
             is supposed to mean.
@@ -160,7 +160,7 @@ export default function AboutPage() {
             Luxterra is family-run and deliberately small. Christian builds;{" "}
             <strong>Mi Hee Yoo</strong>, his wife, handles interior design and
             selections. If you have walked{" "}
-            <Link href="/projects/917-burnet">917 Burnet</Link> or looked at the
+            <Link href="/projects/dignowity-hill-historic-renovation">the Dignowity Hill house</Link> or looked at the
             photographs of it, her work is the reason the finishes hold together
             the way they do.
           </p>
@@ -179,7 +179,7 @@ export default function AboutPage() {
             telling you the truth when the truth is inconvenient.
           </p>
           <p>
-            The electrical at 917 Burnet is the version of that you can actually
+            The electrical at the Dignowity Hill house is the version of that you can actually
             inspect. We planned to keep it, the plan would have been cheaper, and
             we replaced all of it because what was under the house wasn&apos;t
             something we were willing to leave for an owner to find later.
@@ -213,7 +213,7 @@ export default function AboutPage() {
             bathroom swap, a list of small jobs. We will take the right
             renovation: a house worth saving, taken far enough back that it comes
             out genuinely right.{" "}
-            <Link href="/projects/917-burnet">917 Burnet</Link> is what the right
+            <Link href="/projects/dignowity-hill-historic-renovation">the Dignowity Hill house</Link> is what the right
             one looks like. If you&apos;re not sure which yours is, ask &mdash;
             we&apos;ll tell you honestly, including when the answer is that you
             want a different contractor.
@@ -229,7 +229,7 @@ export default function AboutPage() {
           <div><dt>Insurance</dt><dd>$1,000,000 general liability</dd></div>
           <div><dt>Also</dt><dd>Licensed Texas real estate broker</dd></div>
           <div><dt>Service area</dt><dd>San Antonio and the Texas Hill Country</dd></div>
-          <div><dt>Model home</dt><dd><Link href="/projects/917-burnet">917 Burnet Street</Link> &mdash; visits by appointment</dd></div>
+          <div><dt>Model home</dt><dd><Link href="/projects/dignowity-hill-historic-renovation">the Dignowity Hill house</Link> &mdash; visits by appointment</dd></div>
         </dl>
       </section>
 
