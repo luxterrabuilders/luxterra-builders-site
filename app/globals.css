@@ -13,10 +13,41 @@ body {
   box-sizing: border-box;
   background: #020617;       /* dark navy background */
   color: #f9fafb;            /* light text */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+  font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
     sans-serif;
 }
 
+
+/* ---------- Type system ----------
+   The scale used to collapse in the middle: h3 rendered at 16.8px against 16px
+   body copy, so section subheadings were 0.8px larger than the paragraphs under
+   them and the eye had nothing to lock onto when scanning. */
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display), Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+}
+
+h1 { font-size: clamp(2.2rem, 4.5vw, 3.1rem); line-height: 1.08; }
+h2 { font-size: clamp(1.6rem, 2.6vw, 2.05rem); line-height: 1.2; }
+h3 { font-size: 1.3rem; line-height: 1.3; }
+
+body {
+  font-size: 1.0625rem;   /* 17px - the audience for a custom home skews 40+ */
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------- Neutral palette ----------
+   Six near-identical greys were doing one job. Three, named. */
+:root {
+  --ink: #f9fafb;        /* primary text on the dark ground */
+  --ink-muted: #cbd5e1;  /* body copy, captions */
+  --ink-faint: #94a3b8;  /* labels, meta, kickers */
+  --gold: #facc15;
+  --ground: #020617;
+}
 
 /* Responsive media safety net.
    Without this, an image renders at its intrinsic width and pushes the page
@@ -1065,7 +1096,7 @@ body {
 /* ===== Site body base ===== */
 .site-body {
   margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+  font-family: var(--font-body), system-ui, -apple-system, BlinkMacSystemFont,
     sans-serif;
   background: #020617;
   color: #e5e7eb;

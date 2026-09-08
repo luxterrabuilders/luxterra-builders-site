@@ -1,6 +1,8 @@
 // app/layout.js
 
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
+
 import Navbar from "./components/Navbar";
 import SiteFooter from "./components/SiteFooter";
 import MobileActionBar from "./components/MobileActionBar";
@@ -12,6 +14,24 @@ import {
   SERVICES,
 } from "./lib/business";
 
+// Headlines in a high-contrast serif, body in a neutral sans. Every other
+// contractor in San Antonio uses a heavy default sans, so this is the cheapest
+// available differentiation - and system-ui was reading as an unfinished
+// template. next/font self-hosts both, so there is no external request and no
+// layout shift while they load.
+// Fraunces is a variable font, so no weight list - next/font ships the full
+// range and the CSS picks weights off it.
+const display = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const bodyFont = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
 
 // TODO (Christian): if you're willing to publish a street address, add it to
 // `address` and add a `geo` block. Both strengthen local ranking.
@@ -102,7 +122,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${display.variable} ${bodyFont.variable}`}>
       <body className="site-body">
         <a className="skip-link" href="#main-content">
           Skip to main content

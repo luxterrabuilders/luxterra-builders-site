@@ -8,7 +8,8 @@
 }
 
 /* HARD OVERRIDE: hero area must stay dark */
-.hero,
+/* .hero deliberately carries the background image now - only its children
+   stay transparent. */
 .hero-grid,
 .hero-text {
   background: transparent !important;
@@ -21,9 +22,43 @@ body {
 }
 
 
-/* HERO */
+/* HERO
+   This was 915px of flat black. On a page selling custom homes, the first
+   photograph of a building sat three screens down. The hero now carries the
+   Dignowity twilight exterior behind a gradient heavy enough to keep the
+   headline at full contrast - the text is never laid over raw photograph. */
 .hero {
-  padding: 96px 16px 80px;
+  position: relative;
+  padding: 128px 16px 108px;
+  isolation: isolate;
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(2, 6, 23, 0.96) 0%,
+      rgba(2, 6, 23, 0.90) 42%,
+      rgba(2, 6, 23, 0.55) 72%,
+      rgba(2, 6, 23, 0.40) 100%
+    ),
+    url("/dignowity-front-elevation-twilight.jpg");
+  background-size: cover;
+  background-position: center 62%;
+  background-repeat: no-repeat;
+}
+
+/* Below the two-column breakpoint the copy sits over the middle of the photo,
+   so the overlay goes vertical and much darker. */
+@media (max-width: 900px) {
+  .hero {
+    padding: 96px 16px 80px;
+    background-image:
+      linear-gradient(
+        to bottom,
+        rgba(2, 6, 23, 0.93) 0%,
+        rgba(2, 6, 23, 0.88) 55%,
+        rgba(2, 6, 23, 0.95) 100%
+      ),
+      url("/dignowity-front-elevation-twilight.jpg");
+  }
 }
 
 .hero-grid {
@@ -49,15 +84,16 @@ body {
 }
 
 .hero-title {
-  font-size: 2.9rem;
-  line-height: 1.05;
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+  line-height: 1.04;
   font-weight: 700;
   margin: 0 0 20px;
+  text-shadow: 0 2px 24px rgba(2, 6, 23, 0.55);
 }
 
 .hero-sub {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.09rem;
+  line-height: 1.65;
   color: #e5e7eb;
   margin-bottom: 28px;
 }
@@ -240,7 +276,9 @@ body {
 
 .lp-project-image-wrap img {
   width: 100%;
-  height: 220px;
+  aspect-ratio: 3 / 2;   /* was a fixed 220px, a 2.73:1 letterbox that cut the
+                            houses into strips */
+  height: auto;
   object-fit: cover;
   display: block;
 }
@@ -418,7 +456,8 @@ body {
 /* Make sure images look good if different aspect ratios */
 .projects-page .lp-project-image-wrap img {
   width: 100%;
-  height: 260px;
+  aspect-ratio: 3 / 2;
+  height: auto;
   object-fit: cover;
 }
 
