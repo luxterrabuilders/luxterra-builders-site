@@ -163,6 +163,18 @@ body {
   font-weight: 500;
 }
 
+.hero-metric-rating {
+  color: #facc15;
+  font-weight: 700;
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+.hero-metric-rating:hover,
+.hero-metric-rating:focus-visible {
+  text-decoration: underline;
+}
+
 /* Right side – logo card */
 .hero-visual {
   display: flex;

@@ -48,9 +48,25 @@ export default function HomePage() {
       </div>
 
       <div className="hero-metrics">
+        {/* This slot used to read "5+ years". Against builders advertising
+            decades, leading with the smallest number invited the wrong
+            comparison. The rating answers the question the visitor is actually
+            asking, and it links out so it can be checked.
+            Deliberately NOT marked up as AggregateRating - Google's policy does
+            not support self-serving review markup, and the rest of the site is
+            careful about that. */}
         <div className="hero-metric">
-          <span className="hero-metric-label">Experience</span>
-          <span className="hero-metric-value">5+ years</span>
+          <span className="hero-metric-label">Google rating</span>
+          <span className="hero-metric-value">
+            <a
+              className="hero-metric-rating"
+              href={GOOGLE_BUSINESS_PROFILE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {GOOGLE_RATING} &#9733; &middot; {GOOGLE_REVIEW_COUNT} reviews
+            </a>
+          </span>
         </div>
         <div className="hero-metric">
           <span className="hero-metric-label">Project types</span>
