@@ -9,17 +9,16 @@
 // light oak, white and brass; the ADU is navy, dark tile and brass. That
 // contrast is the story of the project, so the galleries are grouped to show it.
 //
-// TODO (Christian): five facts I will not invent. Send them over and I will
-// drop them into the facts list at the top:
-//   1. Square footage - main house and ADU separately.
-//   2. Bedroom and bathroom count for each.
-//   3. Year completed.
-//   4. Was the pool and the outdoor kitchen in Luxterra's scope, or a separate
-//      contractor? The photos are strong either way, but I will not imply you
-//      built it if you did not.
-//   5. Is the ADU rented, used by family, or a short-term rental? The bunk
-//      room and the gaming setup suggest it earns its keep, and "this ADU pays
-//      for itself" is a far better line than anything I can write generically.
+// All figures confirmed by Christian on 8 Sep 2026:
+//   - Main house 1,358 sqft, 3 bed / 2 full bath. ADU 433 sqft, 1 bed / 1 full
+//     bath. Completed 2024.
+//   - The pool was existing: it was fully renovated and the spa was added.
+//     Outdoor living was in Luxterra's scope as well. The page says "renovated"
+//     rather than "built" for exactly that reason.
+//   - Both units operate as short-term rentals today.
+//
+// Do not add revenue, occupancy or nightly-rate claims to this page. He has not
+// given those numbers and they would need to be substantiated.
 
 import Link from "next/link";
 import Image from "next/image";
@@ -33,7 +32,7 @@ export const metadata = {
   alternates: { canonical: "/projects/kings-modern-residence" },
   title: "Kings Modern Residence - Custom Home + ADU in San Antonio",
   description:
-    "A ground-up custom home with a fully separate ADU on one San Antonio lot: light oak and brass in the main house, navy and dark tile in the guest unit, and a pool between them.",
+    "A 1,358 sq ft custom home and a fully independent 433 sq ft ADU on one San Antonio lot, completed 2024. Both units run as short-term rentals. Built by Luxterra Builders.",
   openGraph: {
     title: "Kings Modern Residence | Luxterra Builders",
     description:
@@ -45,9 +44,11 @@ export const metadata = {
 
 const FACTS = [
   ["Project type", "Custom home + detached ADU"],
+  ["Completed", "2024"],
+  ["Main house", "1,358 sq ft \u00b7 3 bed / 2 bath"],
+  ["ADU", "433 sq ft \u00b7 1 bed / 1 bath"],
   ["Location", "San Antonio, Texas"],
-  ["Scope", "Ground-up build, interior finishes, site planning"],
-  ["Finishes", "Two complete kitchens, two full bath sets, pool and outdoor living"],
+  ["Scope", "Ground-up build, pool renovation and new spa, outdoor living, interior finishes"],
 ];
 
 const GALLERIES = [
@@ -86,7 +87,7 @@ const GALLERIES = [
   {
     title: "Pool and outdoor living",
     blurb:
-      "The lot does the work here. The pool sits between the two buildings, under a mature oak, with a covered patio and string lighting for the evenings.",
+      "The pool was already here. We renovated it completely and added the spa, then built the outdoor living around it - a covered patio under the mature oak, an outdoor kitchen, and lighting that makes the space work after dark.",
     shots: [
       ["/kings-22.jpg", "Pool running the length of the lot beneath a mature oak, with the house lit at dusk"],
       ["/kings-21.jpg", "Pool and spa with the main house and ADU lit at twilight"],
@@ -110,13 +111,14 @@ export default function KingsModernResidencePage() {
       />
 
       <section className="kings-hero">
-        <p className="kings-kicker">Custom home &middot; Detached ADU &middot; Pool</p>
+        <p className="kings-kicker">Custom home &middot; Detached ADU &middot; Completed 2024</p>
         <h1>Kings Modern Residence</h1>
         <p className="kings-lede">
-          Two complete homes on one San Antonio lot. A ground-up custom house at
-          the front, a fully independent ADU behind it, and a pool between the
-          two &mdash; built so the second dwelling adds real value instead of
-          reading as a spare room bolted on the back.
+          Two complete homes on one San Antonio lot, finished in 2024. A 1,358
+          square foot custom house at the front, a fully independent 433 square
+          foot ADU behind it, and a renovated pool and spa between the two. Both
+          units operate as short-term rentals today &mdash; which is the clearest
+          argument we can make for building a second dwelling properly.
         </p>
         <dl className="kings-facts">
           {FACTS.map(([label, value]) => (
@@ -156,16 +158,20 @@ export default function KingsModernResidencePage() {
           </p>
         </div>
         <div>
-          <h2>Why an ADU is worth building properly</h2>
+          <h2>433 square feet that earns its own living</h2>
           <p>
-            A detached unit with its own kitchen, its own full bathroom and its
-            own entrance can house family, guests or a tenant without anyone
-            walking through anyone else&apos;s living room. It is the single
-            most flexible thing you can add to a residential lot in San Antonio.
+            The ADU is one bedroom and one full bathroom in 433 square feet, with
+            its own kitchen and its own entrance. Both it and the main house are
+            listed as short-term rentals today, which is the part worth paying
+            attention to: the second dwelling is not storage and it is not a
+            spare room. It is a second income.
           </p>
           <p>
-            The cost difference between a proper ADU and a glorified guest room
-            is smaller than most people expect. The difference in what it is
+            That only works because it was built as a real home. A detached unit
+            with a proper kitchen, a full bath and its own door can take a tenant,
+            a guest or family without anyone walking through anyone else&apos;s
+            living room. The cost difference between that and a glorified guest
+            room is smaller than most people expect. The difference in what it is
             worth afterwards is not.
           </p>
           <p className="kings-story-cta">
@@ -191,9 +197,10 @@ export default function KingsModernResidencePage() {
       <section className="kings-cta">
         <h2>Thinking about a custom home, an ADU, or both?</h2>
         <p>
-          Tell us about the lot. If it will take a second dwelling, that is
-          worth knowing before you design the first one &mdash; it changes where
-          the house sits, where the utilities run and where the driveway goes.
+          Tell us about the lot. If it will take a second dwelling, that is worth
+          knowing before you design the first one &mdash; it changes where the
+          house sits, where the utilities run and where the driveway goes. It is
+          far cheaper to plan for an ADU than to retrofit one.
         </p>
         <div className="kings-cta-actions">
           <Link href="/quote" className="kings-btn-primary">Request a free consultation</Link>
