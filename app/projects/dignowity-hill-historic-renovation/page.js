@@ -21,26 +21,25 @@ export const metadata = {
 };
 
 const PHOTOS = [
-  { src: "/dignowity-front-elevation-twilight.jpg", alt: "Dignowity Hill historic home renovation at twilight, San Antonio", w: 2000, h: 1342, group: "Exterior" },
+  { src: "/dignowity-front-elevation-twilight.jpg", alt: "Dignowity Hill historic home renovation lit at twilight, San Antonio", w: 2000, h: 1342, group: "Exterior" },
   { src: "/dignowity-front-porch-detail.jpg", alt: "Wraparound front porch with bench seating and the original leaded-glass door, Dignowity Hill, San Antonio", w: 2000, h: 1333, group: "Exterior" },
-  { src: "/dignowity-porch-twilight.jpg", alt: "Wraparound porch seating at the Dignowity Hill house in the evening", w: 2000, h: 1342, group: "Exterior" },
-  { src: "/dignowity-living-room.jpg", alt: "Open living room with built-in media wall at the Dignowity Hill house", w: 2000, h: 1333, group: "Living and kitchen" },
-  { src: "/dignowity-living-dining-open-plan.jpg", alt: "Open plan living and dining area with chandelier at the Dignowity Hill house", w: 2000, h: 1333, group: "Living and kitchen" },
+  { src: "/dignowity-porch-twilight.jpg", alt: "Side porch looking out to the street at dusk, warm light through the windows", w: 2000, h: 1342, group: "Exterior" },
+  { src: "/dignowity-living-room.jpg", alt: "Open living room with a built-in media wall and lit display niches", w: 2000, h: 1333, group: "Living and kitchen" },
+  { src: "/dignowity-living-dining-open-plan.jpg", alt: "Living and dining areas open to each other under a sculptural chandelier", w: 2000, h: 1333, group: "Living and kitchen" },
   { src: "/dignowity-dining-kitchen.jpg", alt: "Dining area looking through to the kitchen at the Dignowity Hill house", w: 2000, h: 1332, group: "Living and kitchen" },
-  { src: "/dignowity-kitchen-island.jpg", alt: "Kitchen with waterfall granite island and custom cabinetry at the Dignowity Hill house", w: 2000, h: 1333, group: "Living and kitchen" },
-  { src: "/dignowity-granite-detail.jpg", alt: "Close view of the waterfall granite island in the Dignowity Hill house kitchen", w: 2000, h: 1332, group: "Living and kitchen" },
-  { src: "/dignowity-kitchen-sink-range.jpg", alt: "Kitchen island with farmhouse sink and range at the Dignowity Hill house", w: 2000, h: 1333, group: "Living and kitchen" },
-  { src: "/dignowity-primary-bedroom.jpg", alt: "Primary bedroom at the Dignowity Hill house with natural light", w: 2000, h: 1341, group: "Bedrooms and baths" },
-  { src: "/dignowity-bedroom-pool-view.jpg", alt: "Guest bedroom with layered bedding and natural light at the Dignowity Hill house", w: 2000, h: 1341, group: "Bedrooms and baths" },
-  { src: "/dignowity-primary-bath-stone.jpg", alt: "Primary bathroom with a marble-clad shower and brass fixtures at the Dignowity Hill house", w: 2000, h: 1333, group: "Bedrooms and baths" },
-  { src: "/dignowity-walk-in-shower.jpg", alt: "Walk-in shower with blue stone tile and brass fixtures at the Dignowity Hill house", w: 2000, h: 1332, group: "Bedrooms and baths" },
-  { src: "/dignowity-double-vanity.jpg", alt: "Double vanity with granite countertop at the Dignowity Hill house", w: 2000, h: 1333, group: "Bedrooms and baths" },
+  { src: "/dignowity-kitchen-island.jpg", alt: "Kitchen with a waterfall granite island and brass fixtures", w: 2000, h: 1333, group: "Living and kitchen" },
+  { src: "/dignowity-granite-detail.jpg", alt: "Waterfall granite island with farmhouse sink, open to the living area", w: 2000, h: 1333, group: "Living and kitchen" },
+  { src: "/dignowity-kitchen-sink-range.jpg", alt: "Kitchen island with farmhouse sink, range and custom oak cabinetry", w: 2000, h: 1333, group: "Living and kitchen" },
+  { src: "/dignowity-primary-bedroom.jpg", alt: "Primary bedroom with layered bedding and warm evening light", w: 2000, h: 1341, group: "Bedrooms" },
+  { src: "/dignowity-bedroom-pool-view.jpg", alt: "Second bedroom with vaulted ceiling and oak flooring", w: 2000, h: 1333, group: "Bedrooms" },
   { src: "/dignowity-pool-twilight.jpg", alt: "Pool and spa lit at dusk with the house and deck behind, Dignowity Hill", w: 2000, h: 1342, group: "Outdoor" },
-  { src: "/dignowity-pool-waterfall.jpg", alt: "Rock waterfall feature on the pool at the Dignowity Hill house", w: 2000, h: 1333, group: "Outdoor" },
-  { src: "/dignowity-back-deck-twilight.jpg", alt: "Back deck and outdoor dining at the Dignowity Hill house in the evening", w: 2000, h: 1342, group: "Outdoor" },
+  { src: "/dignowity-pool-waterfall.jpg", alt: "Rock waterfall and spa lit at dusk beside the pool", w: 2000, h: 1342, group: "Outdoor" },
+  { src: "/dignowity-pool-deck-dusk.jpg", alt: "Pool and raised deck at sunset under the mature oak", w: 2000, h: 1342, group: "Outdoor" },
+  { src: "/dignowity-pool-patio-dusk.jpg", alt: "Poolside patio dining set beside the spa and rock waterfall", w: 2000, h: 1342, group: "Outdoor" },
+  { src: "/dignowity-back-deck-twilight.jpg", alt: "Rear deck seating with warm light through the windows in the evening", w: 2000, h: 1342, group: "Outdoor" },
 ];
 
-const GROUPS = ["Exterior", "Living and kitchen", "Bedrooms and baths", "Outdoor"];
+const GROUPS = ["Exterior", "Living and kitchen", "Bedrooms", "Outdoor"];
 
 export default function DignowityHillPage() {
   return (
